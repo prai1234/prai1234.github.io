@@ -1,4 +1,7 @@
 body{
   background-color: Skyblue;
-  text-alighn:center;
+  text-align: center;
+}
+h1{
+  text: strong;
 }
