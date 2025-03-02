@@ -17,7 +17,7 @@ a:visited {
 /* Hover styling */
 a:hover {
   color: black; /* Text color changes to gold on hover */
-  background-color: gold; /* Background changes to light pink on hover */
+  background-color: yellow; /* Background changes to light pink on hover */
   text-decoration: none; /* Ensure no underline on hover */
 }
 
