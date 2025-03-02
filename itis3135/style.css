@@ -10,7 +10,7 @@ a:link {
 
 /* visited link */
 a:visited {
-  color: black;
+ color: inherit;
 }
 
 /* mouse over link */
@@ -20,7 +20,7 @@ a:hover {
 
 /* selected link */
 a:active {
-  color: black;
+  color: inherit;
 }
 
 h1{
