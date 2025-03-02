@@ -1,34 +1,36 @@
-body{
-  background-color: Skyblue;
+body {
+  background-color: skyblue;
   text-align: center;
   text-decoration: none;
-  
 }
-a{
-  color: dark green;
+
+a {
+  color: darkgreen;
   text-decoration: none;
 }
-a: link {
+
+/* Corrected pseudo-class selectors */
+a:link {
   color: red;
 }
 
 /* visited link */
-a: visited {
- color: inherit;
+a:visited {
+  color: inherit;
 }
 
 /* mouse over link */
-a: hover {
+a:hover {
   color: red;
   background-color: pink;
 }
 
 /* selected link */
-a: active {
+a:active {
   color: inherit;
 }
 
-h1{
-  text: strong;
-  text-color: black;
+h1 {
+  font-weight: bold; /* Corrected property for bold text */
+  color: black; /* Corrected property for text color */
 }
