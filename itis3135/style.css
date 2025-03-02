@@ -1,7 +1,6 @@
 body {
   background-color: skyblue;
   text-align: center;
-  text-decoration: none;
 }
 
 a {
@@ -9,7 +8,6 @@ a {
   text-decoration: none;
 }
 
-/* Corrected pseudo-class selectors */
 a:link {
   color: red;
 }
@@ -34,6 +32,6 @@ nav{
 }
 
 h1 {
-  font-weight: bold; /* Corrected property for bold text */
-  color: black; /* Corrected property for text color */
+  font-weight: bold; 
+  color: black; /* 
 }
