@@ -1,7 +1,13 @@
 body{
   background-color: Skyblue;
   text-align: center;
+  
 }
+a {
+text-decoration: none;
+}
+
 h1{
   text: strong;
+  text-color: black;
 }
