@@ -2,6 +2,9 @@ body {
   background-color: skyblue;
   text-align: center;
 }
+img{
+  border: 2px;
+}
 
 /* Default link styling */
 a {
