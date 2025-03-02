@@ -3,7 +3,7 @@ body {
   text-align: center;
 }
 img{
-  border: 2px;
+  border: 2px solid;
 }
 
 /* Default link styling */
@@ -30,7 +30,7 @@ a:active {
 }
 
 /* Ensure other text remains black */
-h1, nav, p {
+p {
   color: black;
 }
 
@@ -44,15 +44,4 @@ h1 {
   font-weight: bold;
   color: black;
 }
-/* selected link */
-a:active {
-  color: inherit;
-}
-nav{
-  color: dark green;
-}
 
-h1 {
-  font-weight: bold; 
-  color: black; /* 
-}
