@@ -10,7 +10,6 @@ a{
 }
 a: link {
   color: red;
-  text-decoration: none;
 }
 
 /* visited link */
@@ -31,7 +30,4 @@ a: active {
 h1{
   text: strong;
   text-color: black;
-}
-nav{
-  text: silver;
 }
