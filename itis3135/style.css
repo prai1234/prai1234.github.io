@@ -3,26 +3,44 @@ body {
   text-align: center;
 }
 
+/* Default link styling */
 a {
   color: darkgreen;
   text-decoration: none;
 }
 
-a:link {
-  color: red;
-}
-
-/* visited link */
+/* Visited link styling */
 a:visited {
-  color: inherit;
+  color: darkgreen; /* Keep the same color as default */
 }
 
-/* mouse over link */
+/* Hover styling */
 a:hover {
-  color: red;
-  background-color: pink;
+  color: gold; /* Text color changes to gold on hover */
+  background-color: lightpink; /* Background changes to light pink on hover */
+  text-decoration: none; /* Ensure no underline on hover */
 }
 
+/* Active link styling (when clicked) */
+a:active {
+  color: darkgreen; /* Keep the same color as default */
+}
+
+/* Ensure other text remains black */
+h1, nav, p {
+  color: black;
+}
+
+/* Ensure nav text is dark green */
+nav {
+  color: darkgreen;
+}
+
+/* Ensure h1 text is bold and black */
+h1 {
+  font-weight: bold;
+  color: black;
+}
 /* selected link */
 a:active {
   color: inherit;
