@@ -29,6 +29,9 @@ a:hover {
 a:active {
   color: inherit;
 }
+nav{
+  color: dark green;
+}
 
 h1 {
   font-weight: bold; /* Corrected property for bold text */
