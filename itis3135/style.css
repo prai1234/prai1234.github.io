@@ -6,7 +6,6 @@ img{
   border: 2px solid;
 }
 ul {
-  list-style-type: none; /* Removes bullet points */
   padding-left: 0; /* Removes default padding */
   margin-left: 0; /* Removes default margin */
 }
