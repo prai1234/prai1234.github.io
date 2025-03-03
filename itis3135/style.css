@@ -8,13 +8,13 @@ img{
 
 /* Default link styling */
 a {
-  color: darkgreen;
+  color: darkred;
   text-decoration: none;
 }
 
 /* Visited link styling */
 a:visited {
-  color: darkgreen; /* Keep the same color as default */
+  color: darkred; /* Keep the same color as default */
 }
 
 /* Hover styling */
@@ -26,7 +26,7 @@ a:hover {
 
 /* Active link styling (when clicked) */
 a:active {
-  color: darkgreen; /* Keep the same color as default */
+  color: darkred; /* Keep the same color as default */
 }
 
 /* Ensure other text remains black */
@@ -36,7 +36,7 @@ p {
 
 /* Ensure nav text is dark green */
 nav {
-  color: darkgreen;
+  color: darkred;
 }
 
 /* Ensure h1 text is bold and black */
