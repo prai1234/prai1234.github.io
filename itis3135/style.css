@@ -5,6 +5,9 @@ body {
 img{
   border: 2px solid;
 }
+ul{
+  text-align: left;
+}
 
 /* Default link styling */
 a {
