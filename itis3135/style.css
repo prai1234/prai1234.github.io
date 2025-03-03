@@ -4,6 +4,7 @@ body {
 }
 img{
   border: 2px solid;
+  padding-bottom:0%;
 }
 ul {
   padding-left: 0; /* Removes default padding */
