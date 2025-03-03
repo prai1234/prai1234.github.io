@@ -5,8 +5,18 @@ body {
 img{
   border: 2px solid;
 }
-ul{
-  text-align: left;
+ul {
+  list-style-type: none; /* Removes bullet points */
+  padding-left: 0; /* Removes default padding */
+  margin-left: 0; /* Removes default margin */
+}
+
+li {
+  padding-left: 20px; /* Adds consistent padding for alignment */
+  text-indent: -20px; /* Offsets the text to align with the list */
+}
+.name {
+   font-style: italic;
 }
 
 /* Default link styling */
