@@ -1,7 +1,9 @@
+// Show the "What" section by default
+showSection('what');
 // JavaScript to show/hide sections
 function showSection(sectionId) {
     // Hide all sections
-    document.querySelectorAll('section').forEach(section => {
+    document.querySelectorAll('section').forEach((section) => {
         section.classList.remove('active');
     });
 
