@@ -30,7 +30,7 @@ main {
 section {
     display: none; /* Hide all sections by default */
 }
-section.active {
+.active {
     display: block; /* Show the active section */
 }
 footer {
