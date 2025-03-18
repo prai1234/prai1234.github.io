@@ -7,38 +7,59 @@ body {
     padding: 0;
     text-align: center;
 }
+
 header {
     background-color: #333;
     color: #fff;
     padding: 10px;
     text-align: center;
 }
+
 nav {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 0;                             
     padding: 10px 20px;
-    margin: 20px auto;                /* Center nav and add space above/below */
-    width: fit-content;               /* Makes the box fit around the links */
-    background-color: #f4f4f4;        /* Light gray background */
-    border: 2px solid #000000;        /* Black border to separate it clearly */
-    border-radius: 10px;              /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for separation */
-}
-nav a {
     color: #fff;
+    margin: 20px auto;
+    width: fit-content;
+    background-color: #f4f4f4;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: #000;                        /* Black text inside light gray nav */
     text-decoration: none;
     font-weight: bold;
+    padding: 10px 15px;
+    border-left: 2px solid #000;        /* Divider between links */
 }
+
+nav a:first-child {
+    border-left: none;                  /* No divider on the first link */
+}
+
+nav a:hover {
+    background-color: #000;             /* Black bg on hover */
+    color: #f4f4f4;                     /* Light text on hover */
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
 main {
     padding: 20px;
 }
+
 section {
     display: none; /* Hide all sections by default */
 }
+
 .active {
     display: block; /* Show the active section */
 }
+
 footer {
     background-color: #333;
     color: #fff;
@@ -46,38 +67,44 @@ footer {
     padding: 10px;
     margin-top: 20px;
 }
+
 footer a {
     color: #fff;
     text-decoration: none;
 }
+
 figure {
     text-align: center;
     margin: 20px 0;
 }
+
 figcaption {
     font-style: italic;
     margin-top: 10px;
 }
+
 .validation-buttons {
     margin-top: 10px;
 }
+
 .validation-buttons img {
     margin: 0 5px;
 }
+
 ul {
-    list-style-type: none; /* Removes bullet points */
-    padding-left: 20px;    /* Adds padding to the left */
-    margin: 0;             /* Removes default margin */
+    list-style-type: none;
+    padding-left: 20px;
+    margin: 0;
 }
 
 li {
-    padding: 20px 0;        /* Adds vertical padding between items */
-    text-align: left;      /* Ensures text is left-aligned (not centered) */
-}
-p {
-    text-align: left;      /* Aligns text to the left */
-    padding: 10px 20px;    /* Adds top/bottom and left/right padding */
-    margin: 0;             /* Resets default margin if needed */
-    line-height: 1.6;      /* Improves readability with spacing between lines */
+    padding: 20px 0;
+    text-align: left;
 }
 
+p {
+    text-align: left;
+    padding: 10px 20px;
+    margin: 0;
+    line-height: 1.6;
+}
