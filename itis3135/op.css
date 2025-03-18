@@ -17,8 +17,13 @@ nav {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-top: 10px;
-    border: 2px solid #FFD700;
+    padding: 10px 20px;
+    margin: 20px auto;                /* Center nav and add space above/below */
+    width: fit-content;               /* Makes the box fit around the links */
+    background-color: #f4f4f4;        /* Light gray background */
+    border: 2px solid #000000;        /* Black border to separate it clearly */
+    border-radius: 10px;              /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for separation */
 }
 nav a {
     color: #fff;
