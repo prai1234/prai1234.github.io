@@ -93,12 +93,16 @@ figcaption {
 
 ul {
     list-style-type: none;
-    padding-left: 20px;
     margin: 0;
 }
+ai.p {
+    padding-left: 250px;
+    text-align: left;
+}
+
 
 li {
-    padding: 200px 0;
+    padding-left: 250px;
     text-align: left;
 }
 
@@ -108,3 +112,4 @@ p {
     margin: 0;
     line-height: 1.6;
 }
+
