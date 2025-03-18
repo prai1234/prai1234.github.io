@@ -58,3 +58,20 @@ figcaption {
 .validation-buttons img {
     margin: 0 5px;
 }
+ul {
+    list-style-type: none; /* Removes bullet points */
+    padding-left: 20px;    /* Adds padding to the left */
+    margin: 0;             /* Removes default margin */
+}
+
+li {
+    padding: 5px 0;        /* Adds vertical padding between items */
+    text-align: left;      /* Ensures text is left-aligned (not centered) */
+}
+p {
+    text-align: left;      /* Aligns text to the left */
+    padding: 10px 20px;    /* Adds top/bottom and left/right padding */
+    margin: 0;             /* Resets default margin if needed */
+    line-height: 1.6;      /* Improves readability with spacing between lines */
+}
+
