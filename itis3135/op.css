@@ -65,7 +65,7 @@ ul {
 }
 
 li {
-    padding: 5px 0;        /* Adds vertical padding between items */
+    padding: 20px 0;        /* Adds vertical padding between items */
     text-align: left;      /* Ensures text is left-aligned (not centered) */
 }
 p {
