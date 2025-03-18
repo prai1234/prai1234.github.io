@@ -99,11 +99,10 @@ ul {
     list-style-type: none;
     margin: 0;
 }
-ai.p {
+#ai p {
     padding-left: 250px;
     text-align: left;
 }
-
 
 li {
     padding-left: 250px;
@@ -116,4 +115,5 @@ p {
     margin: 0;
     line-height: 1.6;
 }
+
 
