@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RPG Game Panel</title>
+  <title>Advanced RPG Panel</title>
   <style>
     body {
       margin: 0;
-      background: #1a1a1a;
+      background: #121212;
       font-family: 'Segoe UI', sans-serif;
       color: #f0f0f0;
     }
@@ -25,46 +25,54 @@
     }
 
     .panel {
-      background: #2b2b2b;
-      border: 2px solid #444;
+      background: #1f1f1f;
+      border: 2px solid #333;
       border-radius: 8px;
-      padding: 10px;
+      padding: 12px;
     }
 
     .stats {
       grid-area: stats;
     }
 
+    .stats h3 {
+      color: #00ffff;
+    }
+
     .inventory {
       grid-area: inventory;
+    }
+
+    .inventory-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .inventory-tabs button {
+      flex: 1;
+      padding: 8px;
+      background: #292929;
+      border: 1px solid #444;
+      border-radius: 4px;
+      color: #f0f0f0;
+      cursor: pointer;
+    }
+
+    .items-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 5px;
     }
 
-    .inventory .item {
+    .item {
       background: #3a3a3a;
       border: 1px solid #555;
       height: 50px;
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-
-    .skills {
-      grid-area: skills;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .skills .skill {
-      width: 50px;
-      height: 50px;
-      background: #3a3a3a;
-      border: 1px solid #666;
-      border-radius: 4px;
+      font-size: 20px;
     }
 
     .map {
@@ -78,53 +86,107 @@
       overflow-y: auto;
     }
 
+    .skills {
+      grid-area: skills;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .skill {
+      width: 50px;
+      height: 50px;
+      background: #3a3a3a;
+      border: 1px solid #666;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     h3 {
       margin-top: 0;
-      color: #ffd700;
     }
   </style>
 </head>
 <body>
 
   <div class="game-panel">
+    
+    <!-- Character Stats Panel -->
     <div class="panel stats">
       <h3>Character Stats</h3>
-      <p>HP: 100 / 100</p>
-      <p>MP: 50 / 50</p>
-      <p>XP: 75%</p>
-      <p>Level: 5</p>
+      <p><strong>Name:</strong> Arkon</p>
+      <p><strong>Class:</strong> Warrior</p>
+      <p><strong>Level:</strong> 10</p>
+      <p><strong>HP:</strong> 150 / 150</p>
+      <p><strong>MP:</strong> 60 / 60</p>
+      <p><strong>Strength:</strong> 18</p>
+      <p><strong>Agility:</strong> 12</p>
+      <p><strong>Intelligence:</strong> 9</p>
+      <p><strong>Defense:</strong> 14</p>
     </div>
 
+    <!-- Map Panel -->
     <div class="panel map">
       <h3>Mini Map</h3>
-      <p>[Map Display Here]</p>
+      <p>[Map Display Placeholder]</p>
     </div>
 
+    <!-- Inventory Panel -->
     <div class="panel inventory">
-      <div class="item">🗡️</div>
-      <div class="item">🛡️</div>
-      <div class="item">🧪</div>
-      <div class="item">📦</div>
-      <div class="item">💎</div>
-      <!-- Add more items as needed -->
+      <h3>Inventory</h3>
+      <div class="inventory-tabs">
+        <button onclick="showItems('armory')">Armory</button>
+        <button onclick="showItems('consumables')">Consumables</button>
+        <button onclick="showItems('misc')">Items</button>
+      </div>
+      <div id="inventory-items" class="items-grid">
+        <!-- Dynamic Items Will Load Here -->
+      </div>
     </div>
 
+    <!-- Quest Log Panel -->
     <div class="panel quests">
       <h3>Quest Log</h3>
       <ul>
-        <li>Find the lost sword</li>
-        <li>Defeat 10 goblins</li>
-        <li>Collect 5 herbs</li>
+        <li>Defend the village from raiders</li>
+        <li>Gather 10 healing herbs</li>
+        <li>Explore the Ancient Ruins</li>
       </ul>
     </div>
 
+    <!-- Skills Panel -->
     <div class="panel skills">
+      <div class="skill">⚔️</div>
+      <div class="skill">🛡️</div>
       <div class="skill">🔥</div>
-      <div class="skill">💧</div>
-      <div class="skill">⚡</div>
-      <div class="skill">🌀</div>
+      <div class="skill">💨</div>
     </div>
   </div>
+
+  <script>
+    const inventoryData = {
+      armory: ['🗡️', '🛡️', '👑', '👕', '🦵'],
+      consumables: ['🧪', '🍎', '🥤', '🍞', '🍖'],
+      misc: ['💎', '📜', '🔑', '🧰', '📦']
+    };
+
+    function showItems(category) {
+      const grid = document.getElementById('inventory-items');
+      grid.innerHTML = '';
+      inventoryData[category].forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'item';
+        div.textContent = item;
+        grid.appendChild(div);
+      });
+    }
+
+    // Load default category
+    showItems('armory');
+  </script>
 
 </body>
 </html>
