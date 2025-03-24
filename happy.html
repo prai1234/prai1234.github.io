@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RPG Game Panel</title>
+  <style>
+    body {
+      margin: 0;
+      background: #1a1a1a;
+      font-family: 'Segoe UI', sans-serif;
+      color: #f0f0f0;
+    }
+
+    .game-panel {
+      display: grid;
+      grid-template-areas: 
+        "stats map"
+        "inventory quests"
+        "skills skills";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto 80px;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .panel {
+      background: #2b2b2b;
+      border: 2px solid #444;
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    .stats {
+      grid-area: stats;
+    }
+
+    .inventory {
+      grid-area: inventory;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 5px;
+    }
+
+    .inventory .item {
+      background: #3a3a3a;
+      border: 1px solid #555;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .skills {
+      grid-area: skills;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .skills .skill {
+      width: 50px;
+      height: 50px;
+      background: #3a3a3a;
+      border: 1px solid #666;
+      border-radius: 4px;
+    }
+
+    .map {
+      grid-area: map;
+      height: 150px;
+    }
+
+    .quests {
+      grid-area: quests;
+      max-height: 150px;
+      overflow-y: auto;
+    }
+
+    h3 {
+      margin-top: 0;
+      color: #ffd700;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="game-panel">
+    <div class="panel stats">
+      <h3>Character Stats</h3>
+      <p>HP: 100 / 100</p>
+      <p>MP: 50 / 50</p>
+      <p>XP: 75%</p>
+      <p>Level: 5</p>
+    </div>
+
+    <div class="panel map">
+      <h3>Mini Map</h3>
+      <p>[Map Display Here]</p>
+    </div>
+
+    <div class="panel inventory">
+      <div class="item">🗡️</div>
+      <div class="item">🛡️</div>
+      <div class="item">🧪</div>
+      <div class="item">📦</div>
+      <div class="item">💎</div>
+      <!-- Add more items as needed -->
+    </div>
+
+    <div class="panel quests">
+      <h3>Quest Log</h3>
+      <ul>
+        <li>Find the lost sword</li>
+        <li>Defeat 10 goblins</li>
+        <li>Collect 5 herbs</li>
+      </ul>
+    </div>
+
+    <div class="panel skills">
+      <div class="skill">🔥</div>
+      <div class="skill">💧</div>
+      <div class="skill">⚡</div>
+      <div class="skill">🌀</div>
+    </div>
+  </div>
+
+</body>
+</html>
