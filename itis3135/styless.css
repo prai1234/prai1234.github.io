@@ -1,5 +1,5 @@
 /* General Reset */
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,12 +20,12 @@ header {
     padding: 20px;
 }
 
-header h1 {
+h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
 }
 
-header p {
+p {
     font-style: italic;
 }
 
