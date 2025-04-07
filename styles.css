@@ -1,63 +1,68 @@
 body {
-    background-color: skyblue;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    background-color: skyblue; /* Set background color */
+    font-family: Arial, sans-serif; /* Set font for the page */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
+/* Header styles */
 header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
+    background-color: #333; /* Dark background for header */
+    color: white; /* White text color */
+    padding: 20px; /* Space inside header */
+    text-align: center; /* Center text in header */
 }
 
-h1 {
-    margin: 0;
+header h1 {
+    margin: 0; /* Remove margin from h1 */
 }
 
+/* Main content styles */
 main {
-    padding: 20px;
-    text-align: center;
+    padding: 20px; /* Add space around content */
+    text-align: center; /* Center text in main */
 }
 
 .name {
-    font-style: italic;
+    font-style: italic; /* Italicize the name */
 }
 
+/* Footer styles */
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    background-color: #333; /* Dark background for footer */
+    color: white; /* White text color */
+    text-align: center; /* Center text in footer */
+    padding: 10px; /* Space inside footer */
+    position: fixed; /* Keep footer at the bottom */
+    width: 100%; /* Full width */
+    bottom: 0; /* Align footer at the bottom */
 }
 
 footer nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
+    color: white; /* White text for links */
+    text-decoration: none; /* Remove underline from links */
+    margin: 0 10px; /* Add space between links */
 }
 
 footer nav a:hover {
-    color: yellow;
+    color: yellow; /* Change color on hover */
 }
 
+/* List styles for the links */
 ul {
-    padding-left: 0;
-    margin-left: 0;
-    list-style-type: disc;
-    text-align: center;
+    padding-left: 0; /* Remove default padding */
+    margin-left: 0; /* Remove default margin */
+    list-style-type: disc; /* Use bullet points */
+    text-align: center; /* Center the list */
 }
 
 li {
-    display: inline-block;
-    padding-left: 20px;
-    text-align: left;
+    display: inline-block; /* Make list items inline */
+    padding-left: 20px; /* Space between list items */
+    text-align: left; /* Align text to the left inside list items */
 }
 
+/* Additional styling for links */
 a {
     color: inherit; /* Removes the default blue color */
     text-decoration: none; /* Removes the default underline */
@@ -68,20 +73,17 @@ a:visited {
 }
 
 a:hover {
-    color: black;
-    background-color: yellow;
-    text-decoration: none; /* Ensure no underline on hover */
+    color: black; /* Text color changes to black on hover */
+    background-color: yellow; /* Background changes to yellow */
+    text-decoration: none; /* No underline on hover */
 }
 
 a:active {
     color: inherit; /* Keep the same color when clicked */
 }
 
+/* Paragraph styles */
 p {
-    color: black;
-    text-align: center;
-}
-
-footer {
-    text-align: center;
+    color: black; /* Text color for paragraphs */
+    text-align: center; /* Center text for paragraphs */
 }
