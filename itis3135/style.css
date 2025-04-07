@@ -2,21 +2,25 @@ body {
   background-color: skyblue;
   text-align: center;
 }
-img{
+
+img {
   border: 2px solid;
-  padding-bottom:0%;
+  padding-bottom: 0%;
 }
+
 ul {
   padding-left: 0; /* Removes default padding */
   margin-left: 0; /* Removes default margin */
+  list-style-type: disc; /* Adds dots for the list items */
 }
 
 li {
   padding-left: 20px; /* Adds consistent padding for alignment */
   text-indent: -20px; /* Offsets the text to align with the list */
 }
+
 .name {
-   font-style: italic;
+  font-style: italic;
 }
 
 /* Default link styling */
@@ -45,6 +49,7 @@ a:active {
 /* Ensure other text remains black */
 p {
   color: black;
+  text-align: left; /* Align text to the left */
 }
 
 /* Ensure nav text is dark green */
