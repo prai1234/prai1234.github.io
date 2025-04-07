@@ -15,14 +15,16 @@ ul {
   padding-left: 0; /* Removes default padding */
   margin-left: 0; /* Removes default margin */
   list-style-type: disc; /* Adds dots for the list items */
+  
   text-align: center; /* Centers the entire list */
   display: inline-block; /* Keeps the list in center */
+  text-align: left; /* Aligns the list items to the left */
 }
 
 /* List item styling */
 li {
   display: list-item; /* Ensures list items are treated as block elements */
-  text-align: left; /* Aligns the list items to the left */
+  text-align: center;
   padding-left: 20px; /* Adds consistent padding for alignment */
 }
 
