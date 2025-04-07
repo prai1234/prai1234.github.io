@@ -1,13 +1,16 @@
+/* General Body styling */
 body {
   background-color: skyblue;
   text-align: center; /* Centers the whole body content */
 }
 
+/* Image styling */
 img {
   border: 2px solid;
   padding-bottom: 0%;
 }
 
+/* List styling */
 ul {
   padding-left: 0; /* Removes default padding */
   margin-left: 0; /* Removes default margin */
@@ -16,12 +19,14 @@ ul {
   display: inline-block; /* Keeps the list in center */
 }
 
+/* List item styling */
 li {
   display: list-item; /* Ensures list items are treated as block elements */
   text-align: left; /* Aligns the list items to the left */
   padding-left: 20px; /* Adds consistent padding for alignment */
 }
 
+/* Name styling */
 .name {
   font-style: italic;
   text-align: center; /* Centers the name text */
@@ -40,8 +45,8 @@ a:visited {
 
 /* Hover styling */
 a:hover {
-  color: black; /* Text color changes to gold on hover */
-  background-color: yellow; /* Background changes to light pink on hover */
+  color: black; /* Text color changes to black on hover */
+  background-color: yellow; /* Background changes to yellow on hover */
   text-decoration: none; /* Ensure no underline on hover */
 }
 
@@ -50,18 +55,24 @@ a:active {
   color: darkblue; /* Keep the same color as default */
 }
 
-/* Ensure other text remains black */
+/* General paragraph styling */
 p {
   color: black;
-  text-align: left; /* Align text to the left for regular paragraphs */
+  text-align: center; /* Centers the text for all paragraphs by default */
 }
 
-/* Ensure nav text is dark blue */
+/* Styling for paragraphs with class "sum" */
+p.sum {
+  text-align: left; /* Aligns the text to the left */
+  padding-left: 20px; /* Optional: adds padding for better alignment */
+}
+
+/* Nav text styling */
 nav {
   color: darkblue;
 }
 
-/* Ensure h1 text is bold and black */
+/* Header (h1) styling */
 h1 {
   font-weight: bold;
   color: black;
@@ -69,8 +80,6 @@ h1 {
 
 /* Footer styling */
 footer {
-  text-align: center; /* Centers the footer text */
-  padding: 20px; /* Adds some space around the footer */
-  background-color: lightgray; /* Optional: adds a background color */
+  text-align: center;
 }
 
