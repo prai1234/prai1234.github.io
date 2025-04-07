@@ -12,12 +12,14 @@ ul {
   padding-left: 0; /* Removes default padding */
   margin-left: 0; /* Removes default margin */
   list-style-type: disc; /* Adds dots for the list items */
-  text-align: left; /* Aligns the list to the left */
+  text-align: center; /* Centers the entire list */
+  display: inline-block; /* Keeps the list in center */
 }
 
 li {
+  display: list-item; /* Ensures list items are treated as block elements */
+  text-align: left; /* Aligns the list items to the left */
   padding-left: 20px; /* Adds consistent padding for alignment */
-  text-indent: -20px; /* Offsets the text to align with the list */
 }
 
 .name {
@@ -64,3 +66,11 @@ h1 {
   font-weight: bold;
   color: black;
 }
+
+/* Footer styling */
+footer {
+  text-align: center; /* Centers the footer text */
+  padding: 20px; /* Adds some space around the footer */
+  background-color: lightgray; /* Optional: adds a background color */
+}
+
