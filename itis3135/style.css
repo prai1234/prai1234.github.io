@@ -1,6 +1,6 @@
 body {
   background-color: skyblue;
-  text-align: center;
+  text-align: center; /* Centers the whole body content */
 }
 
 img {
@@ -12,6 +12,7 @@ ul {
   padding-left: 0; /* Removes default padding */
   margin-left: 0; /* Removes default margin */
   list-style-type: disc; /* Adds dots for the list items */
+  text-align: left; /* Aligns the list to the left */
 }
 
 li {
@@ -21,6 +22,7 @@ li {
 
 .name {
   font-style: italic;
+  text-align: center; /* Centers the name text */
 }
 
 /* Default link styling */
@@ -49,10 +51,10 @@ a:active {
 /* Ensure other text remains black */
 p {
   color: black;
-  text-align: left; /* Align text to the left */
+  text-align: left; /* Align text to the left for regular paragraphs */
 }
 
-/* Ensure nav text is dark green */
+/* Ensure nav text is dark blue */
 nav {
   color: darkblue;
 }
@@ -62,4 +64,3 @@ h1 {
   font-weight: bold;
   color: black;
 }
-
