@@ -59,28 +59,29 @@ li {
 }
 
 a {
-    color: darkblue;
-    text-decoration: none;
+    color: inherit; /* Removes the default blue color */
+    text-decoration: none; /* Removes the default underline */
 }
 
 a:visited {
-    color: darkblue;
+    color: inherit; /* Keep the same color as the default */
 }
 
 a:hover {
     color: black;
     background-color: yellow;
-    text-decoration: none;
+    text-decoration: none; /* Ensure no underline on hover */
 }
 
 a:active {
-    color: darkblue;
+    color: inherit; /* Keep the same color when clicked */
 }
 
 p {
     color: black;
     text-align: center;
 }
+
 footer {
     text-align: center;
 }
