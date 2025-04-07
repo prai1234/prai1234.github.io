@@ -1,87 +1,71 @@
 body {
-    background-color: skyblue; /* Set background color */
-    font-family: Arial, sans-serif; /* Set font for the page */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    background-color: skyblue;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
-
-/* Header styles */
 header {
-    background-color: #333; /* Dark background for header */
-    color: white; /* White text color */
-    padding: 20px; /* Space inside header */
-    text-align: center; /* Center text in header */
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
-
 h1 {
-    margin: 0; /* Remove margin from h1 */
+    margin: 0;
 }
-
-/* Main content styles */
 main {
-    padding: 20px; /* Add space around content */
-    text-align: center; /* Center text in main */
+    padding: 20px;
+    text-align: center;
 }
-
 .name {
-    font-style: italic; /* Italicize the name */
+    font-style: italic;
 }
-
-/* Footer styles */
 footer {
-    background-color: #333; /* Dark background for footer */
-    color: white; /* White text color */
-    text-align: center; /* Center text in footer */
-    width: 100%; /* Full width */
-    bottom: 0; /* Align footer at the bottom */
+    background-color: #333;
+    color: white;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
-
 footer nav a {
-    color: white; /* White text for links */
-    text-decoration: none; /* Remove underline from links */
-    margin: 0 10px; /* Add space between links */
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
 }
-
 footer nav a:hover {
-    color: yellow; /* Change color on hover */
+    color: yellow;
 }
-
-/* List styles for the links */
 ul {
-    padding-left: 0; /* Remove default padding */
-    margin-left: 0; /* Remove default margin */
-    list-style-type: disc; /* Use bullet points */
-    text-align: center; /* Center the list */
+    padding-left: 0;
+    margin-left: 0;
+    list-style-type: disc;
+    text-align: center;
 }
-
 li {
-    display: inline-block; /* Make list items inline */
-    padding-left: 20px; /* Space between list items */
-    text-align: left; /* Align text to the left inside list items */
+    display: inline-block;
+    padding-left: 20px;
+    text-align: left;
 }
-
-/* Additional styling for links */
 a {
     color: inherit; /* Removes the default blue color */
     text-decoration: none; /* Removes the default underline */
 }
-
 a:visited {
     color: inherit; /* Keep the same color as the default */
 }
-
 a:hover {
-    color: black; /* Text color changes to black on hover */
-    background-color: yellow; /* Background changes to yellow */
-    text-decoration: none; /* No underline on hover */
+    color: black;
+    background-color: yellow;
+    text-decoration: none; /* Ensure no underline on hover */
 }
-
 a:active {
     color: inherit; /* Keep the same color when clicked */
 }
-
-/* Paragraph styles */
 p {
-    color: black; /* Text color for paragraphs */
-    text-align: center; /* Center text for paragraphs */
+    color: black;
+    text-align: center;
+}
+footer {
+    text-align: center;
 }
