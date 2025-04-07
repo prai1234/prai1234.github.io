@@ -61,7 +61,7 @@ p {
   text-align: center; 
 }
 
-p.sum {
+.sum {
   text-align: left; /* Aligns the text to the left */
 }
 
