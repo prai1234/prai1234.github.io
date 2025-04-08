@@ -1,113 +1,87 @@
-/* Body */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #2b2d3c;
-    color: #f1f1f1;
-    line-height: 1.6;
+    background-color: skyblue;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
-/* Header */
+
 header {
-    background-color: #4c4d63;
-    text-align: center;
+    background-color: #333;
+    color: white;
     padding: 20px;
+    text-align: center;
 }
+
 h1 {
-    font-size: 2.5rem; /* Changed from em to rem for better scalability */
-    margin-bottom: 10px;
+    margin: 0;
 }
-p {
-    font-style: italic;
-    font-size: 1.1rem; /* Adjust font size for better readability */
-}
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-nav ul li {
-    margin: 0 15px;
-}
-nav ul li a {
-    color: #f1f1f1;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: color 0.3s ease; /* Added transition for smooth hover effect */
-}
-nav ul li a:hover {
-    color: #ffb3b3;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Added box shadow for hover effect */
-}
-/* Main Content */
+
 main {
-    padding: 40px 20px;
+    padding: 20px;
     text-align: center;
 }
-h2 {
-    font-size: 2.5rem; /* Increased font size for better prominence */
-    margin-bottom: 20px;
-    color: #ffb3b3;
+
+.name {
+    font-style: italic;
 }
-ul {
-    list-style-type: none;
-    margin-top: 20px;
-    padding-left: 0;
-}
-ul li {
-    font-size: 1.2rem;
-    margin: 10px 0;
-}
-/* Footer */
+
 footer {
-    background-color: #4c4d63;
+    background-color: #333;
+    color: white;
     text-align: center;
-    padding: 30px 20px; /* Increased padding for a more spacious footer */
-    margin-top: 40px;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
-footer p {
-    font-size: 1rem;
-    color: #f1f1f1;
+
+footer nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
 }
-/* Media Queries for Different Devices */
-/* Mobile devices (up to 600px) */
-@media screen and (max-width: 600px) {
-    body {
-        font-size: 14px; /* Adjust font size for smaller screens */
-    }
-    h1 {
-        font-size: 1.8rem; /* Adjust font size for mobile */
-    }
-    h2 {
-        font-size: 2rem; /* Adjust font size for mobile */
-    }
-    ul li {
-        font-size: 1rem; /* Adjust list item font size for smaller screens */
-    }
+
+footer nav a:hover {
+    color: yellow;
 }
-/* Tablet devices (601px to 980px) */
-@media screen and (min-width: 601px) and (max-width: 980px) {
-    body {
-        font-size: 16px; /* Slightly larger font for tablet devices */
-    }
-    h1 {
-        font-size: 2rem; /* Adjust font size for tablets */
-    }
-    h2 {
-        font-size: 2.2rem; /* Adjust font size for tablets */
-    }
+
+ul {
+    padding-left: 0;
+    margin-left: 0;
+    list-style-type: disc;
+    text-align: center;
 }
-/* Desktop devices (981px and above) */
-@media screen and (min-width: 981px) {
-    body {
-        font-size: 18px; /* Larger font size for desktops */
-    }
-    h1 {
-        font-size: 2.5rem; /* Default size for desktop */
-    }
-    h2 {
-        font-size: 2.5rem; /* Default size for desktop */
-    }
+
+li {
+    display: inline-block;
+    padding-left: 20px;
+    text-align: left;
+}
+
+a {
+    color: inherit; /* Removes the default blue color */
+    text-decoration: none; /* Removes the default underline */
+}
+
+a:visited {
+    color: inherit; /* Keep the same color as the default */
+}
+
+a:hover {
+    color: black;
+    background-color: yellow;
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+a:active {
+    color: inherit; /* Keep the same color when clicked */
+}
+
+p {
+    color: black;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
 }
