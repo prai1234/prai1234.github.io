@@ -32,7 +32,9 @@ footer {
     text-align: center;
     padding: 30px 20px; /* Increased padding for a more spacious footer */
     margin-top: 40px;
+    position: fixed;
     color: white;
+    bottom: 0;
 }
 footer p {
     font-size: 1rem;
