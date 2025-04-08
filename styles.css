@@ -1,71 +1,91 @@
+{
+    box-sizing: border-box;
+}
+
 body {
     background-color: skyblue;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
+
 header {
     background-color: #333;
     color: white;
     padding: 20px;
     text-align: center;
 }
+
 h1 {
     margin: 0;
 }
+
 main {
     padding: 20px;
     text-align: center;
 }
+
 .name {
     font-style: italic;
 }
+
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
     position: fixed;
+    width: 100%;
     bottom: 0;
 }
+
 footer nav a {
     color: white;
     text-decoration: none;
     margin: 0 10px;
 }
+
 footer nav a:hover {
     color: yellow;
 }
+
 ul {
     padding-left: 0;
     margin-left: 0;
     list-style-type: disc;
     text-align: center;
 }
+
 li {
     display: inline-block;
     padding-left: 20px;
     text-align: left;
 }
+
 a {
-    color: inherit; /* Removes the default blue color */
-    text-decoration: none; /* Removes the default underline */
+    color: inherit;
+    text-decoration: none;
 }
+
 a:visited {
-    color: inherit; /* Keep the same color as the default */
+    color: inherit;
 }
+
 a:hover {
     color: black;
     background-color: yellow;
-    text-decoration: none; /* Ensure no underline on hover */
+    text-decoration: none;
 }
+
 a:active {
-    color: inherit; /* Keep the same color when clicked */
+    color: inherit;
 }
+
 p {
     color: black;
     text-align: center;
 }
+
 footer {
     text-align: center;
 }
