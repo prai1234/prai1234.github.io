@@ -1,6 +1,6 @@
-/* Reset all styles to ensure consistency */
-* {
-    box-sizing: border-box; /* Ensures padding and border are included in width/height */
+/* Apply box-sizing to html, body, and all elements */
+html, body, * {
+    box-sizing: border-box;
 }
 
 body {
@@ -19,6 +19,7 @@ header {
 
 h1 {
     margin: 0;
+    font-size: 32px; /* Default font size for desktop */
 }
 
 main {
@@ -29,7 +30,6 @@ main {
     margin: 0 auto; /* Centers the content horizontally */
 }
 
-/* Styling for .name class */
 .name {
     font-style: italic;
 }
@@ -41,7 +41,7 @@ footer {
     padding: 10px;
     position: fixed;
     bottom: 0;
-    width: 100%; /* Ensure footer spans the full width */
+    width: 100%;
 }
 
 footer nav a {
@@ -96,44 +96,38 @@ p {
 /* Mobile devices (up to 600px) */
 @media screen and (max-width: 600px) {
     main {
-        width: 95%; /* Adjust width for mobile devices */
+        width: 95%;
     }
-
     footer {
-        font-size: 12px; /* Smaller font for mobile */
+        font-size: 12px;
     }
-
     h1 {
-        font-size: 24px; /* Adjust font size for mobile */
+        font-size: 24px;
     }
 }
 
 /* Tablet devices (601px to 980px) */
 @media screen and (min-width: 601px) and (max-width: 980px) {
     main {
-        width: 95%; /* Adjust width for tablet devices */
+        width: 95%;
     }
-
     footer {
-        font-size: 14px; /* Adjust font size for tablet */
+        font-size: 14px;
     }
-
     h1 {
-        font-size: 28px; /* Adjust font size for tablet */
+        font-size: 28px;
     }
 }
 
 /* Desktop devices (981px and above) */
 @media screen and (min-width: 981px) {
     main {
-        width: 80%; /* Adjust width for larger screens */
+        width: 80%;
     }
-
     footer {
-        font-size: 16px; /* Larger font size for desktops */
+        font-size: 16px;
     }
-
     h1 {
-        font-size: 32px; /* Larger font size for desktops */
+        font-size: 32px;
     }
 }
