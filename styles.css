@@ -34,16 +34,16 @@ main {
 
 footer {
     background-color: #333;
-    color: white;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%; /* Ensure footer spans the full width */
-    bottom: 0;
-}
-
-footer nav a {
+    padding: 30px 20px; /* Increased padding for a more spacious footer */
+    margin-top: 40px;
     color: white;
+}
+footer p {
+    font-size: 1rem;
+    color: #f1f1f1;
+}
+footer nav a {
     text-decoration: none;
     margin: 0 10px;
 }
