@@ -1,3 +1,13 @@
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2b2d3c; /* Set page background color */
+    color: #f1f1f1;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
 /* Main Content */
 main {
     padding: 40px 20px;
@@ -24,10 +34,66 @@ ul li {
 ul li a {
     text-decoration: none; /* Ensure no underline for list links */
     color: #f1f1f1; /* Set the text color */
-    transition: color 0.3s ease; /* Add smooth hover effect */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Add smooth transition for background color */
+    padding: 5px 10px; /* Optional: Add padding to make the background color visible */
 }
 
 ul li a:hover {
     color: #ffb3b3; /* Change color on hover */
+    background-color: #333; /* Add background color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add box shadow for hover effect */
+}
+
+/* Header */
+header {
+    background-color: #4c4d63;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem; /* Changed from em to rem for better scalability */
+    margin-bottom: 10px;
+}
+
+p {
+    font-style: italic;
+    font-size: 1.1rem; /* Adjust font size for better readability */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #f1f1f1;
+    text-decoration: none; /* Ensures no underline */
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease; /* Added transition for smooth hover effect */
+}
+
+nav ul li a:hover {
+    color: #ffb3b3;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Added box shadow for hover effect */
+}
+
+/* Footer */
+footer {
+    background-color: #4c4d63;
+    text-align: center;
+    padding: 30px 20px; /* Increased padding for a more spacious footer */
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #f1f1f1;
 }
