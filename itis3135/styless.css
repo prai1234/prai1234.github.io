@@ -38,7 +38,7 @@ nav ul li {
 
 nav ul li a {
     color: #f1f1f1;
-    text-decoration: none;
+    text-decoration: none; /* Ensures no underline */
     font-weight: bold;
     text-transform: uppercase;
     transition: color 0.3s ease; /* Added transition for smooth hover effect */
@@ -85,46 +85,3 @@ footer p {
     color: #f1f1f1;
 }
 
-/* Media Queries for Different Devices */
-
-/* Mobile devices (up to 600px) */
-@media screen and (max-width: 600px) {
-    body {
-        font-size: 14px; /* Adjust font size for smaller screens */
-    }
-    h1 {
-        font-size: 1.8rem; /* Adjust font size for mobile */
-    }
-    h2 {
-        font-size: 2rem; /* Adjust font size for mobile */
-    }
-    ul li {
-        font-size: 1rem; /* Adjust list item font size for smaller screens */
-    }
-}
-
-/* Tablet devices (601px to 980px) */
-@media screen and (min-width: 601px) and (max-width: 980px) {
-    body {
-        font-size: 16px; /* Slightly larger font for tablet devices */
-    }
-    h1 {
-        font-size: 2rem; /* Adjust font size for tablets */
-    }
-    h2 {
-        font-size: 2.2rem; /* Adjust font size for tablets */
-    }
-}
-
-/* Desktop devices (981px and above) */
-@media screen and (min-width: 981px) {
-    body {
-        font-size: 18px; /* Larger font size for desktops */
-    }
-    h1 {
-        font-size: 2.5rem; /* Default size for desktop */
-    }
-    h2 {
-        font-size: 2.5rem; /* Default size for desktop */
-    }
-}
