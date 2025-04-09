@@ -10,6 +10,20 @@ img {
   padding-bottom: 0%;
 }
 
+/* List styling (For Unordered List) */
+ul {
+  padding-left: 0; /* Removes default padding */
+  margin-left: 0; /* Removes default margin */
+  list-style-type: disc; /* Adds dots for the list items */
+  text-align: center; /* Centers the entire list */
+  display: inline-block; /* Keeps the list in center */
+  text-align: left; /* Aligns the list items to the left */
+  border: 2px solid #ddd; /* Adds a border around the unordered list */
+  border-radius: 8px; /* Adds rounded corners */
+  padding: 10px;
+  background-color: #f9f9f9; /* Light background color */
+}
+
 /* List styling (For Ordered List) */
 ol {
   padding-left: 0; /* Removes default padding */
