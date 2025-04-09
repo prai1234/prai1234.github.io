@@ -10,14 +10,18 @@ img {
   padding-bottom: 0%;
 }
 
-/* List styling */
-ul {
+/* List styling (For Ordered List) */
+ol {
   padding-left: 0; /* Removes default padding */
   margin-left: 0; /* Removes default margin */
-  list-style-type: disc; /* Adds dots for the list items */
+  list-style-type: decimal; /* Adds numbers for the ordered list */
   text-align: center; /* Centers the entire list */
   display: inline-block; /* Keeps the list in center */
-  text-align: center; /* Aligns the list items to the left */
+  text-align: left; /* Aligns the list items to the left */
+  border: 2px solid #ddd; /* Adds a border around the ordered list */
+  border-radius: 8px; /* Adds rounded corners */
+  padding: 10px;
+  background-color: #f9f9f9; /* Light background color */
 }
 
 /* List item styling */
@@ -25,6 +29,8 @@ li {
   display: list-item; /* Ensures list items are treated as block elements */
   text-align: left;
   padding-left: 20px; /* Adds consistent padding for alignment */
+  padding-bottom: 5px; /* Adds space between list items */
+  margin-bottom: 5px; /* Adds space between list items */
 }
 
 /* Name styling */
@@ -104,13 +110,6 @@ footer {
     footer {
         font-size: 12px;
     }
-}
-
-/* Box-Sizing to fix width and padding issues */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
 }
 
 /* Table styling */
