@@ -108,14 +108,16 @@ footer {
 
 /* Table styling */
 table {
-    width: 100%;
-    border-collapse: collapse;
+    width: 80%; /* Adjusted table width to center it */
+    margin: 20px auto; /* Centers the table */
+    border-collapse: collapse; /* Collapses the borders */
+    border: 2px solid black; /* Adds a black border around the entire table */
 }
 
 th, td {
     padding: 8px;
     text-align: left;
-    border: 1px solid #ddd;
+    border: 1px solid #ddd; /* Adds borders to cells */
 }
 
 th {
