@@ -1,7 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
     background-color: skyblue;
     font-family: Arial, sans-serif;
@@ -21,11 +17,12 @@ h1 {
 }
 
 main {
+    box-sizing: border-box; /* Fixes warning for width + padding */
     padding: 20px;
     text-align: center;
-    max-width: 1200px; /* Max-width added for larger screens */
-    width: 90%; /* Percentage width for responsiveness */
-    margin: 0 auto; /* Centers the content */
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .name {
@@ -33,6 +30,7 @@ main {
 }
 
 footer {
+    box-sizing: border-box; /* Fixes warning for width + padding */
     background-color: #333;
     color: white;
     text-align: center;
@@ -71,7 +69,7 @@ a {
 }
 
 a:visited {
-    color: inherit; /* Keep the same color as the default */
+    color: inherit;
 }
 
 a:hover {
@@ -94,21 +92,21 @@ p {
 /* For tablets */
 @media screen and (min-width: 601px) and (max-width: 980px) {
     main {
-        width: 95%; /* Adjust the width for tablet screens */
+        width: 95%;
     }
 
     footer {
-        font-size: 14px; /* Smaller font size for tablets */
+        font-size: 14px;
     }
 }
 
 /* For mobile devices */
 @media screen and (min-width: 370px) and (max-width: 600px) {
     main {
-        width: 100%; /* Full width on small screens */
+        width: 100%;
     }
 
     footer {
-        font-size: 12px; /* Even smaller font for mobile */
+        font-size: 12px;
     }
 }
