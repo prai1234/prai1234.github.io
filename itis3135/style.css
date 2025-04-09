@@ -81,6 +81,7 @@ h1 {
 footer {
   text-align: center;
 }
+
 /* MEDIA QUERIES */
 
 /* For tablets */
@@ -103,4 +104,52 @@ footer {
     footer {
         font-size: 12px;
     }
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Alternate row colors */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Header row styling */
+th {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* Style for the complex table */
+figure {
+    margin: 20px 0;
+}
+
+/* Styling for the table captions */
+figcaption {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Adding space around content */
+main {
+    padding: 20px;
 }
