@@ -106,6 +106,13 @@ footer {
     }
 }
 
+/* Box-Sizing to fix width and padding issues */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 /* Table styling */
 table {
     width: 80%; /* Adjusted table width to center it */
