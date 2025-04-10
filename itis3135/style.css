@@ -2,12 +2,12 @@
 body {
   background-color: skyblue;
   text-align: center;
-  box-sizing: border-box; /* Ensures padding and borders are included in width/height calculations */
+  box-sizing: border-box;
 }
 
 /* Apply box-sizing to all elements to ensure padding and border are included in the width/height */
 html, body, table, th, td {
-  box-sizing: border-box; /* This includes borders and padding in the element's width and height */
+  box-sizing: border-box;
 }
 
 /* Image styling */
@@ -25,17 +25,19 @@ ul, ol {
   display: inline-block;
 }
 
-/* Center the ordered list and add some padding */
-ol {
-  margin: 20px auto;
-  padding: 0 20px;
-}
-
-/* List item styling */
 li {
   display: list-item;
   text-align: left;
   padding-left: 20px;
+}
+
+/* Center the list and add spacing */
+.center-list {
+  display: inline-block;
+  text-align: left;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;  /* Space before footer */
 }
 
 /* Default link styling */
@@ -48,21 +50,18 @@ a {
 a:hover {
   color: black;
   background-color: yellow;
-  text-decoration: none;
 }
 
-/* Active link styling (when clicked) */
 a:active {
   color: darkblue;
 }
 
 /* Table Styling */
 table {
-  width: 80%; /* Table width */
-  margin: 20px auto; /* Centers the table */
-  box-sizing: border-box;
+  width: 80%;
+  margin: 20px auto;
   border-collapse: collapse;
-  border: 2px solid #333; /* Border around the table */
+  border: 2px solid #333;
 }
 
 th, td {
@@ -100,8 +99,7 @@ td[rowspan] {
 }
 
 /* MEDIA QUERIES */
-/* For tablets */
-@media screen and (min-width: 601px) and (max-width: 980px) {
+@media screen and (max-width: 980px) {
   main {
     width: 95%;
   }
@@ -112,7 +110,7 @@ td[rowspan] {
 }
 
 /* For mobile devices */
-@media screen and (min-width: 370px) and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   main {
     width: 100%;
   }
