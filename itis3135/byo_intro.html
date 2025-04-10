@@ -24,26 +24,74 @@
 
     <!-- Main Content -->
     <main>
-        <h2>Create Your Own Intro Page</h2>
+        <h2>BYO Intro Page</h2>
         <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
         
+        <!-- Form Section -->
         <form id="introForm" onsubmit="return validateForm()">
-            <!-- Form Fields (as before) -->
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" value="Prahlad Rai" required><br>
 
             <label for="mascot">Mascot:</label>
             <input type="text" id="mascot" name="mascot" value="Black Cat" required><br>
 
-            <!-- Add other form fields here -->
-            
+            <label for="image">Image (PNG or JPG):</label>
+            <input type="file" id="image" name="image" accept="image/png, image/jpg, image/jpeg" required><br>
+
+            <label for="imageCaption">Image Caption:</label>
+            <input type="text" id="imageCaption" name="imageCaption" value="A black cat" required><br>
+
+            <label for="personalBackground">Personal Background:</label>
+            <input type="text" id="personalBackground" name="personalBackground" required><br>
+
+            <label for="professionalBackground">Professional Background:</label>
+            <input type="text" id="professionalBackground" name="professionalBackground" required><br>
+
+            <label for="academicBackground">Academic Background:</label>
+            <input type="text" id="academicBackground" name="academicBackground" required><br>
+
+            <label for="webDevelopmentBackground">Background in Web Development:</label>
+            <input type="text" id="webDevelopmentBackground" name="webDevelopmentBackground" required><br>
+
+            <label for="primaryComputerPlatform">Primary Computer Platform:</label>
+            <input type="text" id="primaryComputerPlatform" name="primaryComputerPlatform" required><br>
+
+            <label for="courses">Courses Currently Taking:</label>
+            <div id="courses">
+                <input type="text" name="courses"><br>
+                <button type="button" onclick="addCourseField()">Add another course</button>
+            </div>
+
+            <label for="funnyThing">Funny Thing?</label>
+            <input type="text" id="funnyThing" name="funnyThing"><br>
+
+            <label for="anythingElse">Anything else?</label>
+            <input type="text" id="anythingElse" name="anythingElse"><br>
+
+            <label>
+                <input type="checkbox" id="agree" name="agree" required>
+                I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.
+            </label><br>
+
             <input type="submit" value="Submit">
             <input type="reset" value="Reset">
         </form>
 
+        <!-- Result Section -->
         <div id="result" style="display: none;">
             <h3>Your Intro Page</h3>
-            <!-- Result Display here -->
+            <p><strong>Name:</strong> <span id="resultName"></span></p>
+            <p><strong>Mascot:</strong> <span id="resultMascot"></span></p>
+            <img id="resultImage" src="" alt="Image" style="width:200px;">
+            <p><strong>Image Caption:</strong> <span id="resultImageCaption"></span></p>
+            <p><strong>Personal Background:</strong> <span id="resultPersonalBackground"></span></p>
+            <p><strong>Professional Background:</strong> <span id="resultProfessionalBackground"></span></p>
+            <p><strong>Academic Background:</strong> <span id="resultAcademicBackground"></span></p>
+            <p><strong>Web Development Background:</strong> <span id="resultWebDevelopmentBackground"></span></p>
+            <p><strong>Primary Computer Platform:</strong> <span id="resultPrimaryComputerPlatform"></span></p>
+            <p><strong>Courses Currently Taking:</strong> <span id="resultCourses"></span></p>
+            <p><strong>Funny Thing:</strong> <span id="resultFunnyThing"></span></p>
+            <p><strong>Anything else?</strong> <span id="resultAnythingElse"></span></p>
             <button onclick="resetForm()">Reset</button>
         </div>
     </main>
@@ -67,18 +115,7 @@
             Page Built by <a href="https://www.freecodecamp.org/certification/Prai2/responsive-web-design">Prahlad Rai</a> &copy; 2025,
             <em><a href="https://www.freecodecamp.org/certification/Prai2/responsive-web-design">Certified in Responsive Web Design</a></em>.
         </p>
-        <p>
-            <a href="https://jigsaw.w3.org/css-validator/check/referer">
-                <img style="border:0;width:88px;height:31px"
-                     src="https://jigsaw.w3.org/css-validator/images/vcss"
-                     alt="Valid CSS!" />
-            </a>
-            <a href="https://jigsaw.w3.org/css-validator/check/referer">
-                <img style="border:0;width:88px;height:31px"
-                     src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
-                     alt="Valid CSS!" />
-            </a>
-        </p>
     </footer>
 </body>
 </html>
+
