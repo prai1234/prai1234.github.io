@@ -2,6 +2,14 @@
 body {
   background-color: skyblue;
   text-align: center; /* Centers the whole body content */
+  box-sizing: border-box; /* Ensures padding and borders are included in the width and height calculations */
+}
+
+/* Apply box-sizing to all elements to avoid broken box model issues */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Prevents borders and padding from breaking the layout */
 }
 
 /* Image styling */
@@ -11,19 +19,25 @@ img {
 }
 
 /* List styling */
-ul {
-  padding-left: 0;
-  margin-left: 0;
-  list-style-type: disc;
-  text-align: center;
-  display: inline-block;
+ul, ol {
+  padding-left: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+  list-style-type: decimal; /* Adds numbers for ordered list */
+  text-align: left; /* Aligns the list items to the left */
+  display: inline-block; /* Keeps the list centered */
+}
+
+/* Center the ordered list and add some padding */
+ol {
+  margin: 20px auto; /* Centers the list horizontally and adds margin around */
+  padding: 0 20px; /* Adds some space around the list */
 }
 
 /* List item styling */
 li {
   display: list-item;
   text-align: left;
-  padding-left: 20px;
+  padding-left: 20px; /* Adds consistent padding for alignment */
 }
 
 /* Name styling */
@@ -123,25 +137,24 @@ td[rowspan] {
 }
 
 /* MEDIA QUERIES */
-
 /* For tablets */
 @media screen and (min-width: 601px) and (max-width: 980px) {
-    main {
-        width: 95%;
-    }
+  main {
+    width: 95%;
+  }
 
-    footer {
-        font-size: 14px;
-    }
+  footer {
+    font-size: 14px;
+  }
 }
 
 /* For mobile devices */
 @media screen and (min-width: 370px) and (max-width: 600px) {
-    main {
-        width: 100%;
-    }
+  main {
+    width: 100%;
+  }
 
-    footer {
-        font-size: 12px;
-    }
+  footer {
+    font-size: 12px;
+  }
 }
