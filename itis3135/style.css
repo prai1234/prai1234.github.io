@@ -1,14 +1,96 @@
-/* General Table Styling */
+/* General Body styling */
+body {
+  background-color: skyblue;
+  text-align: center; /* Centers the whole body content */
+}
+
+/* Image styling */
+img {
+  border: 2px solid;
+  padding-bottom: 0%;
+}
+
+/* List styling */
+ul {
+  padding-left: 0;
+  margin-left: 0;
+  list-style-type: disc;
+  text-align: center;
+  display: inline-block;
+}
+
+/* List item styling */
+li {
+  display: list-item;
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* Name styling */
+.name {
+  font-style: italic;
+  text-align: center;
+}
+
+/* Default link styling */
+a {
+  color: darkblue;
+  text-decoration: none;
+}
+
+/* Visited link styling */
+a:visited {
+  color: darkblue;
+}
+
+/* Hover styling */
+a:hover {
+  color: black;
+  background-color: yellow;
+  text-decoration: none;
+}
+
+/* Active link styling (when clicked) */
+a:active {
+  color: darkblue;
+}
+
+/* General paragraph styling */
+p {
+  color: black;
+  text-align: center;
+}
+
+.sum {
+  text-align: left;
+}
+
+nav {
+  color: darkblue;
+}
+
+/* Header (h1) styling */
+h1 {
+  font-weight: bold;
+  color: black;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+}
+
+/* Table Styling */
 table {
-  width: 80%; /* Adjusted width for better centering */
-  margin: 20px auto; /* Centers the table on the page */
+  width: 80%;
+  margin: 20px auto;
   border-collapse: collapse;
-  border: 2px solid #333; /* Adds border around the table */
+  border: 2px solid #333;
 }
 
 th, td {
   padding: 10px;
-  border: 1px solid #ddd; /* Adds border for each cell */
+  border: 1px solid #ddd;
   text-align: left;
 }
 
@@ -18,11 +100,11 @@ thead {
 }
 
 tbody tr:nth-child(even) {
-  background-color: #f2f2f2; /* Light gray for even rows */
+  background-color: #f2f2f2;
 }
 
 tbody tr:nth-child(odd) {
-  background-color: #ffffff; /* White for odd rows */
+  background-color: #ffffff;
 }
 
 figure {
@@ -35,7 +117,31 @@ figcaption {
   margin-bottom: 10px;
 }
 
-/* Rowspan for table */
+/* Row Span Styling */
 td[rowspan] {
-  background-color: #e6e6e6; /* Light background for rows with rowspan */
+  background-color: #e6e6e6;
+}
+
+/* MEDIA QUERIES */
+
+/* For tablets */
+@media screen and (min-width: 601px) and (max-width: 980px) {
+    main {
+        width: 95%;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+/* For mobile devices */
+@media screen and (min-width: 370px) and (max-width: 600px) {
+    main {
+        width: 100%;
+    }
+
+    footer {
+        font-size: 12px;
+    }
 }
