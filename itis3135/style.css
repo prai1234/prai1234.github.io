@@ -1,13 +1,13 @@
 /* General Body styling */
 body {
   background-color: skyblue;
-  text-align: center; /* Centers the whole body content */
-  box-sizing: border-box; /* Ensures padding and borders are included in the width and height calculations */
+  text-align: center;
+  box-sizing: border-box; /* Ensures padding and borders are included in width/height calculations */
 }
 
-/* Apply box-sizing to the elements that require it */
+/* Apply box-sizing to all elements to ensure padding and border are included in the width/height */
 html, body, table, th, td {
-  box-sizing: border-box; /* Ensures padding and borders are included in the width and height calculations */
+  box-sizing: border-box; /* This includes borders and padding in the element's width and height */
 }
 
 /* Image styling */
@@ -20,39 +20,28 @@ img {
 ul, ol {
   padding-left: 0;
   margin: 0;
-  list-style-type: decimal; /* Adds numbers for ordered list */
-  text-align: left; /* Aligns the list items to the left */
-  display: inline-block; /* Keeps the list centered */
+  list-style-type: decimal;
+  text-align: left;
+  display: inline-block;
 }
 
 /* Center the ordered list and add some padding */
 ol {
-  margin: 20px auto; /* Centers the list horizontally and adds margin around */
-  padding: 0 20px; /* Adds some space around the list */
+  margin: 20px auto;
+  padding: 0 20px;
 }
 
 /* List item styling */
 li {
   display: list-item;
   text-align: left;
-  padding-left: 20px; /* Adds consistent padding for alignment */
-}
-
-/* Name styling */
-.name {
-  font-style: italic;
-  text-align: center;
+  padding-left: 20px;
 }
 
 /* Default link styling */
 a {
   color: darkblue;
   text-decoration: none;
-}
-
-/* Visited link styling */
-a:visited {
-  color: darkblue;
 }
 
 /* Hover styling */
@@ -67,37 +56,12 @@ a:active {
   color: darkblue;
 }
 
-/* General paragraph styling */
-p {
-  color: black;
-  text-align: center;
-}
-
-.sum {
-  text-align: left;
-}
-
-nav {
-  color: darkblue;
-}
-
-/* Header (h1) styling */
-h1 {
-  font-weight: bold;
-  color: black;
-}
-
-/* Footer styling */
-footer {
-  text-align: center;
-}
-
 /* Table Styling */
 table {
-  width: 80%;
-  margin: 20px auto;
+  width: 80%; /* Table width */
+  margin: 20px auto; /* Centers the table */
   border-collapse: collapse;
-  border: 2px solid #333;
+  border: 2px solid #333; /* Border around the table */
 }
 
 th, td {
