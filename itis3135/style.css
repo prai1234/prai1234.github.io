@@ -5,11 +5,9 @@ body {
   box-sizing: border-box; /* Ensures padding and borders are included in the width and height calculations */
 }
 
-/* Apply box-sizing to all elements to avoid broken box model issues */
-*,
-*::before,
-*::after {
-  box-sizing: border-box; /* Prevents borders and padding from breaking the layout */
+/* Apply box-sizing to the elements that require it */
+html, body, table, th, td {
+  box-sizing: border-box; /* Ensures padding and borders are included in the width and height calculations */
 }
 
 /* Image styling */
@@ -20,8 +18,8 @@ img {
 
 /* List styling */
 ul, ol {
-  padding-left: 0; /* Removes default padding */
-  margin: 0; /* Removes default margin */
+  padding-left: 0;
+  margin: 0;
   list-style-type: decimal; /* Adds numbers for ordered list */
   text-align: left; /* Aligns the list items to the left */
   display: inline-block; /* Keeps the list centered */
