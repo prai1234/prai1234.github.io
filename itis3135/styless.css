@@ -104,6 +104,7 @@ table {
     margin: 0 auto; /* Center align table */
     border-collapse: collapse; /* Collapse borders */
     border: 2px solid #333; /* Add border with color */
+    border: 2px solid white;
 }
 
 table th, table td {
@@ -120,7 +121,7 @@ ol {
     text-align: center; /* Center align the list */
 }
 
-ol li {
+li {
     display: inline-block; /* Display list items inline */
     margin: 0 10px; /* Adjust margin between items */
 }
