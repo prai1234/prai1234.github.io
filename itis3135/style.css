@@ -1,177 +1,41 @@
-/* General Body styling */
-body {
-  background-color: skyblue;
-  text-align: center; /* Centers the whole body content */
-}
-
-/* Image styling */
-img {
-  border: 2px solid;
-  padding-bottom: 0%;
-}
-
-/* List styling (For Unordered List) */
-ul {
-  padding-left: 0; /* Removes default padding */
-  margin-left: 0; /* Removes default margin */
-  list-style-type: disc; /* Adds dots for the list items */
-  text-align: center; /* Centers the entire list */
-  display: inline-block; /* Keeps the list in center */
-  text-align: left; /* Aligns the list items to the left */
-  border: 2px solid #ddd; /* Adds a border around the unordered list */
-  border-radius: 8px; /* Adds rounded corners */
-  padding: 10px;
-  background-color: #f9f9f9; /* Light background color */
-}
-
-/* List styling (For Ordered List) */
-ol {
-  padding-left: 0; /* Removes default padding */
-  margin-left: 0; /* Removes default margin */
-  list-style-type: decimal; /* Adds numbers for the ordered list */
-  text-align: center; /* Centers the entire list */
-  display: inline-block; /* Keeps the list in center */
-  text-align: left; /* Aligns the list items to the left */
-  border: 2px solid #ddd; /* Adds a border around the ordered list */
-  border-radius: 8px; /* Adds rounded corners */
-  padding: 10px;
-  background-color: #f9f9f9; /* Light background color */
-}
-
-/* List item styling */
-li {
-  display: list-item; /* Ensures list items are treated as block elements */
-  text-align: left;
-  padding-left: 20px; /* Adds consistent padding for alignment */
-  padding-bottom: 5px; /* Adds space between list items */
-  margin-bottom: 5px; /* Adds space between list items */
-}
-
-/* Name styling */
-.name {
-  font-style: italic;
-  text-align: center; /* Centers the name text */
-}
-
-/* Default link styling */
-a {
-  color: darkblue;
-  text-decoration: none;
-}
-
-/* Visited link styling */
-a:visited {
-  color: darkblue; /* Keep the same color as default */
-}
-
-/* Hover styling */
-a:hover {
-  color: black; /* Text color changes to black on hover */
-  background-color: yellow; /* Background changes to yellow on hover */
-  text-decoration: none; /* Ensure no underline on hover */
-}
-
-/* Active link styling (when clicked) */
-a:active {
-  color: darkblue; /* Keep the same color as default */
-}
-
-/* General paragraph styling */
-p {
-  color: black;
-  text-align: center; 
-}
-
-.sum {
-  text-align: left; /* Aligns the text to the left */
-}
-
-/* Nav text styling */
-nav {
-  color: darkblue;
-}
-
-/* Header (h1) styling */
-h1 {
-  font-weight: bold;
-  color: black;
-}
-
-/* Footer styling */
-footer {
-  text-align: center;
-}
-
-/* MEDIA QUERIES */
-
-/* For tablets */
-@media screen and (min-width: 601px) and (max-width: 980px) {
-    main {
-        width: 95%;
-    }
-
-    footer {
-        font-size: 14px;
-    }
-}
-
-/* For mobile devices */
-@media screen and (min-width: 370px) and (max-width: 600px) {
-    main {
-        width: 100%;
-    }
-
-    footer {
-        font-size: 12px;
-    }
-}
-
-/* Table styling */
+/* General Table Styling */
 table {
-    width: 80%; /* Adjusted table width to center it */
-    margin: 20px auto; /* Centers the table */
-    border-collapse: collapse; /* Collapses the borders */
-    border: 2px solid black; /* Adds a black border around the entire table */
+  width: 80%; /* Adjusted width for better centering */
+  margin: 20px auto; /* Centers the table on the page */
+  border-collapse: collapse;
+  border: 2px solid #333; /* Adds border around the table */
 }
 
 th, td {
-    padding: 8px;
-    text-align: left;
-    border: 1px solid #ddd; /* Adds borders to cells */
+  padding: 10px;
+  border: 1px solid #ddd; /* Adds border for each cell */
+  text-align: left;
 }
 
-th {
-    background-color: #f2f2f2;
+thead {
+  background-color: #333;
+  color: white;
 }
 
-/* Alternate row colors */
-tr:nth-child(even) {
-    background-color: #f9f9f9;
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Light gray for even rows */
 }
 
-tr:nth-child(odd) {
-    background-color: #ffffff;
+tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* White for odd rows */
 }
 
-/* Header row styling */
-th {
-    background-color: #6c757d;
-    color: white;
-}
-
-/* Style for the complex table */
 figure {
-    margin: 20px 0;
+  margin: 20px 0;
+  text-align: center;
 }
 
-/* Styling for the table captions */
 figcaption {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-/* Adding space around content */
-main {
-    padding: 20px;
+/* Rowspan for table */
+td[rowspan] {
+  background-color: #e6e6e6; /* Light background for rows with rowspan */
 }
