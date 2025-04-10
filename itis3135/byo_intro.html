@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prahlad B Rai's Black Cat || ITIS 3135 - Tables</title>
+    <title>BYO Intro</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script src="survey.js"></script>
 </head>
 <body>
-    <header> 
+    <!-- Header -->
+    <header>
         <h1>Prahlad B Rai's Black Cat || ITIS 3135</h1>
         <nav>
             <a href="https://webpages.charlotte.edu/prai2/itis3135/">Home</a> ||
@@ -21,134 +22,33 @@
         </nav>
     </header>
 
+    <!-- Main Content -->
     <main>
-        <h2>Tables</h2>
-        <!-- Ordered List of People -->
-        <h3>My Tabular Data</h3>
-        <ol>
-            <li>D.I. von Briesen - dvonbri1@uncc.edu - 1</li>
-            <li>Esam Abdullah - eabdullah@gmail.com - 31</li>
-            <li>Medina Gomez - gomez_med8@yahoo.com - 3</li>
-            <li>James Smith - jsmith@company.com - 15</li>
-            <li>Linda Clark - lclark@enterprise.com - 10</li>
-            <li>Mary Johnson - mjohnson@webmail.com - 8</li>
-            <li>Tom Harris - tharris@corporation.org - 25</li>
-        </ol>
+        <h2>Create Your Own Intro Page</h2>
+        <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+        
+        <form id="introForm" onsubmit="return validateForm()">
+            <!-- Form Fields (as before) -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="Prahlad Rai" required><br>
 
-        <!-- Basic Table -->
-        <h3>Employee Data in Simple Table</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Years of Service</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>D.I. von Briesen</td>
-                    <td>dvonbri1@uncc.edu</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td>Esam Abdullah</td>
-                    <td>eabdullah@gmail.com</td>
-                    <td>31</td>
-                </tr>
-                <tr>
-                    <td>Medina Gomez</td>
-                    <td>gomez_med8@yahoo.com</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>James Smith</td>
-                    <td>jsmith@company.com</td>
-                    <td>15</td>
-                </tr>
-                <tr>
-                    <td>Linda Clark</td>
-                    <td>lclark@enterprise.com</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>Mary Johnson</td>
-                    <td>mjohnson@webmail.com</td>
-                    <td>8</td>
-                </tr>
-                <tr>
-                    <td>Tom Harris</td>
-                    <td>tharris@corporation.org</td>
-                    <td>25</td>
-                </tr>
-            </tbody>
-        </table>
+            <label for="mascot">Mascot:</label>
+            <input type="text" id="mascot" name="mascot" value="Black Cat" required><br>
 
-        <!-- Complex Table -->
-        <h3>Employee Data in Complex Table</h3>
-        <figure>
-            <figcaption>Employee Information</figcaption>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Category</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Salary</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td rowspan="3">Bosses</td>
-                        <td>D.I. von Briesen</td>
-                        <td>dvonbri1@uncc.edu</td>
-                        <td>$1,000,000.01</td>
-                    </tr>
-                    <tr>
-                        <td>Esam Abdullah</td>
-                        <td>eabdullah@gmail.com</td>
-                        <td>$25,000</td>
-                    </tr>
-                    <tr>
-                        <td>Medina Gomez</td>
-                        <td>gomez_med8@yahoo.com</td>
-                        <td>$55,000</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="2">Minions</td>
-                        <td>James Smith</td>
-                        <td>jsmith@company.com</td>
-                        <td>$45,000</td>
-                    </tr>
-                    <tr>
-                        <td>Linda Clark</td>
-                        <td>lclark@enterprise.com</td>
-                        <td>$50,000</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="2">Sub Minions</td>
-                        <td>Mary Johnson</td>
-                        <td>mjohnson@webmail.com</td>
-                        <td>$35,000</td>
-                    </tr>
-                    <tr>
-                        <td>Tom Harris</td>
-                        <td>tharris@corporation.org</td>
-                        <td>$40,000</td>
-                    </tr>
-                    <tr>
-                        <th colspan="3">Total Years of Service</th>
-                        <td>93</td>
-                    </tr>
-                    <tr>
-                        <th colspan="3">Total Salary</th>
-                        <td>$1,300,000.01</td>
-                    </tr>
-                </tbody>
-            </table>
-        </figure>
+            <!-- Add other form fields here -->
+            
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+
+        <div id="result" style="display: none;">
+            <h3>Your Intro Page</h3>
+            <!-- Result Display here -->
+            <button onclick="resetForm()">Reset</button>
+        </div>
     </main>
 
+    <!-- Footer -->
     <footer>
         <nav>
             <a href="https://webpages.charlotte.edu/prai2/">Charlotte.edu</a>
