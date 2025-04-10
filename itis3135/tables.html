@@ -22,73 +22,147 @@
     </header>
 
     <main>
-        <h2>HTML Tables Assignment</h2>
-        
-       <h2>HTML Tables</h2>
-        
+        <h2>HTML Tables - Activity</h2>
+        <p>Hello, you've made it to the Tables page for ITIS 3135.</p>
+
+        <!-- Ordered List of People -->
         <h3>My Tabular Data</h3>
         <ol>
-            <li>John Smith - jsmith@company.com - 5 years</li>
-            <li>Sarah Johnson - sjohnson@company.com - 3 years</li>
-            <li>Michael Brown - mbrown@company.com - 7 years</li>
-            <li>Emily Davis - edavis@company.com - 2 years</li>
-            <li>David Wilson - dwilson@company.com - 10 years</li>
-            <li>Jennifer Miller - jmiller@company.com - 4 years</li>
-            <li>Robert Taylor - rtaylor@company.com - 1 year</li>
+            <li>D.I. von Briesen - dvonbri1@uncc.edu - 1</li>
+            <li>Esam Abdullah - eabdullah@gmail.com - 31</li>
+            <li>Medina Gomez - gomez_med8@yahoo.com - 3</li>
+            <li>James Smith - jsmith@company.com - 15</li>
+            <li>Linda Clark - lclark@enterprise.com - 10</li>
+            <li>Mary Johnson - mjohnson@webmail.com - 8</li>
+            <li>Tom Harris - tharris@corporation.org - 25</li>
         </ol>
-        
+
+        <!-- Basic Table -->
         <h3>Employee Data in Simple Table</h3>
         <table>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Years of Service</th>
-            </tr>
-            <tr>
-                <td>John Smith</td>
-                <td>jsmith@company.com</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>Sarah Johnson</td>
-                <td>sjohnson@company.com</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td>Michael Brown</td>
-                <td>mbrown@company.com</td>
-                <td>7</td>
-            </tr>
-            <tr>
-                <td>Emily Davis</td>
-                <td>edavis@company.com</td>
-                <td>2</td>
-            </tr>
-            <tr>
-                <td>David Wilson</td>
-                <td>dwilson@company.com</td>
-                <td>10</td>
-            </tr>
-            <tr>
-                <td>Jennifer Miller</td>
-                <td>jmiller@company.com</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <td>Robert Taylor</td>
-                <td>rtaylor@company.com</td>
-                <td>1</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Years of Service</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>D.I. von Briesen</td>
+                    <td>dvonbri1@uncc.edu</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Esam Abdullah</td>
+                    <td>eabdullah@gmail.com</td>
+                    <td>31</td>
+                </tr>
+                <tr>
+                    <td>Medina Gomez</td>
+                    <td>gomez_med8@yahoo.com</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>James Smith</td>
+                    <td>jsmith@company.com</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>Linda Clark</td>
+                    <td>lclark@enterprise.com</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Mary Johnson</td>
+                    <td>mjohnson@webmail.com</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>Tom Harris</td>
+                    <td>tharris@corporation.org</td>
+                    <td>25</td>
+                </tr>
+            </tbody>
         </table>
+
+        <!-- Complex Table -->
+        <h3>Employee Data in Complex Table</h3>
+        <figure>
+            <figcaption>Employee Information</figcaption>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="3">Bosses</td>
+                        <td>D.I. von Briesen</td>
+                        <td>dvonbri1@uncc.edu</td>
+                        <td>$1,000,000.01</td>
+                    </tr>
+                    <tr>
+                        <td>Esam Abdullah</td>
+                        <td>eabdullah@gmail.com</td>
+                        <td>$25,000</td>
+                    </tr>
+                    <tr>
+                        <td>Medina Gomez</td>
+                        <td>gomez_med8@yahoo.com</td>
+                        <td>$55,000</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Minions</td>
+                        <td>James Smith</td>
+                        <td>jsmith@company.com</td>
+                        <td>$45,000</td>
+                    </tr>
+                    <tr>
+                        <td>Linda Clark</td>
+                        <td>lclark@enterprise.com</td>
+                        <td>$50,000</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Sub Minions</td>
+                        <td>Mary Johnson</td>
+                        <td>mjohnson@webmail.com</td>
+                        <td>$35,000</td>
+                    </tr>
+                    <tr>
+                        <td>Tom Harris</td>
+                        <td>tharris@corporation.org</td>
+                        <td>$40,000</td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Total Years of Service</th>
+                        <td>93</td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Total Salary</th>
+                        <td>$1,300,000.01</td>
+                    </tr>
+                </tbody>
+            </table>
+        </figure>
     </main>
 
     <footer>
         <nav>
-            <a href="https://webpages.charlotte.edu/prai2/">Charlotte.edu</a> ||
-            <a href="https://prai1234.github.io/index.html">GitHub Pages</a> ||
-            <a href="https://prai1234.github.io/itis3135/index.html">Github Course Page</a> ||
-            <a href="https://www.freecodecamp.org/Prai2">FreeCodeCamp</a> ||
-            <a href="https://www.codecademy.com/profiles/cloud6214266955">CodeAcadamy</a> ||
+            <a href="https://webpages.charlotte.edu/prai2/">Charlotte.edu</a>
+            ||
+            <a href="https://prai1234.github.io/index.html">GitHub Pages</a>
+            ||
+            <a href="https://prai1234.github.io/itis3135/index.html">Github Course Page</a>
+            ||
+            <a href="https://www.freecodecamp.org/Prai2">FreeCodeCamp</a>
+            ||
+            <a href="https://www.codecademy.com/profiles/cloud6214266955">CodeAcadamy</a>
+            ||
             <a href="https://www.linkedin.com/in/prahlad-rai-b82b84323/">Linkedin</a>
         </nav>
         <p>
@@ -101,7 +175,13 @@
                      src="https://jigsaw.w3.org/css-validator/images/vcss"
                      alt="Valid CSS!" />
             </a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                     src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+                     alt="Valid CSS!" />
+            </a>
         </p>
     </footer>
 </body>
 </html>
+
