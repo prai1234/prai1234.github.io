@@ -19,6 +19,9 @@ h2 {
     margin-bottom: 20px;
     color: #ffb3b3;
 }
+h3 {
+    background-color:#4CAF50;
+}
 
 /* Ordered List (OL) Styling */
 ol {
@@ -112,7 +115,6 @@ th, td {
     padding: 10px;
     text-align: left;
     border: 1px solid #ddd;
-    color: black; /* Set the text color to black */
 }
 
 th {
@@ -143,6 +145,7 @@ figure {
 figcaption {
     font-weight: bold;
     margin-bottom: 10px;
+    color: black; /* Ensure text inside <figcaption> is black */
 }
 
 /* Footer */
