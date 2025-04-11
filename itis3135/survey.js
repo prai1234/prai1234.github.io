@@ -1,37 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Function declarations
-    function showResults() {
-        const form = document.getElementById('introForm');
-        const resultDiv = document.getElementById('result');
-        
-        document.getElementById('resultName').textContent = document.getElementById('name').value;
-        document.getElementById('resultMascot').textContent = document.getElementById('mascot').value;
-        
-        const imageFile = document.getElementById('image').files[0];
-        if (imageFile) {
-            document.getElementById('resultImage').src = URL.createObjectURL(imageFile);
-        }
-        
-        document.getElementById('resultImageCaption').textContent = document.getElementById('imageCaption').value;
-        document.getElementById('resultPersonalBackground').textContent = document.getElementById('personalBackground').value;
-        document.getElementById('resultProfessionalBackground').textContent = document.getElementById('professionalBackground').value;
-        document.getElementById('resultAcademicBackground').textContent = document.getElementById('academicBackground').value;
-        document.getElementById('resultWebDevelopmentBackground').textContent = document.getElementById('webDevelopmentBackground').value;
-        document.getElementById('resultPrimaryComputerPlatform').textContent = document.getElementById('primaryComputerPlatform').value;
-        
-        const courseInputs = document.querySelectorAll('input[name="courses"]');
-        const courses = Array.from(courseInputs).map(function(input) {
-            return input.value.trim();
-        }).filter(Boolean);
-        document.getElementById('resultCourses').textContent = courses.join(', ');
-        
-        document.getElementById('resultFunnyThing').textContent = document.getElementById('funnyThing').value;
-        document.getElementById('resultAnythingElse').textContent = document.getElementById('anythingElse').value;
-        
-        form.style.display = 'none';
-        resultDiv.style.display = 'block';
-    }
+    // Variables
+    let courseCount = 1;
+    const introForm = document.getElementById('introForm');
+    const addCourseBtn = document.getElementById('addCourseBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const resultDiv = document.getElementById('result');
 
+    // Functions
     function addCourseField() {
         courseCount++;
         const coursesDiv = document.getElementById('courses');
@@ -57,7 +32,36 @@ document.addEventListener('DOMContentLoaded', function() {
         newCourseDiv.appendChild(newInput);
         newCourseDiv.appendChild(deleteButton);
         
-        coursesDiv.insertBefore(newCourseDiv, document.getElementById('addCourseBtn'));
+        coursesDiv.insertBefore(newCourseDiv, addCourseBtn);
+    }
+
+    function showResults() {
+        document.getElementById('resultName').textContent = document.getElementById('name').value;
+        document.getElementById('resultMascot').textContent = document.getElementById('mascot').value;
+        
+        const imageFile = document.getElementById('image').files[0];
+        if (imageFile) {
+            document.getElementById('resultImage').src = URL.createObjectURL(imageFile);
+        }
+        
+        document.getElementById('resultImageCaption').textContent = document.getElementById('imageCaption').value;
+        document.getElementById('resultPersonalBackground').textContent = document.getElementById('personalBackground').value;
+        document.getElementById('resultProfessionalBackground').textContent = document.getElementById('professionalBackground').value;
+        document.getElementById('resultAcademicBackground').textContent = document.getElementById('academicBackground').value;
+        document.getElementById('resultWebDevelopmentBackground').textContent = document.getElementById('webDevelopmentBackground').value;
+        document.getElementById('resultPrimaryComputerPlatform').textContent = document.getElementById('primaryComputerPlatform').value;
+        
+        const courseInputs = document.querySelectorAll('input[name="courses"]');
+        const courses = Array.from(courseInputs).map(function(input) {
+            return input.value.trim();
+        }).filter(Boolean);
+        document.getElementById('resultCourses').textContent = courses.join(', ');
+        
+        document.getElementById('resultFunnyThing').textContent = document.getElementById('funnyThing').value;
+        document.getElementById('resultAnythingElse').textContent = document.getElementById('anythingElse').value;
+        
+        introForm.style.display = 'none';
+        resultDiv.style.display = 'block';
     }
 
     function handleSubmit(event) {
@@ -79,9 +83,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function resetForm() {
-        document.getElementById('introForm').reset();
-        document.getElementById('result').style.display = 'none';
-        document.getElementById('introForm').style.display = 'block';
+        introForm.reset();
+        resultDiv.style.display = 'none';
+        introForm.style.display = 'block';
         courseCount = 1;
         
         const coursesDiv = document.getElementById('courses');
@@ -90,13 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Variable declarations
-    let courseCount = 1;
-    const introForm = document.getElementById('introForm');
-    const addCourseBtn = document.getElementById('addCourseBtn');
-    const resetBtn = document.getElementById('resetBtn');
-
-    // Event listeners
+    // Event Listeners
     addCourseBtn.addEventListener('click', addCourseField);
     resetBtn.addEventListener('click', resetForm);
     introForm.addEventListener('submit', handleSubmit);
