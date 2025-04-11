@@ -1,38 +1,8 @@
 // Initialize course counter
 let courseCount = 1;
 
-// Function to add a new course field
-function addCourseField() {
-    courseCount++;
-    const coursesDiv = document.getElementById('courses');
-    const newCourseDiv = document.createElement('div');
-    const newLabel = document.createElement('label');
-    const newInput = document.createElement('input');
-    const deleteButton = document.createElement('button');
-
-    newLabel.htmlFor = `course${courseCount}`;
-    newLabel.textContent = `Course ${courseCount}`;
-    
-    newInput.type = 'text';
-    newInput.name = 'courses';
-    newInput.id = `course${courseCount}`;
-    
-    deleteButton.type = 'button';
-    deleteButton.textContent = 'Delete';
-    deleteButton.onclick = function() {
-        coursesDiv.removeChild(newCourseDiv);
-    };
-
-    newCourseDiv.appendChild(newLabel);
-    newCourseDiv.appendChild(newInput);
-    newCourseDiv.appendChild(deleteButton);
-    
-    // Insert before the "Add another course" button
-    coursesDiv.insertBefore(newCourseDiv, coursesDiv.lastElementChild);
-}
-
 // Function to show results
-function showResults() {
+const showResults = () => {
     const form = document.getElementById('introForm');
     const resultDiv = document.getElementById('result');
     
@@ -63,10 +33,40 @@ function showResults() {
     // Show results and hide form
     form.style.display = 'none';
     resultDiv.style.display = 'block';
-}
+};
+
+// Function to add a new course field
+const addCourseField = () => {
+    courseCount++;
+    const coursesDiv = document.getElementById('courses');
+    const newCourseDiv = document.createElement('div');
+    const newLabel = document.createElement('label');
+    const newInput = document.createElement('input');
+    const deleteButton = document.createElement('button');
+
+    newLabel.htmlFor = `course${courseCount}`;
+    newLabel.textContent = `Course ${courseCount}`;
+    
+    newInput.type = 'text';
+    newInput.name = 'courses';
+    newInput.id = `course${courseCount}`;
+    
+    deleteButton.type = 'button';
+    deleteButton.textContent = 'Delete';
+    deleteButton.onclick = function() {
+        coursesDiv.removeChild(newCourseDiv);
+    };
+
+    newCourseDiv.appendChild(newLabel);
+    newCourseDiv.appendChild(newInput);
+    newCourseDiv.appendChild(deleteButton);
+    
+    // Insert before the "Add another course" button
+    coursesDiv.insertBefore(newCourseDiv, coursesDiv.lastElementChild);
+};
 
 // Function to validate form
-function validateForm(event) {
+const validateForm = (event) => {
     event.preventDefault();
     
     const name = document.getElementById('name').value;
@@ -83,15 +83,17 @@ function validateForm(event) {
     
     showResults();
     return false;
-}
+};
 
 // Function to reset form
-function resetForm() {
+const resetForm = () => {
     document.getElementById('introForm').reset();
     document.getElementById('result').style.display = 'none';
     document.getElementById('introForm').style.display = 'block';
     courseCount = 1;
-}
+};
 
-// Add form submit event listener
-document.getElementById('introForm').addEventListener('submit', validateForm);
+// Add event listeners when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('introForm').addEventListener('submit', validateForm);
+});
