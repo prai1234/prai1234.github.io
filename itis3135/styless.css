@@ -116,7 +116,7 @@ th, td {
 
 th {
     background-color: #4CAF50;
-    color: white;
+    color: black;
 }
 
 tbody tr:nth-child(even) {
