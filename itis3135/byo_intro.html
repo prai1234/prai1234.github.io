@@ -21,14 +21,14 @@
             <a href="https://webpages.charlotte.edu/prai2/itis3135/hobby/">Hobby</a> ||
             <a href="https://webpages.charlotte.edu/prai2/itis3135/design/">Design Firm Site</a>||
             <a href="https://webpages.charlotte.edu/prai2/itis3135/project/">Project</a>
-           
         </nav>
     </header>
+
     <!-- Main Content -->
     <main>
         <h2>BYO Intro Page</h2>
         <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
-        
+
         <!-- Form Section -->
         <form id="introForm" onsubmit="return validateForm()">
             <label for="name">Name:</label>
@@ -51,7 +51,7 @@
             <input type="text" id="primaryComputerPlatform" name="primaryComputerPlatform" required><br>
             <label for="courses">Courses Currently Taking:</label>
             <div id="courses">
-                <input type="text" name="courses"><br>
+                <input type="text" id="course1" name="courses"><br>
                 <button type="button" onclick="addCourseField()">Add another course</button>
             </div>
             <label for="funnyThing">Funny Thing?</label>
@@ -65,12 +65,13 @@
             <input type="submit" value="Submit">
             <input type="reset" value="Reset">
         </form>
+
         <!-- Result Section -->
         <div id="result" style="display: none;">
             <h3>Your Intro Page</h3>
             <p><strong>Name:</strong> <span id="resultName"></span></p>
             <p><strong>Mascot:</strong> <span id="resultMascot"></span></p>
-            <img id="resultImage" src="" alt="Image" style="width:200px;">
+            <img id="resultImage" src="default-image.jpg" alt="Image" style="width:200px;">
             <p><strong>Image Caption:</strong> <span id="resultImageCaption"></span></p>
             <p><strong>Personal Background:</strong> <span id="resultPersonalBackground"></span></p>
             <p><strong>Professional Background:</strong> <span id="resultProfessionalBackground"></span></p>
@@ -83,6 +84,7 @@
             <button onclick="resetForm()">Reset</button>
         </div>
     </main>
+
     <!-- Footer -->
     <footer>
         <nav>
