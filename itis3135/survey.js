@@ -4,28 +4,23 @@ function addCourseField() {
     const courseDiv = document.createElement('div');
     const courseInput = document.createElement('input');
     const courseId = 'course' + (courseCount + 1); // Generate unique ID for the new input
-
     courseInput.type = 'text';
     courseInput.name = 'courses';
-    courseInput.id = courseId; // Assign unique ID to each input
-
+    courseInput.id = courseId;
     const newLabel = document.createElement('label');
-    newLabel.setAttribute('for', courseId); // Match the 'for' with the newly created input ID
-    newLabel.textContent = 'Course ' + (courseCount + 1); // Label for the new input
-
+    newLabel.setAttribute('for', courseId);
+    newLabel.textContent = 'Course ' + (courseCount + 1);
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
     deleteButton.type = 'button';
     deleteButton.onclick = function() {
         courseDiv.remove();
     };
-
-    courseDiv.appendChild(newLabel); // Append the label
-    courseDiv.appendChild(courseInput); // Append the input field
-    courseDiv.appendChild(deleteButton); // Append the delete button
-    document.getElementById('courses').appendChild(courseDiv); // Add to the courses div
-
-    courseCount++; // Increment courseCount to ensure unique IDs for new inputs
+    courseDiv.appendChild(newLabel);
+    courseDiv.appendChild(courseInput);
+    courseDiv.appendChild(deleteButton);
+    document.getElementById('courses').appendChild(courseDiv);
+    courseCount++;
 }
 
 // Function to validate the form
@@ -37,14 +32,14 @@ function validateForm() {
         alert("Name is required!");
         return false;
     }
-
     if (!image) {
         alert("Please upload an image!");
         return false;
     }
-
-    // Add additional validation for other fields as needed
-    return true;
+    
+    // If validation passes, show results
+    showResults();
+    return false; // Prevent form submission for demo purposes
 }
 
 // Function to display the results and hide the form
@@ -67,7 +62,7 @@ function showResults() {
     const courseInputs = document.getElementsByName('courses');
     let courses = [];
     for (let input of courseInputs) {
-        if (input.value.trim()) {  // Only add non-empty course values
+        if (input.value.trim()) {
             courses.push(input.value);
         }
     }
@@ -75,7 +70,6 @@ function showResults() {
     
     document.getElementById('resultFunnyThing').textContent = document.getElementById('funnyThing').value;
     document.getElementById('resultAnythingElse').textContent = document.getElementById('anythingElse').value;
-
     form.style.display = 'none';
     resultDiv.style.display = 'block';
 }
@@ -85,4 +79,6 @@ function resetForm() {
     document.getElementById('introForm').reset();
     document.getElementById('result').style.display = 'none';
     document.getElementById('introForm').style.display = 'block';
+    // Reset course counter but keep the first course field
+    courseCount = 1;
 }
