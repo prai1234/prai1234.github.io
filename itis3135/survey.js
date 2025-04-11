@@ -1,13 +1,17 @@
 // Function to add a new course text box
+let courseCount = 1; // Variable to track the number of courses added
 function addCourseField() {
     const courseDiv = document.createElement('div');
     const courseInput = document.createElement('input');
-    const courseCount = document.getElementsByName('courses').length + 1; // Counting current courses
-    const inputId = 'course' + courseCount; // Generating unique ID
+    const courseId = 'course' + (courseCount + 1); // Generate unique ID for the new input
 
     courseInput.type = 'text';
     courseInput.name = 'courses';
-    courseInput.id = inputId; // Assign unique ID to each input
+    courseInput.id = courseId; // Assign unique ID to each input
+
+    const newLabel = document.createElement('label');
+    newLabel.setAttribute('for', courseId); // Match the 'for' with the newly created input ID
+    newLabel.textContent = 'Course ' + (courseCount + 1); // Label for the new input
 
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
@@ -16,13 +20,69 @@ function addCourseField() {
         courseDiv.remove();
     };
 
-    courseDiv.appendChild(courseInput);
-    courseDiv.appendChild(deleteButton);
-    document.getElementById('courses').appendChild(courseDiv);
+    courseDiv.appendChild(newLabel); // Append the label
+    courseDiv.appendChild(courseInput); // Append the input field
+    courseDiv.appendChild(deleteButton); // Append the delete button
+    document.getElementById('courses').appendChild(courseDiv); // Add to the courses div
 
-    // Updating the 'for' attribute of the label to point to the new input's ID
-    const newLabel = document.createElement('label');
-    newLabel.setAttribute('for', inputId); // Match the 'for' with the newly created input ID
-    newLabel.textContent = 'Course ' + courseCount;
-    document.getElementById('courses').appendChild(newLabel);
+    courseCount++; // Increment courseCount to ensure unique IDs for new inputs
+}
+
+// Function to validate the form
+function validateForm() {
+    const name = document.getElementById('name').value;
+    const image = document.getElementById('image').files[0];
+    
+    if (!name) {
+        alert("Name is required!");
+        return false;
+    }
+
+    if (!image) {
+        alert("Please upload an image!");
+        return false;
+    }
+
+    // Add additional validation for other fields as needed
+    return true;
+}
+
+// Function to display the results and hide the form
+function showResults() {
+    const form = document.getElementById('introForm');
+    const resultDiv = document.getElementById('result');
+    
+    // Gather data from form fields
+    document.getElementById('resultName').textContent = document.getElementById('name').value;
+    document.getElementById('resultMascot').textContent = document.getElementById('mascot').value;
+    document.getElementById('resultImage').src = URL.createObjectURL(document.getElementById('image').files[0]);
+    document.getElementById('resultImageCaption').textContent = document.getElementById('imageCaption').value;
+    document.getElementById('resultPersonalBackground').textContent = document.getElementById('personalBackground').value;
+    document.getElementById('resultProfessionalBackground').textContent = document.getElementById('professionalBackground').value;
+    document.getElementById('resultAcademicBackground').textContent = document.getElementById('academicBackground').value;
+    document.getElementById('resultWebDevelopmentBackground').textContent = document.getElementById('webDevelopmentBackground').value;
+    document.getElementById('resultPrimaryComputerPlatform').textContent = document.getElementById('primaryComputerPlatform').value;
+    
+    // Gather courses data
+    const courseInputs = document.getElementsByName('courses');
+    let courses = [];
+    for (let input of courseInputs) {
+        if (input.value.trim()) {  // Only add non-empty course values
+            courses.push(input.value);
+        }
+    }
+    document.getElementById('resultCourses').textContent = courses.join(', ');
+    
+    document.getElementById('resultFunnyThing').textContent = document.getElementById('funnyThing').value;
+    document.getElementById('resultAnythingElse').textContent = document.getElementById('anythingElse').value;
+
+    form.style.display = 'none';
+    resultDiv.style.display = 'block';
+}
+
+// Function to reset the form
+function resetForm() {
+    document.getElementById('introForm').reset();
+    document.getElementById('result').style.display = 'none';
+    document.getElementById('introForm').style.display = 'block';
 }
