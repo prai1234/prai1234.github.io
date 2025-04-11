@@ -116,8 +116,8 @@ th, td {
 }
 
 th {
-    background-color: #4c4d63; /* Set header background to green as intended */
-    color: black;
+    background-color: #4c4d63; /* Keep header background color green as you want */
+    color: black; /* Set the text color inside the header to black */
 }
 
 tbody tr:nth-child(even) {
@@ -166,3 +166,4 @@ th, td {
 td[headers] {
     font-weight: bold;
 }
+
