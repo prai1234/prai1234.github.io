@@ -7,59 +7,86 @@ body {
     margin: 0;
     padding: 0;
 }
+
 /* Main Content */
 main {
     padding: 40px 20px;
     text-align: center;
 }
+
 h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #ffb3b3;
 }
+
+/* Ordered List (OL) Styling */
+ol {
+    padding-left: 20px;  /* Indentation for the list */
+    margin: 20px auto;   /* Center the list and add vertical margin */
+    list-style-type: decimal;  /* Numbered list */
+    max-width: 600px;    /* Set a max width to keep it centered properly */
+    text-align: left;    /* Align the text within list items to the left */
+}
+
+ol li {
+    margin: 10px 0;  /* Add space between list items */
+}
+
+/* Unordered List (UL) Styling */
 ul {
     list-style-type: none;
     margin-top: 20px;
     padding-left: 0;
 }
+
 ul li {
     font-size: 1.2rem;
     margin: 10px 0;
 }
+
 ul li a {
     text-decoration: none; /* Ensure no underline for list links */
     color: #f1f1f1; /* Set the text color */
     transition: color 0.3s ease, background-color 0.3s ease; /* Add smooth transition for background color */
     padding: 5px 10px; /* Optional: Add padding to make the background color visible */
 }
+
 ul li a:hover {
     color: #ffb3b3; /* Change color on hover */
     background-color: #333; /* Add background color on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add box shadow for hover effect */
 }
+
 /* Header */
 header {
     background-color: #4c4d63;
     text-align: center;
     padding: 20px;
 }
+
 h1 {
     font-size: 2.5rem; /* Changed from em to rem for better scalability */
     margin-bottom: 10px;
 }
+
 p {
     font-style: italic;
     font-size: 1.1rem; /* Adjust font size for better readability */
 }
+
+/* Navigation */
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     margin: 20px 0;
 }
+
 nav ul li {
     margin: 0 15px;
 }
+
 nav ul li a {
     color: #f1f1f1;
     text-decoration: none; /* Ensures no underline */
@@ -67,10 +94,56 @@ nav ul li a {
     text-transform: uppercase;
     transition: color 0.3s ease; /* Added transition for smooth hover effect */
 }
+
 nav ul li a:hover {
     color: #ffb3b3;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Added box shadow for hover effect */
 }
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tfoot {
+    font-weight: bold;
+}
+
+/* Figure and Caption Styling for Complex Table */
+figure {
+    margin: 20px 0;
+    padding: 10px;
+    border: 2px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+figcaption {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
 /* Footer */
 footer {
     background-color: #4c4d63;
@@ -78,7 +151,17 @@ footer {
     padding: 30px 20px; /* Increased padding for a more spacious footer */
     margin-top: 40px;
 }
+
 footer p {
     font-size: 1rem;
     color: #f1f1f1;
+}
+
+/* Accessibility Improvements */
+th, td {
+    text-align: center;
+}
+
+td[headers] {
+    font-weight: bold;
 }
