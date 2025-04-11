@@ -18,10 +18,18 @@ function addCourseField() {
 // Function to validate the form
 function validateForm() {
     const name = document.getElementById('name').value;
+    const image = document.getElementById('image').files[0];
+
     if (!name) {
         alert("Name is required!");
         return false;
     }
+
+    if (!image) {
+        alert("Please upload an image!");
+        return false;
+    }
+
     // Add additional validation for other fields as needed
     return true;
 }
@@ -30,7 +38,7 @@ function validateForm() {
 function showResults() {
     const form = document.getElementById('introForm');
     const resultDiv = document.getElementById('result');
-
+    
     // Gather data from form fields
     document.getElementById('resultName').textContent = document.getElementById('name').value;
     document.getElementById('resultMascot').textContent = document.getElementById('mascot').value;
@@ -46,7 +54,7 @@ function showResults() {
     const courseInputs = document.getElementsByName('courses');
     let courses = [];
     for (let input of courseInputs) {
-        if (input.value) {
+        if (input.value.trim()) {  // Only add non-empty course values
             courses.push(input.value);
         }
     }
