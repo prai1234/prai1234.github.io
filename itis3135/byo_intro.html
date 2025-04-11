@@ -6,7 +6,7 @@
     <title>Prahlad B Rai's Black Cat || ITIS 3135 - Tables</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <script src="survey.js"></script>
+    <script src="survey.js" defer></script>
 </head>
 <body>
     <header> 
@@ -52,7 +52,7 @@
                     <label for="course1">Course 1</label>
                     <input type="text" name="courses" id="course1"><br>
                 </div>
-                <button type="button" onclick="addCourseField()">Add another course</button>
+                <button type="button" id="addCourseBtn">Add another course</button>
             </div>
             <label for="funnyThing">Funny Thing?</label>
             <input type="text" id="funnyThing" name="funnyThing"><br>
@@ -69,7 +69,7 @@
             <h3>Your Intro Page</h3>
             <p><strong>Name:</strong> <span id="resultName"></span></p>
             <p><strong>Mascot:</strong> <span id="resultMascot"></span></p>
-            <img id="resultImage" src="" alt="Uploaded Image" style="width:200px;">
+            <img id="resultImage" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Uploaded Image" style="width:200px;">
             <p><strong>Image Caption:</strong> <span id="resultImageCaption"></span></p>
             <p><strong>Personal Background:</strong> <span id="resultPersonalBackground"></span></p>
             <p><strong>Professional Background:</strong> <span id="resultProfessionalBackground"></span></p>
@@ -79,7 +79,7 @@
             <p><strong>Courses Currently Taking:</strong> <span id="resultCourses"></span></p>
             <p><strong>Funny Thing:</strong> <span id="resultFunnyThing"></span></p>
             <p><strong>Anything else?</strong> <span id="resultAnythingElse"></span></p>
-            <button onclick="resetForm()">Reset</button>
+            <button id="resetBtn">Reset</button>
         </div>
     </main>
     <footer>
