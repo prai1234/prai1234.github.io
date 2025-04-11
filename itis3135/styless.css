@@ -112,6 +112,7 @@ th, td {
     padding: 10px;
     text-align: left;
     border: 1px solid #ddd;
+    color: black; /* Set the text color to black */
 }
 
 th {
@@ -165,3 +166,4 @@ th, td {
 td[headers] {
     font-weight: bold;
 }
+
