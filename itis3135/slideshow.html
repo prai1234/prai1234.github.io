@@ -16,7 +16,9 @@
     <main>
         <h2>My Name Slideshow</h2>
         <div class="slideshow-container">
-
+            <!-- Previous arrow -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            
             <div class="mySlides fade"><img src="paper.jpg" alt="P - for Paper"><div class="text">P - for Paper (P from Prahlad)</div></div>
             <div class="mySlides fade"><img src="rice.jpg" alt="R - for Rice"><div class="text">R - for Rice (R from Prahlad)</div></div>
             <div class="mySlides fade"><img src="apple.jpg" alt="A - for Apple"><div class="text">A - for Apple (A from Prahlad)</div></div>
@@ -28,9 +30,10 @@
             <div class="mySlides fade"><img src="house.jpg" alt="R - for House"><div class="text">R - for House (R from Rai)</div></div>
             <div class="mySlides fade"><img src="angel.jpg" alt="A - for Angel"><div class="text">A - for Angel (A from Rai)</div></div>
             <div class="mySlides fade"><img src="ib.jpg" alt="I - for Ibuprofen"><div class="text">I - for Ibuprofen (I from Rai)</div></div>
-
+            
+            <!-- Next arrow -->
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-
         <br>
         <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
@@ -45,8 +48,7 @@
             <span class="dot" onclick="currentSlide(10)"></span>
             <span class="dot" onclick="currentSlide(11)"></span>
         </div>
-
-        <h3>Image Credits</h3>
+        <h3 class="image-credits">Image Credits</h3>
         <ul>
             <li>All photos were taken by me using my camera.</li>
         </ul>
