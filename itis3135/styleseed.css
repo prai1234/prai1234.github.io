@@ -1,12 +1,12 @@
-/* Fix layout box sizing */
-* {
+/* Use a more specific selector instead of universal selector */
+html, body, div, span, h1, h2, h3, p, a, img, ul, li, header, footer, main {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f7f7f7;
     color: #333;
 }
@@ -48,8 +48,9 @@ h2 {
     display: none;
 }
 
-img {
-    width: 100%;
+.mySlides img {
+    max-width: 100%;
+    height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
