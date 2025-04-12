@@ -10,6 +10,10 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
     color: #333;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;  /* Set base font size */
+    line-height: 1.5;
 }
 
 header, footer {
@@ -20,7 +24,7 @@ header, footer {
 }
 
 .main-heading {
-    font-size: 2.2rem;
+    font-size: 2rem; /* Adjust heading size for better fit */
     margin: 0;
 }
 
@@ -33,14 +37,15 @@ header, footer {
 main {
     padding: 30px 20px;
     text-align: center;
-    max-width: 100%; /* Adjust this to your preference */
+    max-width: 100%; /* Ensure it's responsive */
     margin: 0 auto;
 }
 
 /* Slideshow Styling */
 .slideshow-container {
     position: relative;
-    max-width: 800px;
+    width: 80%; /* Make slideshow container responsive */
+    max-width: 800px; /* Set max width to prevent it from becoming too large */
     margin: 20px auto;
 }
 
@@ -110,14 +115,38 @@ main {
 }
 
 /* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .main-heading {
+        font-size: 1.8rem;
+    }
+    .tagline {
+        font-size: 0.9rem;
+    }
+    .slideshow-container {
+        width: 90%; /* Ensure slideshow container scales down */
+    }
+}
+
 @media screen and (max-width: 768px) {
     .slideshow-container {
-        max-width: 100%;
+        width: 95%;
+    }
+    .main-heading {
+        font-size: 1.6rem;
+    }
+    .prev, .next {
+        font-size: 18px;
     }
 }
 
 @media screen and (max-width: 480px) {
+    .main-heading {
+        font-size: 1.4rem;
+    }
+    .slideshow-container {
+        width: 100%;
+    }
     .prev, .next {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
