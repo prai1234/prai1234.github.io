@@ -1,10 +1,15 @@
 $(document).ready(function() {
     let slideIndex = 1;
+    let slideInterval;
+    const slideDelay = 5000; // 5 seconds
     
-    // Define the function before using it
+    // Initialize the slideshow
+    showSlides(slideIndex);
+    startSlideShow();
+    
     function showSlides(n) {
-        let slides = $(".mySlides");
-        let dots = $(".dot");
+        const slides = $(".mySlides");
+        const dots = $(".dot");
         
         if (n > slides.length) {
             slideIndex = 1;
@@ -15,24 +20,39 @@ $(document).ready(function() {
         
         slides.hide();
         dots.removeClass("active");
-        slides.eq(slideIndex - 1).show();
+        slides.eq(slideIndex - 1).fadeIn(1000);
         dots.eq(slideIndex - 1).addClass("active");
     }
     
-    // Initialize the slideshow
-    showSlides(slideIndex);
+    function startSlideShow() {
+        slideInterval = setInterval(function() {
+            plusSlides(1);
+        }, slideDelay);
+    }
+    
+    function resetSlideTimer() {
+        clearInterval(slideInterval);
+        startSlideShow();
+    }
     
     // Set up the global functions
     window.plusSlides = function(n) {
         showSlides(slideIndex += n);
+        resetSlideTimer();
     };
     
     window.currentSlide = function(n) {
         showSlides(slideIndex = n);
+        resetSlideTimer();
     };
     
-    // Auto-advance slides
-    setInterval(function() {
-        plusSlides(1);
-    }, 5000);
+    // Pause on hover
+    $('.slideshow-container').hover(
+        function() {
+            clearInterval(slideInterval);
+        },
+        function() {
+            startSlideShow();
+        }
+    );
 });
