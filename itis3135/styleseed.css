@@ -67,6 +67,7 @@ h3 {
 .text {
     color: #fff;
     background-color: rgba(0, 0, 0, 0.7);
+    box-sizing: border-box
     padding: 10px;
     position: absolute;
     bottom: 10px;
