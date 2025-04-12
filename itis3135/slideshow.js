@@ -2,11 +2,8 @@ $(document).ready(function() {
     let slideIndex = 1;
     let slideInterval;
     const slideDelay = 5000; // 5 seconds
-    
-    // Initialize the slideshow
-    showSlides(slideIndex);
-    startSlideShow();
-    
+
+    // Define functions first
     function showSlides(n) {
         const slides = $(".mySlides");
         const dots = $(".dot");
@@ -45,6 +42,10 @@ $(document).ready(function() {
         showSlides(slideIndex = n);
         resetSlideTimer();
     };
+    
+    // Initialize the slideshow
+    showSlides(slideIndex);
+    startSlideShow();
     
     // Pause on hover
     $('.slideshow-container').hover(
