@@ -34,18 +34,20 @@ main {
     text-align: center;
 }
 
-/* Only ONE h2 definition (fixes the warning) */
+/* SINGLE h2 definition - all h2 styles consolidated here */
 h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+    /* Add any other base h2 styles here */
 }
 
-/* Use classes for different h2 styles if needed */
-.secondary-heading {
+/* Alternative heading style using class */
+.heading-secondary {
     color: #666;
     font-size: 1.8rem;
 }
 
+/* Rest of your CSS remains unchanged */
 .slideshow-container {
     position: relative;
     max-width: 800px;
@@ -56,7 +58,6 @@ h2 {
     display: none;
 }
 
-/* Fix width/padding issue by using max-width */
 .mySlides img {
     max-width: 100%;
     height: auto;
@@ -70,7 +71,7 @@ h2 {
     padding: 8px 12px;
     position: absolute;
     bottom: 20px;
-    width: calc(100% - 24px); /* Account for padding */
+    width: calc(100% - 24px);
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
 }
