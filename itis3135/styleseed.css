@@ -34,9 +34,16 @@ main {
     text-align: center;
 }
 
+/* Only ONE h2 definition (fixes the warning) */
 h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+}
+
+/* Use classes for different h2 styles if needed */
+.secondary-heading {
+    color: #666;
+    font-size: 1.8rem;
 }
 
 .slideshow-container {
