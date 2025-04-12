@@ -1,12 +1,13 @@
-/* Use a more specific selector instead of universal selector */
-html, body, div, span, h1, h2, h3, p, a, img, ul, li, header, footer, main {
+/* Replace universal selector with specific elements */
+html, body, div, section, header, footer, main, 
+h1, h2, h3, p, a, img, ul, li, span {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #f7f7f7;
     color: #333;
 }
@@ -48,6 +49,7 @@ h2 {
     display: none;
 }
 
+/* Fix width/padding issue by using max-width */
 .mySlides img {
     max-width: 100%;
     height: auto;
@@ -61,7 +63,7 @@ h2 {
     padding: 8px 12px;
     position: absolute;
     bottom: 20px;
-    width: 100%;
+    width: calc(100% - 24px); /* Account for padding */
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
 }
