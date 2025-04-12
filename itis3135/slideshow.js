@@ -2,7 +2,6 @@ $(document).ready(function() {
     let slideIndex = 1;
     let slideInterval;
     const slideDelay = 5000; // 5 seconds
-
     // Define functions first
     function showSlides(n) {
         const slides = $(".mySlides");
