@@ -1,0 +1,102 @@
+/* Replace universal selector with specific elements */
+html, body, div, section, header, footer, main, 
+h1, h2, h3, p, a, img, ul, li, span {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+header, footer {
+    background-color: #222;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.main-heading {
+    margin: 0;
+}
+
+.tagline {
+    font-size: 1rem;
+    margin-top: 5px;
+    color: #ccc;
+}
+
+main {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* SINGLE h2 definition - all h2 styles consolidated here */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    /* Add any other base h2 styles here */
+}
+
+/* Alternative heading style using class */
+.heading-secondary {
+    color: #666;
+    font-size: 1.8rem;
+}
+
+/* Rest of your CSS remains unchanged */
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.text {
+    color: #fff;
+    font-size: 18px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 20px;
+    width: calc(100% - 24px);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #717171;
+}
+
+footer a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
