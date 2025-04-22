@@ -26,11 +26,11 @@
     </header>
     <main>
         <h2>Introduction</h2>
-        <h2>Prahlad B Rai || Black Cat</h2><p></p>
-        <img src="pr.jpg" alt="Photo of student">
-        <p class="name">Prahlad B Rai</p>
-        
-        <!-- Div added to center the list -->
+        <h3>Prahlad B Rai || Black Cat</h3><p></p>
+        <figure>
+            <img src="pr.jpg" alt="Photo of student">
+             <figcaption>Prahlad B Rai</figcaption>
+        </figure>
         <div class="center-list">
             <ul>
                 <li>Personal Background: I was born in Nepal, and came to the US when I was 10.</li>
@@ -65,16 +65,10 @@
             <em><a href="https://www.freecodecamp.org/certification/Prai2/responsive-web-design">Certified in Responsive Web Design</a></em>.
         </p>
         <p>
-            <a href="https://jigsaw.w3.org/css-validator/check/referer">
-                <img style="border:0;width:88px;height:31px"
-                     src="https://jigsaw.w3.org/css-validator/images/vcss"
-                     alt="Valid CSS!" />
-            </a>
-            <a href="https://jigsaw.w3.org/css-validator/check/referer">
-                <img style="border:0;width:88px;height:31px"
-                     src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
-                     alt="Valid CSS!" />
-            </a>
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
         </p>
     </footer>
 </body>
