@@ -8,16 +8,8 @@
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <nav>
-           <ul>
-                <li><a href="blackcat.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="table.html">Table</a></li>
-            </ul>
-        </nav>
-        <h1>Proud Black Cat Mystics</h1>
-        <p><em>"Unveil your future with the wisdom of the stars."</em></p>
+    <header> 
+          <div data-include="components/header.html"></div>
     </header>
 
    <main>
@@ -153,19 +145,12 @@
 
 
     <footer>
-        <p>&copy; 2025 Proud Black Cat Mystics | All Rights Reserved</p>
-        <div class="validation-buttons">
-            <a href="https://jigsaw.w3.org/css-validator/check/referer">
-                <img style="border:0;width:88px;height:31px"
-                    src="https://jigsaw.w3.org/css-validator/images/vcss"
-                    alt="Valid CSS!" />
-            </a>
-            <a href="https://jigsaw.w3.org/css-validator/check/referer">
-                <img style="border:0;width:88px;height:31px"
-                    src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
-                    alt="Valid CSS!" />
-            </a>
-        </div>
+        <div data-include="components/footer.html"></div>
+          <p><script>
+                    document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+                    document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+          </script></p>
     </footer>
+        <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>
