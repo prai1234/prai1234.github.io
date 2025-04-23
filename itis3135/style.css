@@ -238,6 +238,7 @@ form .form-group input[type="text"] {
 
   footer {
     font-size: 14px;
+    border: none;
   }
 
   /* Adjust form width for smaller screens */
