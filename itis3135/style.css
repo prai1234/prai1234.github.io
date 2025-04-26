@@ -3,6 +3,7 @@ body {
   background-color: skyblue;
   text-align: center;
   box-sizing: border-box;
+  font-family:  DM Sans, sans-serif;
 }
 
 /* Apply box-sizing to all elements to ensure padding and border are included in the width/height */
