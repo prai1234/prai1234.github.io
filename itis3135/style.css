@@ -31,15 +31,25 @@ li {
   padding-left: 20px;
 }
 
-/* Center the list and add spacing */
-.center-list {
-  display: inline-block;
-  text-align: left;
-  padding: 20px;
-  margin-top: 20px;
-  margin-bottom: 40px;  /* Space before footer */
+center-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure it takes the full height of the viewport */
 }
 
+/* Style for the unordered list */
+.center-list ul {
+    list-style-type: disc; /* Use bullet points */
+    text-align: left; /* Align the text to the left */
+    max-width: 600px; /* Optional: Adjust the maximum width as per your design */
+    padding: 20px; /* Optional: Add padding around the list */
+}
+
+/* Style for the nested unordered list */
+.center-list ul ul {
+    margin-left: 20px; /* Indent nested list */
+}
 /* Default link styling */
 a {
   color: darkblue;
