@@ -1,4 +1,4 @@
-// Define resetCanvas() first
+// Define reset function first
 function resetCanvas() {
   background(0); // Clear the canvas
 }
@@ -7,35 +7,34 @@ function setup() {
   // Create the canvas
   createCanvas(710, 400);
   
-  // Create a reset button with styling
-  let resetButton = createButton('Reset Canvas');
-  resetButton.position(10, height - 40); // Position at bottom-left
-  resetButton.mousePressed(resetCanvas); // Now resetCanvas is defined
+  // Create reset button
+  let resetButton = createButton('Reset');
+  resetButton.position(width - 350, height - 5); // Position right of canvas
+  resetButton.mousePressed(resetCanvas);
   
-  // Style the button
+  // Style the button (sleek modern look)
   resetButton.style('padding', '8px 16px');
-  resetButton.style('background-color', '#333');
+  resetButton.style('background-color', '#4CAF50'); // Green color
   resetButton.style('color', 'white');
   resetButton.style('border', 'none');
   resetButton.style('border-radius', '4px');
   resetButton.style('font-family', 'sans-serif');
+  resetButton.style('cursor', 'pointer');
+  resetButton.style('box-shadow', '0 2px 5px rgba(0,0,0,0.2)');
   
-  // Set initial background to black
-  resetCanvas(); // Now this works too
+  // Set initial background
+  resetCanvas();
   
-  // Set width of the lines
+  // Drawing settings
   strokeWeight(10);
-  
-  // Set color mode to hue-saturation-brightness (HSB)
   colorMode(HSB);
   
-  // Set screen reader accessible description
-  describe('A blank canvas where the user draws by dragging the mouse. There is a reset button at the bottom.');
+  // Accessibility
+  describe('Drawing canvas with reset button in bottom right');
 }
 
 function mouseDragged() {
-  // Set the color based on the mouse position, and draw a line
-  // from the previous position to the current position
+  // Color-changing drawing
   let lineHue = mouseX - mouseY;
   stroke(lineHue, 90, 90);
   line(pmouseX, pmouseY, mouseX, mouseY);
