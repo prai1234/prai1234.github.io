@@ -3,18 +3,24 @@ body {
   background-color: skyblue;
   text-align: center;
   box-sizing: border-box;
-  font-family:  DM Sans, sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
-/* Apply box-sizing to all elements to ensure padding and border are included in the width/height */
+/* Apply box-sizing to all elements */
 html, body, table, th, td {
   box-sizing: border-box;
 }
 
-/* Image styling */
+/* Image styling (default) */
 img {
-  border: 2px solid;
-  padding-bottom: 0%;
+  border: 2px solid;              /* keeps borders on normal images */
+  padding-bottom: 0;
+}
+
+/* REMOVE borders on the validator badges only */
+#validation-link-html img,
+#validation-link-css img {
+  border: none;
 }
 
 /* List styling */
@@ -32,25 +38,27 @@ li {
   padding-left: 20px;
 }
 
-center-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Ensure it takes the full height of the viewport */
+/* Fixed: class selector needs a dot */
+.center-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;                 /* full viewport height */
 }
 
 /* Style for the unordered list */
 .center-list ul {
-    list-style-type: disc; /* Use bullet points */
-    text-align: left; /* Align the text to the left */
-    max-width: 600px; /* Optional: Adjust the maximum width as per your design */
-    padding: 20px; /* Optional: Add padding around the list */
+  list-style-type: disc;          /* bullet points */
+  text-align: left;
+  max-width: 600px;
+  padding: 20px;
 }
 
-/* Style for the nested unordered list */
+/* Style for nested unordered list */
 .center-list ul ul {
-    margin-left: 20px; /* Indent nested list */
+  margin-left: 20px;              /* indent nested list */
 }
+
 /* Default link styling */
 a {
   color: darkblue;
@@ -72,7 +80,6 @@ table {
   width: 80%;
   margin: 20px auto;
   border-collapse: collapse;
-  box-sizing: border-box;
   border: 2px solid #333;
 }
 
@@ -87,45 +94,30 @@ thead {
   color: white;
 }
 
-tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
+tbody tr:nth-child(even)  { background-color: #f2f2f2; }
+tbody tr:nth-child(odd)   { background-color: #fff;    }
 
-tbody tr:nth-child(odd) {
-  background-color: #ffffff;
-}
+figure        { margin: 20px 0; text-align: center; }
+figcaption    { margin-bottom: 10px; }
 
-figure {
-  margin: 20px 0;
-  text-align: center;
-}
-
-figcaption {
-  margin-bottom: 10px;
-}
-
-/* Row Span Styling */
-td[rowspan] {
-  background-color: #e6e6e6;
-}
+/* Row-span Styling */
+td[rowspan] { background-color: #e6e6e6; }
 
 /* Form Styling */
 form {
   max-width: 800px;
   margin: 0 auto;
   text-align: left;
-  background-color: white;
+  background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,.1);
 }
 
-/* Form labels and inputs */
 form label {
   display: block;
   font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 5px;
+  margin: 10px 0 5px;
 }
 
 form input[type="text"],
@@ -136,15 +128,13 @@ form input[type="checkbox"] {
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box;
 }
 
 form input[type="submit"],
 form input[type="reset"] {
-  width: auto;
   padding: 10px 20px;
   background-color: #333;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -155,140 +145,104 @@ form input[type="reset"]:hover {
   background-color: #555;
 }
 
-/* Add button for adding courses */
+/* Button Styling */
 button {
   padding: 10px 15px;
   background-color: #333;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #555;
-}
+button:hover { background-color: #555; }
 
 /* Center the form content but keep labels and inputs left-aligned */
-form .form-group {
-  margin-bottom: 15px;
-}
-
-form .form-group input[type="text"] {
-  text-align: left;
-}
+form .form-group { margin-bottom: 15px; }
+form .form-group input[type="text"] { text-align: left; }
 
 /* Slideshow Styles */
 .slideshow-container {
-    position: relative;
-    max-width: 800px;
-    margin: auto;
+  position: relative;
+  max-width: 800px;
+  margin: auto;
 }
 
 .mySlides {
-    display: none;
-    text-align: center;
+  display: none;
+  text-align: center;
 }
 
 .mySlides img {
-    width: 100%;
-    height: auto;
-    max-height: 500px;
-    object-fit: contain;
-  background-color: black;
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+  background-color: #000;
 }
+
 .text {
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+  color: #fff;
+  background-color: rgba(0,0,0,.7);
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 /* Dot Navigation */
 .dot-container {
-    text-align: center;
-    padding: 20px;
+  text-align: center;
+  padding: 20px;
 }
 
 .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.3s ease;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color .3s ease;
 }
 
-.dot:hover, .active {
-    background-color: #717171;
-}
+.dot:hover,
+.active { background-color: #717171; }
 
 /* Fade animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
+.fade { animation: fade 1.5s; }
+@keyframes fade { from {opacity:.4;} to {opacity:1;} }
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 980px) {
-  main {
-    width: 95%;
-  }
+  main  { width: 95%; }
+  footer { font-size: 14px; }
 
-  footer {
-    font-size: 14px;
-    border: none;
-    border: none;
-  }
-
-  /* Adjust form width for smaller screens */
-  form {
-    width: 90%;
-    margin: 0 auto;
-  }
+  form  { width: 90%; }
 }
 
-/* For mobile devices */
 @media screen and (max-width: 600px) {
-  main {
-    width: 100%;
-  }
+  main  { width: 100%; }
+  footer { font-size: 12px; }
 
-  footer {
-    font-size: 12px;
-  }
+  form  { width: 100%; }
 
-  /* Adjust form width for mobile */
-  form {
-    width: 100%;
-    margin: 0 auto;
-  }
-    .footer-validation {
+  .footer-validation {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1em;
     margin-top: 1em;
     flex-wrap: wrap;
-    border: none;
   }
-  
+
   .footer-validation img {
-    height: auto;
     max-height: 64px;
     width: auto;
-    border: none;
+    border: none; /* no borders inside footer validation */
   }
-  
-}
+  }
+
