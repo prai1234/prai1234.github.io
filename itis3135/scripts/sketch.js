@@ -5,7 +5,7 @@ function resetCanvas() {
 
 function setup() {
   // Create the canvas
-  createCanvas(710, 400);
+  createCanvas(710, 100);
   
   // Create reset button
   let resetButton = createButton('Reset');
