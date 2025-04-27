@@ -9,7 +9,7 @@ function setup() {
   
   // Create reset button
   let resetButton = createButton('Reset');
-  resetButton.position(width - 350, height - 5); // Position right of canvas
+  resetButton.position(width - 350, height - 700); // Position right of canvas
   resetButton.mousePressed(resetCanvas);
   
   // Style the button (sleek modern look)
