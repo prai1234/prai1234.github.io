@@ -1,3 +1,8 @@
+// Define resetCanvas() first
+function resetCanvas() {
+  background(0); // Clear the canvas
+}
+
 function setup() {
   // Create the canvas
   createCanvas(710, 400);
@@ -5,7 +10,7 @@ function setup() {
   // Create a reset button with styling
   let resetButton = createButton('Reset Canvas');
   resetButton.position(10, height - 40); // Position at bottom-left
-  resetButton.mousePressed(resetCanvas);
+  resetButton.mousePressed(resetCanvas); // Now resetCanvas is defined
   
   // Style the button
   resetButton.style('padding', '8px 16px');
@@ -16,7 +21,7 @@ function setup() {
   resetButton.style('font-family', 'sans-serif');
   
   // Set initial background to black
-  resetCanvas();
+  resetCanvas(); // Now this works too
   
   // Set width of the lines
   strokeWeight(10);
@@ -34,8 +39,4 @@ function mouseDragged() {
   let lineHue = mouseX - mouseY;
   stroke(lineHue, 90, 90);
   line(pmouseX, pmouseY, mouseX, mouseY);
-}
-
-function resetCanvas() {
-  background(0); // Clear the canvas
 }
