@@ -27,15 +27,14 @@
             <a href="https://webpages.charlotte.edu/prai2/itis3135/">ITIS3135</a> ||
             <a href="https://www.linkedin.com/in/prahlad-rai-b82b84323/" target="_blank">LinkedIn</a>
         </nav>
-
-     <p>
-            <a href="https://jigsaw.w3.org/css-validator/check/referer">
-                <img style="border:0;width:88px;height:31px"
-                     src="https://jigsaw.w3.org/css-validator/images/vcss"
-                     alt="Valid CSS!" />
-            </a>
     </footer>
-
+<script>
+      document.getElementById("validation-link-html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+      $(document).ready(function(){
+        $("#header-placeholder").load("header.html");
+      });
+      document.getElementById("validation-link-css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
 </body>
 </html>
 
