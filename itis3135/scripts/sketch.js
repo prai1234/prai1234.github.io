@@ -1,41 +1,17 @@
-// Define reset function first
-function resetCanvas() {
-  background(0); // Clear the canvas
-}
-
 function setup() {
-  // Create the canvas
-  createCanvas(710, 100);
-  
-  // Create reset button
-  let resetButton = createButton('Reset');
-  resetButton.position(width - 350, height - 400); // Position right of canvas
-  resetButton.mousePressed(resetCanvas);
-  
-  // Style the button (sleek modern look)
-  resetButton.style('padding', '8px 16px');
-  resetButton.style('background-color', '#4CAF50'); // Green color
-  resetButton.style('color', 'white');
-  resetButton.style('border', 'none');
-  resetButton.style('border-radius', '4px');
-  resetButton.style('font-family', 'sans-serif');
-  resetButton.style('cursor', 'pointer');
-  resetButton.style('box-shadow', '0 2px 5px rgba(0,0,0,0.2)');
-  
-  // Set initial background
-  resetCanvas();
-  
-  // Drawing settings
-  strokeWeight(10);
-  colorMode(HSB);
-  
-  // Accessibility
-  describe('Drawing canvas with reset button in bottom right');
+    createCanvas(710, 400);
+    background(1000);
+    strokeWeight(8);
+    colorMode(HSB);
+    describe('A blank canvas where the user draws by dragging the mouse');
 }
-
+  
 function mouseDragged() {
-  // Color-changing drawing
-  let lineHue = mouseX - mouseY;
-  stroke(lineHue, 90, 90);
-  line(pmouseX, pmouseY, mouseX, mouseY);
+    let lineHue = mouseX - mouseY;
+    stroke(lineHue, 90, 90);
+    line(pmouseX, pmouseY, mouseX, mouseY);
 }
+const resetBtn = document.getElementById("reset");
+resetBtn.addEventListener("click", () => {
+    setup();
+});
