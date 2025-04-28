@@ -1,3 +1,4 @@
+/* ─────────────────────  GLOBAL STYLES  ───────────────────── */
 /* General Body styling */
 body {
   background-color: skyblue;
@@ -75,7 +76,7 @@ a:active {
   color: darkblue;
 }
 
-/* Table Styling */
+/* ─────────────────────  TABLE STYLES  ───────────────────── */
 table {
   width: 80%;
   margin: 20px auto;
@@ -104,11 +105,11 @@ figcaption    { margin-bottom: 10px; }
 /* Row-span Styling */
 td[rowspan] { background-color: #e6e6e6; }
 
-/* Form Styling */
+/* ─────────────────────  FORM STYLES  ───────────────────── */
 form {
   max-width: 800px;
   margin: 0 auto;
-  text-align: left;
+  text-align: left;                       /* keep form fields left-aligned */
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
@@ -121,9 +122,12 @@ form label {
   margin: 10px 0 5px;
 }
 
+/* Text-type inputs */
 form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
 form input[type="file"],
-form input[type="checkbox"] {
+form select {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -132,6 +136,14 @@ form input[type="checkbox"] {
   border-radius: 4px;
 }
 
+/* Checkboxes & radios should NOT be full-width */
+form input[type="checkbox"],
+form input[type="radio"] {
+  width: auto;
+  margin-right: 0.4rem;
+}
+
+/* Submit / Reset buttons */
 form input[type="submit"],
 form input[type="reset"] {
   padding: 10px 20px;
@@ -147,7 +159,18 @@ form input[type="reset"]:hover {
   background-color: #555;
 }
 
-/* Button Styling */
+/* Center the form content but keep labels and inputs left-aligned */
+form .form-group { margin-bottom: 15px; }
+form .form-group input[type="text"] { text-align: left; }
+
+/* ─── NEW: Preferred-Contact checkbox alignment ─── */
+.contact-method .checkbox-item {
+  display: flex;
+  align-items: center;
+  margin-block: 0.25rem;      /* top & bottom gap */
+}
+
+/* ─────────────────────  GENERIC BUTTONS  ───────────────────── */
 button {
   padding: 10px 15px;
   background-color: #333;
@@ -159,11 +182,7 @@ button {
 
 button:hover { background-color: #555; }
 
-/* Center the form content but keep labels and inputs left-aligned */
-form .form-group { margin-bottom: 15px; }
-form .form-group input[type="text"] { text-align: left; }
-
-/* Slideshow Styles */
+/* ─────────────────────  SLIDESHOW  ───────────────────── */
 .slideshow-container {
   position: relative;
   max-width: 800px;
@@ -195,10 +214,7 @@ form .form-group input[type="text"] { text-align: left; }
 }
 
 /* Dot Navigation */
-.dot-container {
-  text-align: center;
-  padding: 20px;
-}
+.dot-container { text-align: center; padding: 20px; }
 
 .dot {
   cursor: pointer;
@@ -218,18 +234,16 @@ form .form-group input[type="text"] { text-align: left; }
 .fade { animation: fade 1.5s; }
 @keyframes fade { from {opacity:.4;} to {opacity:1;} }
 
-/* MEDIA QUERIES */
+/* ─────────────────────  MEDIA QUERIES  ───────────────────── */
 @media screen and (max-width: 980px) {
   main  { width: 95%; }
   footer { font-size: 14px; }
-
   form  { width: 90%; }
 }
 
 @media screen and (max-width: 600px) {
   main  { width: 100%; }
   footer { font-size: 12px; }
-
   form  { width: 100%; }
 
   .footer-validation {
@@ -246,5 +260,4 @@ form .form-group input[type="text"] { text-align: left; }
     width: auto;
     border: none; /* no borders inside footer validation */
   }
-  }
-
+}
