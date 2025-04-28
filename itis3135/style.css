@@ -55,7 +55,7 @@ li {
   list-style-type: disc;          /* bullet points */
   text-align: left;
   max-width: 600px;
-  padding: 20px;
+  padding: 5px;
 }
 
 /* Style for nested unordered list */
