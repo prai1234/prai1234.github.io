@@ -54,7 +54,7 @@ li {
 .center-list ul {
   list-style-type: disc;          /* bullet points */
   text-align: left;
-  max-width: 600px;
+  max-width: 50px;
   padding: 5px;
 }
 
