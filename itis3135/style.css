@@ -41,7 +41,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 65vh;                 /* full viewport height */
+  height: 58vh;                 /* full viewport height */
 }
 /* Style for the unordered list */
 .center-list ul {
