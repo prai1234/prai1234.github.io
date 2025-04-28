@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albums - Manoj K. Rai</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+
+    <main>
+        <h1>Albums</h1>
+        <p>Discover the albums by Manoj K. Rai.</p>
+        <div class="albums">
+            <div class="album">
+                <img src="album1.jpg" alt="Album 1">
+                <p>Album 1 - Description</p>
+                <audio controls>
+                    <source src="album1.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="album">
+                <img src="album2.jpg" alt="Album 2">
+                <p>Album 2 - Description</p>
+                <audio controls>
+                    <source src="album2.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
