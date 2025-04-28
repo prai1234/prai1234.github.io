@@ -1,75 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forms - Proud Black Cat Mystics</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms - Proud Black Cat Mystics</title>
+
+  <!-- main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- remove if you don’t need Lint-Page -->
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <header> 
-          <div data-include="components/header.html"></div>
-    </header>
+  <header>
+    <!-- pulls in your shared header component -->
+    <div data-include="components/header.html"></div>
+  </header>
 
-   <main>
-           <h2>Whimsical Company : Forms</h2>
-    
+  <main>
+    <h2>Whimsical Company : Forms</h2>
+
     <form action="#" method="POST">
+      <!-- ────────────────────────────  NAME  ──────────────────────────── -->
+      <label for="first-name">First Name:</label>
+      <input  type="text" id="first-name" name="first-name"
+              required placeholder="Enter your first name">
 
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required placeholder="Enter your full name">
-        
-        
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required placeholder="123-456-7890">
-        
-        
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required placeholder="yourname@example.com">
-        
-        
-        <fieldset>
-            <legend>Preferred Contact Method:</legend>
-            <input type="checkbox" id="contact-email" name="contact" value="email">
-            <label for="contact-email">Email</label>
-            
-            <input type="checkbox" id="contact-phone" name="contact" value="phone">
-            <label for="contact-phone">Phone</label>
-        </fieldset>
-        
-        
-        <fieldset>
-            <legend>Select a Subscription Plan:</legend>
-            <input type="radio" id="basic" name="subscription" value="basic" required>
-            <label for="basic">Basic</label>
-            
-            <input type="radio" id="premium" name="subscription" value="premium">
-            <label for="premium">Premium</label>
-        </fieldset>
+      <label for="last-name">Last Name:</label>
+      <input  type="text" id="last-name"  name="last-name"
+              required placeholder="Enter your last name">
 
-        
-        <label for="service">Select a Service:</label>
-        <select id="service" name="service">
-            <option value="webdesign">Web Design</option>
-            <option value="seo">SEO Optimization</option>
-            <option value="marketing">Digital Marketing</option>
-        </select>
+      <!-- ───────────────────────────  PHONE  ──────────────────────────── -->
+      <label for="phone">Phone Number:</label>
+      <input  type="tel" id="phone" name="phone"
+              required placeholder="123-456-7890">
 
-        
-        <button type="reset">Reset</button>
-        <button type="submit">Submit</button>
+      <!-- ────────────────────────────  EMAIL  ─────────────────────────── -->
+      <label for="email">Email Address:</label>
+      <input  type="email" id="email" name="email"
+              required placeholder="yourname@example.com">
+
+      <!-- ───────────────  PREFERRED CONTACT (checkboxes)  ─────────────── -->
+      <fieldset class="contact-method">
+        <legend>Preferred Contact Method:</legend>
+
+        <div class="checkbox-item">
+          <input type="checkbox" id="contact-email" name="contact" value="email">
+          <label for="contact-email">Email</label>
+        </div>
+
+        <div class="checkbox-item">
+          <input type="checkbox" id="contact-phone" name="contact" value="phone">
+          <label for="contact-phone">Phone</label>
+        </div>
+      </fieldset>
+
+      <!-- ────────────────  SUBSCRIPTION (radio buttons)  ──────────────── -->
+      <fieldset>
+        <legend>Select a Subscription Plan:</legend>
+
+        <input type="radio" id="basic"   name="subscription" value="basic"   required>
+        <label for="basic">Basic</label>
+
+        <input type="radio" id="premium" name="subscription" value="premium">
+        <label for="premium">Premium</label>
+      </fieldset>
+
+      <!-- ────────────────────────────  SERVICE  ───────────────────────── -->
+      <label for="service">Select a Service:</label>
+      <select id="service" name="service">
+        <option value="webdesign">Web Design</option>
+        <option value="seo">SEO Optimization</option>
+        <option value="marketing">Digital Marketing</option>
+      </select>
+
+      <!-- ───────────────────────────  BUTTONS  ────────────────────────── -->
+      <button type="reset">Reset</button>
+      <button type="submit">Submit</button>
     </form>
-    </main>
+  </main>
 
+  <footer>
+    <!-- pulls in your shared footer component -->
+    <div data-include="components/footer.html"></div>
 
-    <footer>
-        <div data-include="components/footer.html"></div>
-          <p><script>
-                    document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
-                    document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-          </script></p>
-    </footer>
-        <script src="scripts/HTMLInclude.min.js"></script>
+    <!-- W3C validators (optional) -->
+    <p>
+      <script>
+        document.getElementById("validation_link_html")
+          ?.setAttribute("href",
+             "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css")
+          ?.setAttribute("href",
+             "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+      </script>
+    </p>
+  </footer>
+
+  <!-- HTML include polyfill -->
+  <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>
+
