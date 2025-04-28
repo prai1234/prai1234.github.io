@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Manoj K. Rai</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+
+    <main>
+        <h1>Contact Manoj K. Rai</h1>
+        <p>Feel free to reach out for booking inquiries, collaborations, or general questions.</p>
+        <form action="mailto:manojkrai@example.com" method="post" enctype="text/plain">
+            <label for="name">Your Name:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="email">Your Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="message">Your Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
