@@ -14,20 +14,17 @@
     <main>
         <h2>Project Name</h2>
         <p>ManojKRai.com</p>
-
         <section id="project-description">
             <h3>Project Overview</h3>
             <p>This website will serve to promote Manoj K. Rai’s music, activism, and the work of the Love & Support Foundation. 
             It will inform users about his journey as a musician, community leader, and social activist.
             The website will also highlight his work with underprivileged youth and other initiatives supported by the foundation.</p>
         </section>
-
         <section id="intended-users">
             <h3>Intended Users</h3>
             <p>The intended users of this website are fans of Manoj K. Rai, people interested in his community initiatives, 
                 and anyone wanting to learn more about his music and the Love & Support Foundation.</p>
         </section>
-
         <section id="content-overview">
             <h3>Overview of Website Content</h3>
             <ul>
@@ -38,7 +35,6 @@
                 <li><strong>Contact Page:</strong> Contact form for inquiries and social media links.</li>
             </ul>
         </section>
-
         <section id="client-information">
             <h3>Client Information</h3>
             <p><strong>Name:</strong> Manoj K. Rai</p>
@@ -46,7 +42,6 @@
             <p><strong>Email:</strong> [Private]</p>
             <p><strong>Phone:</strong> [Private]</p>
         </section>
-
         <section id="wireframe">
             <h3>Wireframe</h3>
             <figure>
@@ -56,7 +51,6 @@
                 </p>
             </figure>
         </section>
-
         <section id="sitemap">
             <h3>Sitemap</h3>
             <figure>
@@ -66,14 +60,34 @@
                 </p>
             </figure>
         </section>
-
+        <section id="dynamic-functionality">
+            <h3>Dynamic Functionality</h3>
+            <div class="slideshow-container">
+                <div class="mySlides fade"><img src="image1.jpg" alt="Image 1"><div class="text">Image 1 Description</div></div>
+                <div class="mySlides fade"><img src="image2.jpg" alt="Image 2"><div class="text">Image 2 Description</div></div>
+                <div class="mySlides fade"><img src="image3.jpg" alt="Image 3"><div class="text">Image 3 Description</div></div>
+            </div>
+        </section>
     </main>
-
     <footer>
         <div data-include="components/footer.html"></div>
     </footer>
-
     <script src="scripts/HTMLInclude.min.js"></script>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change slide every 2 seconds
+        }
+    </script>
 </body>
 </html>
 
