@@ -22,6 +22,28 @@ nav ul li {
     display: inline;
     margin-right: 20px;
 }
+.about-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.about-image {
+  display: block;
+  margin: 0 auto; /* centers the image */
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.con {
+  margin-bottom: 16px;
+  line-height: 1.6;
+  text-align: left;
+}
 
 nav ul li a {
     color: white;
