@@ -91,3 +91,22 @@ input[type="submit"] {
     color: white;
     border: none;
 }
+.past-events {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    background-color: white;
+}
+
+.event-col {
+    flex: 1;
+    padding: 15px;
+    border-right: 1px solid #ccc;
+}
+
+.event-col:last-child {
+    border-right: none;
+}
+
