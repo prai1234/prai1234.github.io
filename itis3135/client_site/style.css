@@ -32,12 +32,11 @@ nav ul li {
 .about-image {
   display: block;
   margin: 0 auto;
-  width: 50%;
-  height: auto; /* maintains aspect ratio */
   border-radius: 10px;
   margin-bottom: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
 
 
 .con {
