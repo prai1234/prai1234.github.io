@@ -91,6 +91,7 @@ input[type="submit"] {
     color: white;
     border: none;
 }
+
 .past-events {
     display: flex;
     justify-content: space-between;
@@ -109,3 +110,45 @@ input[type="submit"] {
     border-right: none;
 }
 
+/* Navbar Layout */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /* space between logo, menu, and icons */
+    padding: 0.5em 1em;
+    background: #333;  /* example background color */
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* The nav-menu will naturally be centered by space-between */ 
+}
+
+.nav-menu li {
+    margin: 0 1em;
+}
+
+.nav-menu a {
+    color: white;  /* example link color */
+    text-decoration: none;
+}
+
+/* Social icons on the right */
+.social-icons a {
+    margin-left: 1em;  /* spacing between icons */
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+/* Logo styling */
+.logo img {
+    height: 40px;  /* example logo size */
+    width: auto;
+}
