@@ -3,6 +3,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center content on the page */
 }
 
 header, footer {
@@ -10,12 +13,23 @@ header, footer {
     color: white;
     text-align: center;
     padding: 10px;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;  /* Align items vertically in the center */
+    justify-content: space-between;  /* Space between the logo, menu, and icons */
+    width: 100%;
+    padding: 0.5em 1em;
+    background: #333;  /* Navbar background */
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
 nav ul li {
@@ -31,6 +45,8 @@ nav ul li a {
 main {
     padding: 20px;
     text-align: center;
+    width: 100%;
+    max-width: 1200px; /* Center content with a maximum width */
 }
 
 .about-container {
@@ -91,6 +107,7 @@ input[type="submit"] {
     color: white;
     border: none;
 }
+
 .past-events {
     display: flex;
     justify-content: space-between;
@@ -107,18 +124,53 @@ input[type="submit"] {
 
 .event-col:last-child {
     border-right: none;
-} 
- .social-icons a {
+}
+
+/* Navbar Layout */
+.navbar {
+    display: flex;
+    align-items: center;  /* Align items vertically in the center */
+    justify-content: space-between;  /* Space between the logo, menu, and icons */
+    width: 100%;
+    padding: 0.5em 1em;
+    background: #333;  /* example background color */
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;  /* Align menu items in the center */
+}
+
+.nav-menu li {
+    margin: 0 1em;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Logo styling (smaller logo) */
+.logo img {
+    height: 30px;  /* Adjust the logo size */
+    width: auto;
+}
+
+/* Social icons on the right */
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons a {
     margin-left: 1em;  /* spacing between icons */
-  }
-  .social-icons img {
+}
+
+.social-icons img {
     width: 24px;
     height: 24px;
     vertical-align: middle;
-  }
-  /* Logo styling */
-  .logo img {
-    height: 40px;  /* example logo size */
-    width: auto;
-  }
-
+}
