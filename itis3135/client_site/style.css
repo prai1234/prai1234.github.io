@@ -32,6 +32,8 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-grow: 1;  /* This makes the nav menu take the remaining space */
+    justify-content: center;  /* Center the menu items */
 }
 
 nav ul li {
@@ -145,6 +147,8 @@ input[type="submit"] {
     padding: 0;
     display: flex;
     align-items: center;  /* Align menu items in the center */
+    flex-grow: 1;  /* Make the nav menu take up remaining space */
+    justify-content: center;  /* Center the menu items */
 }
 
 .nav-menu li {
