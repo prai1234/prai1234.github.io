@@ -108,3 +108,17 @@ input[type="submit"] {
 .event-col:last-child {
     border-right: none;
 } 
+ .social-icons a {
+    margin-left: 1em;  /* spacing between icons */
+  }
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+  }
+  /* Logo styling */
+  .logo img {
+    height: 40px;  /* example logo size */
+    width: auto;
+  }
+
