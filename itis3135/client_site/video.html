@@ -1,209 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Videos - Manoj K. Rai</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <style>
-        .slideshow-container {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .video-frame {
-            display: none;
-            width: 90%;
-            height: calc((90vw * 2 / 3) / 2);
-            max-width: 960px;
-            max-height: 320px;
-            margin: auto;
-        }
-        .video-frame iframe {
-            width: 100%;
-            height: 100%;
-        }
-        .video-frame.active {
-            display: block;
-        }
-        .controls {
-            margin-top: 10px;
-        }
-        .controls button {
-            margin: 0 10px;
-            padding: 5px 15px;
-            font-size: 16px;
-        }
-        .video-section {
-            width: 90%;
-            margin: auto;
-            margin-top: 30px;
-        }
-        .video-section h2 {
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 5px;
-            margin-top: 40px;
-        }
-        .video-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: space-between;
-        }
-        .video-grid .video-item {
-            flex: 0 0 calc(33.333% - 20px);
-        }
-        .video-item h3 {
-            margin-top: 0;
-        }
-        .video-item iframe {
-            width: 100%;
-            height: 200px;
-        }
-        @media (max-width: 768px) {
-            .video-grid .video-item {
-                flex: 0 0 100%;
-            }
-        }
-    </style>
-    <script src="https://www.youtube.com/iframe_api"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Videos - Manoj K. Rai</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <style>
+    .slideshow-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .video-frame {
+      display: none;
+      width: 90%;
+      height: calc(60vw);
+      max-width: 960px;
+      max-height: 320px;
+      margin: auto;
+    }
+    .video-frame-active {
+      display: block;
+    }
+    .video-frame iframe {
+      width: 100%;
+      height: 100%;
+    }
+    .controls {
+      margin-top: 10px;
+    }
+    .controls button {
+      margin: 0 10px;
+      padding: 5px 15px;
+      font-size: 16px;
+    }
+    .video-section {
+      width: 90%;
+      margin: auto;
+      margin-top: 30px;
+    }
+    h2.video-heading {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+    .video-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+    .video-item {
+      flex: 0 0 calc(33.333% - 20px);
+    }
+    h3.video-title {
+      margin-top: 0;
+    }
+    .video-item iframe {
+      width: 100%;
+      height: 200px;
+    }
+    @media (max-width: 768px) {
+      .video-item {
+        flex: 0 0 100%;
+      }
+    }
+  </style>
+  <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 <body>
-    <header>
-        <div data-include="components/header.html"></div>
-    </header>
+  <header>
+    <div data-include="components/header.html"></div>
+  </header>
 
-    <main>
-        <h1>Videos</h1>
-        <p>Watch the latest music videos and interviews with Manoj K. Rai.</p>
+  <main>
+    <h1>Videos</h1>
+    <p>Watch the latest music videos and interviews with Manoj K. Rai.</p>
 
-        <!-- Slideshow -->
-        <div class="slideshow-container">
-            <div class="video-frame active"><iframe src="https://www.youtube.com/embed/hzl_-joshkQ?enablejsapi=1" allowfullscreen></iframe></div>
-            <div class="video-frame"><iframe src="https://www.youtube.com/embed/L1EQA2CbJCc?enablejsapi=1" allowfullscreen></iframe></div>
-            <div class="video-frame"><iframe src="https://www.youtube.com/embed/0ng-pUJsC3U?enablejsapi=1" allowfullscreen></iframe></div>
-            <div class="video-frame"><iframe src="https://www.youtube.com/embed/B30PDyRZla0?enablejsapi=1" allowfullscreen></iframe></div>
-            <div class="video-frame"><iframe src="https://www.youtube.com/embed/xccCgAKLCqo?enablejsapi=1" allowfullscreen></iframe></div>
-            <div class="video-frame"><iframe src="https://www.youtube.com/embed/6bY18OxC28Q?enablejsapi=1" allowfullscreen></iframe></div>
-            <div class="video-frame"><iframe src="https://www.youtube.com/embed/jBGqwizmg1s?enablejsapi=1" allowfullscreen></iframe></div>
-            <div class="video-frame"><iframe src="https://www.youtube.com/embed/xn_270F5318?enablejsapi=1" allowfullscreen></iframe></div>
-            <div class="controls">
-                <button id="prevBtn">Previous</button>
-                <button id="pauseBtn">Pause</button>
-                <button id="nextBtn">Next</button>
-            </div>
-        </div>
-
-        <div class="video-section">
-        <h2>Music Videos</h2>
-        <div class="video-grid">
-            <div class="video-item"><h3>Mangsir ko mahina ley</h3><iframe src="https://www.youtube.com/embed/hzl_-joshkQ" allowfullscreen></iframe></div>
-            <div class="video-item"><h3>Bahanale - Manoj Rai</h3><iframe src="https://www.youtube.com/embed/L1EQA2CbJCc" allowfullscreen></iframe></div>
-            <div class="video-item"><h3>Meri Priyasi Lai</h3><iframe src="https://www.youtube.com/embed/0ng-pUJsC3U" allowfullscreen></iframe></div>
-            <div class="video-item"><h3>Muskurai Timi</h3><iframe src="https://www.youtube.com/embed/B30PDyRZla0" allowfullscreen></iframe></div>
-            <div class="video-item"><h3>Bhijyo Timro Rato Pachheuri</h3><iframe src="https://www.youtube.com/embed/xccCgAKLCqo" allowfullscreen></iframe></div>
-            <div class="video-item"><h3>Timro Harai Ko</h3><iframe src="https://www.youtube.com/embed/6bY18OxC28Q" allowfullscreen></iframe></div>
-            <div class="video-item"><h3>Himalako Kaakhma</h3><iframe src="https://www.youtube.com/embed/jBGqwizmg1s" allowfullscreen></iframe></div>
-        </div>
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+      <div class="video-frame video-frame-active"><iframe src="https://www.youtube.com/embed/hzl_-joshkQ?enablejsapi=1" allowfullscreen></iframe></div>
+      <div class="video-frame"><iframe src="https://www.youtube.com/embed/L1EQA2CbJCc?enablejsapi=1" allowfullscreen></iframe></div>
+      <div class="video-frame"><iframe src="https://www.youtube.com/embed/0ng-pUJsC3U?enablejsapi=1" allowfullscreen></iframe></div>
+      <div class="video-frame"><iframe src="https://www.youtube.com/embed/B30PDyRZla0?enablejsapi=1" allowfullscreen></iframe></div>
+      <div class="video-frame"><iframe src="https://www.youtube.com/embed/xccCgAKLCqo?enablejsapi=1" allowfullscreen></iframe></div>
+      <div class="video-frame"><iframe src="https://www.youtube.com/embed/6bY18OxC28Q?enablejsapi=1" allowfullscreen></iframe></div>
+      <div class="video-frame"><iframe src="https://www.youtube.com/embed/jBGqwizmg1s?enablejsapi=1" allowfullscreen></iframe></div>
+      <div class="video-frame"><iframe src="https://www.youtube.com/embed/xn_270F5318?enablejsapi=1" allowfullscreen></iframe></div>
+      <div class="controls">
+        <button id="prevBtn">Previous</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="nextBtn">Next</button>
+      </div>
     </div>
 
     <div class="video-section">
-        <h2>Program Videos</h2>
-        <div class="video-grid">
-            <div class="video-item"><h3>Madhukar Lohoni 1 (Birtamood)</h3><iframe src="https://www.youtube.com/embed/ppk-fKTfkRc" allowfullscreen></iframe></div>
-            <div class="video-item"><h3>Madhukar Lohoni 2 (Birtamood)</h3><iframe src="https://www.youtube.com/embed/uKfD-pURMxg" allowfullscreen></iframe></div>
-            <div class="video-item"><h3>Madhukar Lohoni 3 (Birtamood)</h3><iframe src="https://www.youtube.com/embed/GirQsONNwAk" allowfullscreen></iframe></div>
-            <div class="video-item"><h3>Senorita 1</h3><iframe src="https://www.youtube.com/embed/EbEFFSC2RxU" allowfullscreen></iframe></div>
-            <div class="video-item"><h3>Senorita 2</h3><iframe src="https://www.youtube.com/embed/6zq9kLNtgQI" allowfullscreen></iframe></div>
-        </div>
+      <h2 class="video-heading">Music Videos</h2>
+      <div class="video-grid">
+        <div class="video-item"><h3 class="video-title">Mangsir ko mahina ley</h3><iframe src="https://www.youtube.com/embed/hzl_-joshkQ" allowfullscreen></iframe></div>
+        <div class="video-item"><h3 class="video-title">Bahanale - Manoj Rai</h3><iframe src="https://www.youtube.com/embed/L1EQA2CbJCc" allowfullscreen></iframe></div>
+        <div class="video-item"><h3 class="video-title">Meri Priyasi Lai</h3><iframe src="https://www.youtube.com/embed/0ng-pUJsC3U" allowfullscreen></iframe></div>
+        <div class="video-item"><h3 class="video-title">Muskurai Timi</h3><iframe src="https://www.youtube.com/embed/B30PDyRZla0" allowfullscreen></iframe></div>
+        <div class="video-item"><h3 class="video-title">Bhijyo Timro Rato Pachheuri</h3><iframe src="https://www.youtube.com/embed/xccCgAKLCqo" allowfullscreen></iframe></div>
+        <div class="video-item"><h3 class="video-title">Timro Harai Ko</h3><iframe src="https://www.youtube.com/embed/6bY18OxC28Q" allowfullscreen></iframe></div>
+        <div class="video-item"><h3 class="video-title">Himalako Kaakhma</h3><iframe src="https://www.youtube.com/embed/jBGqwizmg1s" allowfullscreen></iframe></div>
+      </div>
     </div>
 
     <div class="video-section">
-        <h2>Interviews</h2>
-        <div class="video-grid">
-            <div class="video-item"><h3>Love & Support Foundation Interview</h3><iframe src="https://www.youtube.com/embed/VnOlAb859w8" allowfullscreen></iframe></div>
-            <div class="video-item"><h3>Denzome Sampahang Interview</h3><iframe src="https://www.youtube.com/embed/vF961mg1BlA" allowfullscreen></iframe></div>
-        </div>
+      <h2 class="video-heading">Program Videos</h2>
+      <div class="video-grid">
+        <div class="video-item"><h3 class="video-title">Madhukar Lohoni 1 (Birtamood)</h3><iframe src="https://www.youtube.com/embed/ppk-fKTfkRc" allowfullscreen></iframe></div>
+        <div class="video-item"><h3 class="video-title">Madhukar Lohoni 2 (Birtamood)</h3><iframe src="https://www.youtube.com/embed/uKfD-pURMxg" allowfullscreen></iframe></div>
+        <div class="video-item"><h3 class="video-title">Madhukar Lohoni 3 (Birtamood)</h3><iframe src="https://www.youtube.com/embed/GirQsONNwAk" allowfullscreen></iframe></div>
+        <div class="video-item"><h3 class="video-title">Senorita 1</h3><iframe src="https://www.youtube.com/embed/EbEFFSC2RxU" allowfullscreen></iframe></div>
+        <div class="video-item"><h3 class="video-title">Senorita 2</h3><iframe src="https://www.youtube.com/embed/6zq9kLNtgQI" allowfullscreen></iframe></div>
+      </div>
     </div>
 
     <div class="video-section">
-        <h2>Community</h2>
-        <div class="video-grid">
-            <div class="video-item"><h3>Statue Inauguration of Amber Gurung</h3><iframe src="https://www.youtube.com/embed/xn_270F5318" allowfullscreen></iframe></div>
-        </div>
+      <h2 class="video-heading">Interviews</h2>
+      <div class="video-grid">
+        <div class="video-item"><h3 class="video-title">Love & Support Foundation Interview</h3><iframe src="https://www.youtube.com/embed/VnOlAb859w8" allowfullscreen></iframe></div>
+        <div class="video-item"><h3 class="video-title">Denzome Sampahang Interview</h3><iframe src="https://www.youtube.com/embed/vF961mg1BlA" allowfullscreen></iframe></div>
+      </div>
     </div>
 
-    </main>
+    <div class="video-section">
+      <h2 class="video-heading">Community</h2>
+      <div class="video-grid">
+        <div class="video-item"><h3 class="video-title">Statue Inauguration of Amber Gurung</h3><iframe src="https://www.youtube.com/embed/xn_270F5318" allowfullscreen></iframe></div>
+      </div>
+    </div>
+  </main>
 
-    <footer>
-        <div data-include="components/footer.html"></div>
-    </footer>
+  <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
 
-    <script src="scripts/HTMLInclude.min.js"></script>
-    <script>
-        let current = 0;
-        let interval;
-        let players = [];
+  <script src="scripts/HTMLInclude.min.js"></script>
+  <script>
+    let current = 0;
+    let interval;
+    let players = [];
 
-        function show(index) {
-            const frames = document.querySelectorAll('.video-frame');
-            frames.forEach((frame, i) => {
-                frame.classList.toggle('active', i === index);
-            });
-            current = index;
-        }
+    function show(index) {
+      const frames = document.querySelectorAll('.video-frame');
+      frames.forEach((frame, i) => {
+        frame.classList.toggle('video-frame-active', i === index);
+      });
+      current = index;
+    }
 
-        function next() {
-            const frames = document.querySelectorAll('.video-frame');
-            current = (current + 1) % frames.length;
-            show(current);
-        }
+    function next() {
+      const frames = document.querySelectorAll('.video-frame');
+      current = (current + 1) % frames.length;
+      show(current);
+    }
 
-        function prev() {
-            const frames = document.querySelectorAll('.video-frame');
-            current = (current - 1 + frames.length) % frames.length;
-            show(current);
-        }
+    function prev() {
+      const frames = document.querySelectorAll('.video-frame');
+      current = (current - 1 + frames.length) % frames.length;
+      show(current);
+    }
 
-        function startSlideshow() {
-            interval = setInterval(next, 8000);
-        }
+    function startSlideshow() {
+      interval = setInterval(next, 8000);
+    }
 
-        function pauseSlideshow() {
-            clearInterval(interval);
-        }
+    function pauseSlideshow() {
+      clearInterval(interval);
+    }
 
-        function onYouTubeIframeAPIReady() {
-            const iframes = document.querySelectorAll('.video-frame iframe');
-            iframes.forEach((iframe, index) => {
-                const player = new YT.Player(iframe, {
-                    events: {
-                        'onStateChange': function(event) {
-                            if (event.data === YT.PlayerState.PLAYING) {
-                                pauseSlideshow();
-                            } else if (event.data === YT.PlayerState.ENDED) {
-                                startSlideshow();
-                            }
-                        }
-                    }
-                });
-                players.push(player);
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('nextBtn').onclick = () => {
+    function onYouTubeIframeAPIReady() {
+      const iframes = document.querySelectorAll('.video-frame iframe');
+      iframes.forEach((iframe, index) => {
+        const player = new YT.Player(iframe, {
+          events: {
+            'onStateChange': function (event) {
+              if (event.data === YT.PlayerState.PLAYING) {
                 pauseSlideshow();
-                next();
-            };
-            document.getElementById('prevBtn').onclick = () => {
-                pauseSlideshow();
-                prev();
-            };
-            document.getElementById('pauseBtn').onclick = pauseSlideshow;
-            show(current);
-            startSlideshow();
+              } else if (event.data === YT.PlayerState.ENDED) {
+                startSlideshow();
+              }
+            }
+          }
         });
-    </script>
+        players.push(player);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('nextBtn').onclick = () => {
+        pauseSlideshow();
+        next();
+      };
+      document.getElementById('prevBtn').onclick = () => {
+        pauseSlideshow();
+        prev();
+      };
+      document.getElementById('pauseBtn').onclick = pauseSlideshow;
+      show(current);
+      startSlideshow();
+    });
+  </script>
 </body>
 </html>
