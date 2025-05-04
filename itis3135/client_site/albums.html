@@ -43,7 +43,7 @@
         <img id="slideImage" src="" alt="Album Image" />
         <div id="slideDetails">
           <h2>Playlist</h2>
-          <ul id="playlist"></ul>
+          <select id="trackSelector" onchange="changeTrack(this.value)"></select>
 
           <h2>Audio</h2>
           <audio id="audioPlayer" controls style="width: 100%; margin-bottom: 10px;">
@@ -63,19 +63,20 @@
   </footer>
 
   <script>
-    function openSlide(albumId) {
-      const albumDetails = {
-        1: {
-          image: 'Album1.jpg',
-          playlist: ['Track 1', 'Track 2', 'Track 3'],
-          audio: '',
-          lyrics: 'Lyrics for Album 1...'
-        },
-        2: {
-          image: 'Album2.jpg',
-          playlist: ['01 BAHANA LEY'],
-          audio: '01 BAHANA LEY.mp3',
-          lyrics: `Verse 1
+    const albums = {
+      1: {
+        image: 'Album1.jpg',
+        tracks: [
+          { title: 'Track 1', audio: '', lyrics: 'Lyrics for Album 1...' }
+        ]
+      },
+      2: {
+        image: 'Album2.jpg',
+        tracks: [
+          {
+            title: '01 BAHANA LEY',
+            audio: '01 BAHANA LEY.mp3',
+            lyrics: `Verse 1
 Bahana ley ta timi tadha bhayau
 Kina kina chupchap bida bhayau
 Ma ta timro parkhai ma basirahe
@@ -134,36 +135,106 @@ You pretended to love me using excuses
 You wounded my honest heart so deeply  
 You ran away from my life  
 How could you even think of forgetting me?`
-        },
-        3: {
-          image: 'Album3.jpg',
-          playlist: ['Track 1', 'Track 2', 'Track 3'],
-          audio: '',
-          lyrics: 'Lyrics for Album 3...'
-        },
-        4: {
-          image: 'album4.jpg',
-          playlist: ['Track 1', 'Track 2', 'Track 3'],
-          audio: '',
-          lyrics: 'Lyrics for Album 4...'
-        }
-      };
+          },
+          {
+            title: '02 LA HAI',
+            audio: '02 LA HAI.mp3',
+            lyrics: `Segment 1
+La hai maya timilai
+Yo dil ko gahirai
+Bujhna yaar timile
+Yo mutu ko sachchai
 
-      const album = albumDetails[albumId];
-      document.getElementById('slideImage').src = album.image;
+(English)
+Take this love, it’s for you  
+From the depths of this heart  
+Try to understand, my dear  
+This heart speaks the truth
 
-      const playlist = document.getElementById('playlist');
-      playlist.innerHTML = '';
-      album.playlist.forEach(track => {
-        const li = document.createElement('li');
-        li.textContent = track;
-        playlist.appendChild(li);
+Segment 2
+Timi sangai bitayeko
+Pal haru anmol chhan
+Tyo hansi, tyo maya
+Aaja ni samjhana aunchhan
+
+(English)
+The moments spent with you  
+Are priceless memories  
+That smile, that love  
+Still return to me today
+
+Segment 3
+Timi bina jindagi
+Adhuro adhuro lagcha
+Timro samjhana bhitra
+Mero mutu harauchha
+
+(English)
+Life without you  
+Feels so incomplete  
+Within your memories  
+My heart gets lost
+
+Segment 4
+Timi mero sapana ma
+Aai rakheu rati din
+Bhaye pani sachcha bhan
+Timi ni samjhau chhin?
+
+(English)
+In my dreams  
+You keep appearing day and night  
+But tell me truly  
+Do you remember me too?
+
+Segment 5
+La hai feri ek choti
+Maya dinchu timilai
+Yo mutu ko har ek dhadkan
+Sadar garchu timilai
+
+(English)
+Here, once again  
+I give you my love  
+Every heartbeat of this heart  
+Is a tribute to you`
+          }
+        ]
+      },
+      3: {
+        image: 'Album3.jpg',
+        tracks: [{ title: 'Track 1', audio: '', lyrics: 'Lyrics for Album 3...' }]
+      },
+      4: {
+        image: 'album4.jpg',
+        tracks: [{ title: 'Track 1', audio: '', lyrics: 'Lyrics for Album 4...' }]
+      }
+    };
+
+    let currentAlbum = null;
+
+    function openSlide(albumId) {
+      currentAlbum = albums[albumId];
+      document.getElementById('slideImage').src = currentAlbum.image;
+
+      const trackSelector = document.getElementById('trackSelector');
+      trackSelector.innerHTML = '';
+      currentAlbum.tracks.forEach((track, i) => {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = track.title;
+        trackSelector.appendChild(option);
       });
 
-      document.getElementById('lyrics').textContent = album.lyrics;
-      document.getElementById('audioSource').src = album.audio;
-      document.getElementById('audioPlayer').load();
+      changeTrack(0); // load the first track
       document.getElementById('albumSlide').style.display = 'flex';
+    }
+
+    function changeTrack(index) {
+      const track = currentAlbum.tracks[index];
+      document.getElementById('audioSource').src = track.audio;
+      document.getElementById('audioPlayer').load();
+      document.getElementById('lyrics').textContent = track.lyrics;
     }
 
     function closeSlide() {
