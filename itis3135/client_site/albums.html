@@ -15,22 +15,38 @@
     <main>
         <h1>Albums</h1>
         <p>Discover the albums by Manoj K. Rai.</p>
+
+        <!-- Albums Grid -->
         <div class="albums">
-            <div class="album">
+            <div class="album" onclick="openSlide(1)">
                 <img src="album1.jpg" alt="Album 1">
                 <p>Album 1 - Description</p>
-                <audio controls>
-                    <source src="album1.mp3" type="audio/mp3">
-                    Your browser does not support the audio element.
-                </audio>
             </div>
-            <div class="album">
+            <div class="album" onclick="openSlide(2)">
                 <img src="album2.jpg" alt="Album 2">
                 <p>Album 2 - Description</p>
-                <audio controls>
-                    <source src="album2.mp3" type="audio/mp3">
-                    Your browser does not support the audio element.
-                </audio>
+            </div>
+            <div class="album" onclick="openSlide(3)">
+                <img src="album3.jpg" alt="Album 3">
+                <p>Album 3 - Description</p>
+            </div>
+            <div class="album" onclick="openSlide(4)">
+                <img src="album4.jpg" alt="Album 4">
+                <p>Album 4 - Description</p>
+            </div>
+        </div>
+
+        <!-- Slide Show -->
+        <div id="albumSlide" class="slide">
+            <span class="close" onclick="closeSlide()">&times;</span>
+            <div class="slide-content">
+                <img id="slideImage" src="" alt="Album Image">
+                <div id="slideDetails">
+                    <h2>Playlist</h2>
+                    <ul id="playlist"></ul>
+                    <h2>Lyrics</h2>
+                    <div id="lyrics"></div>
+                </div>
             </div>
         </div>
     </main>
