@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Videos - Manoj K. Rai</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
   <style>
     .slideshow-container {
       text-align: center;
       margin-bottom: 20px;
     }
+
     .video-frame {
       display: none;
       width: 90%;
@@ -19,52 +19,58 @@
       max-height: 320px;
       margin: auto;
     }
+
     .video-frame-active {
       display: block;
     }
+
     .video-frame iframe {
       width: 100%;
       height: 100%;
     }
+
     .controls {
       margin-top: 10px;
     }
+
     .controls button {
       margin: 0 10px;
       padding: 5px 15px;
       font-size: 16px;
     }
+
     .video-section {
       width: 90%;
       margin: auto;
       margin-top: 30px;
     }
+
     .video-heading {
       border-bottom: 2px solid #ccc;
       padding-bottom: 5px;
       margin-top: 40px;
     }
-  
+
     .video-grid {
       display: flex;
       flex-wrap: wrap;
-      row-gap: 20px;
-      column-gap: 20px;
+      gap: 20px;
       justify-content: space-between;
     }
+
     .video-item {
       flex: 0 0 calc(33.333% - 20px);
-      background: skyblue;
-      padding: 10px;
-      box-sizing: border-box;
     }
+
     .video-title {
       margin-top: 0;
     }
+
     .video-item iframe {
       width: 100%;
       height: 200px;
     }
+
     @media (max-width: 768px) {
       .video-item {
         flex: 0 0 100%;
@@ -82,7 +88,6 @@
     <h1>Videos</h1>
     <p>Watch the latest music videos and interviews with Manoj K. Rai.</p>
 
-    <!-- Slideshow -->
     <div class="slideshow-container">
       <div class="video-frame video-frame-active"><iframe src="https://www.youtube.com/embed/hzl_-joshkQ?enablejsapi=1" allowfullscreen></iframe></div>
       <div class="video-frame"><iframe src="https://www.youtube.com/embed/L1EQA2CbJCc?enablejsapi=1" allowfullscreen></iframe></div>
@@ -179,7 +184,7 @@
 
     function onYouTubeIframeAPIReady() {
       const iframes = document.querySelectorAll('.video-frame iframe');
-      iframes.forEach((iframe, index) => {
+      iframes.forEach((iframe) => {
         const player = new YT.Player(iframe, {
           events: {
             'onStateChange': function (event) {
