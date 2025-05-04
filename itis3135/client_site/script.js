@@ -5,7 +5,7 @@ const albums = {
       {
         title: '00 HIMALKO KAAKH',
         audio: '16 HIMALKO KAAKH.mp3',
-        lyrics: 'Lyrics for Album 1...'
+        lyrics: `Lyrics for Album 1...`
       }
     ]
   },
@@ -460,18 +460,12 @@ const srcTag   = document.getElementById('audioSource');
 const player   = document.getElementById('audioPlayer');
 const lyricsEl = document.getElementById('lyrics');
 
-// album click handlers
-document.querySelectorAll('.album').forEach(el =>
-  el.addEventListener('click', () => openSlide(el.dataset.album))
-);
-document.querySelector('.close').addEventListener('click', closeSlide);
-
 function openSlide(id) {
   currentAlbum = albums[id];
   slideImg.src = currentAlbum.image;
   selector.innerHTML = '';
-  currentAlbum.tracks.forEach((t,i) => {
-    let opt = document.createElement('option');
+  currentAlbum.tracks.forEach((t, i) => {
+    const opt = document.createElement('option');
     opt.value = i;
     opt.textContent = t.title;
     selector.append(opt);
@@ -481,7 +475,7 @@ function openSlide(id) {
 }
 
 function changeTrack(idx) {
-  let t = currentAlbum.tracks[idx];
+  const t = currentAlbum.tracks[idx];
   srcTag.src = t.audio;
   player.load();
   lyricsEl.textContent = t.lyrics;
@@ -490,3 +484,11 @@ function changeTrack(idx) {
 function closeSlide() {
   slide.style.display = 'none';
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.album').forEach((el) => {
+    el.addEventListener('click', () => openSlide(el.dataset.album));
+  });
+  document.querySelector('.close').addEventListener('click', closeSlide);
+  selector.addEventListener('change', () => changeTrack(selector.value));
+});
