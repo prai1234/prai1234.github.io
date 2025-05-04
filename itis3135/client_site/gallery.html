@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery - Manoj K. Rai</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer>document.addEventListener('keydown', function(e) {
-        if (!modal.hasAttribute('hidden')) {
-          if (e.key === 'ArrowRight') showNext();
-          if (e.key === 'ArrowLeft') showPrev();
-          if (e.key === 'Escape') modal.setAttribute('hidden', '');
-        }
-      });
-  </script>
-  <style>$1
-
-    /* Fade-in animation */
-    .modal[hidden] {
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.4s ease;
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <style>
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      padding-top: 50px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8);
     }
 
-    .modal:not([hidden]) {
-      opacity: 1;
-      transition: opacity 0.4s ease;
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 600px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
     }
+
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 50px;
+      color: white;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
@@ -37,41 +52,17 @@
     <h1>Gallery</h1>
     <p class="con">Explore images from Manoj K. Rai's events, concerts, and community activities.</p>
     <div class="gallery">
-      <img src="dd2.jpg" alt="Gallery Image">
-      <img src="c1.JPG" alt="Gallery Image">
-      <img src="c3.jpg" alt="Gallery Image">
-      <img src="d1.JPG" alt="Gallery Image">
-      <img src="d1.png" alt="Gallery Image">
-      <img src="d3.JPG" alt="Gallery Image">
-      <img src="d4.JPG" alt="Gallery Image">
-      <img src="dd1.jpg" alt="Gallery Image">
-      <img src="dd4.JPG" alt="Gallery Image">
-      <img src="dd3.jpg" alt="Gallery Image">
-      <img src="dd5.JPG" alt="Gallery Image">
-      <img src="dd6.JPG" alt="Gallery Image">
-      <img src="obca1.JPG" alt="Gallery Image">
-      <img src="dd7.JPG" alt="Gallery Image">
-      <img src="dd8.JPG" alt="Gallery Image">
-      <img src="m.jpg" alt="Gallery Image">
-      <img src="m2.JPG" alt="Gallery Image">
-      <img src="n1.jpg" alt="Gallery Image">
-      <img src="n2.jpg" alt="Gallery Image">
-      <img src="n3.JPG" alt="Gallery Image">
-      <img src="obca5.JPG" alt="Gallery Image">
-      <img src="obca6.JPG" alt="Gallery Image">
-      <img src="obca7.JPG" alt="Gallery Image">
-      <img src="obca2.JPG" alt="Gallery Image">
-      <img src="obca3.JPG" alt="Gallery Image">
-      <img src="obca4.JPG" alt="Gallery Image">
+      <img src="dd2.jpg" alt="Gallery Image" />
+      <img src="c1.JPG" alt="Gallery Image" />
+      <img src="c3.jpg" alt="Gallery Image" />
+      <!-- Add more images as needed -->
     </div>
   </main>
 
   <!-- Modal -->
-  <div id="slideshowModal" class="modal" hidden>
+  <div id="slideshowModal" class="modal">
     <span class="close">&times;</span>
-    <button class="nav-btn prev">&#10094;</button>
-    <img class="modal-content" id="modalImage">
-    <button class="nav-btn next">&#10095;</button>
+    <img class="modal-content" id="modalImage" />
   </div>
 
   <footer>
@@ -80,47 +71,26 @@
 
   <script src="scripts/HTMLInclude.min.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const modal = document.getElementById('slideshowModal');
-      const modalImg = document.getElementById('modalImage');
-      const closeBtn = document.querySelector('.close');
-      const galleryImages = Array.from(document.querySelectorAll('.gallery img'));
-      const prevBtn = document.querySelector('.prev');
-      const nextBtn = document.querySelector('.next');
-      let currentIndex = 0;
+    document.addEventListener("DOMContentLoaded", function () {
+      const modal = document.getElementById("slideshowModal");
+      const modalImg = document.getElementById("modalImage");
+      const closeBtn = document.querySelector(".close");
 
-      function openModal(index) {
-        currentIndex = index;
-        modal.removeAttribute('hidden');
-        modalImg.src = galleryImages[currentIndex].src;
-      }
-
-      function showNext() {
-        currentIndex = (currentIndex + 1) % galleryImages.length;
-        modalImg.src = galleryImages[currentIndex].src;
-      }
-
-      function showPrev() {
-        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-        modalImg.src = galleryImages[currentIndex].src;
-      }
-
-      galleryImages.forEach((img, index) => {
-        img.addEventListener('click', () => openModal(index));
+      document.querySelectorAll(".gallery img").forEach((img) => {
+        img.addEventListener("click", () => {
+          modal.style.display = "block";
+          modalImg.src = img.src;
+        });
       });
 
-      closeBtn.addEventListener('click', () => {
-        modal.setAttribute('hidden', '');
+      closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
       });
 
-      prevBtn.addEventListener('click', showPrev);
-      nextBtn.addEventListener('click', showNext);
-
-      window.addEventListener('click', (e) => {
+      window.addEventListener("click", (e) => {
         if (e.target === modal) {
-          modal.setAttribute('hidden', '');
+          modal.style.display = "none";
         }
-      });
       });
     });
   </script>
