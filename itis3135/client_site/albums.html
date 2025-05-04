@@ -1,108 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Albums - Manoj K. Rai</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Albums - Manoj K. Rai</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <div data-include="components/header.html"></div>
-    </header>
+  <header>
+    <div data-include="components/header.html"></div>
+  </header>
 
-    <main>
-        <h1>Albums</h1>
-        <p>Discover the albums by Manoj K. Rai.</p>
+  <main>
+    <h1>Albums</h1>
+    <p>Discover the albums by Manoj K. Rai.</p>
 
-        <!-- Albums Grid -->
-        <div class="albums">
-            <div class="album" onclick="openSlide(1)">
-                <img src="Album1.jpg" alt="Album 1">
-                <p>Bhutani Katha Batha - Description</p>
-            </div>
-            <div class="album" onclick="openSlide(2)">
-                <img src="Album2.jpg" alt="Album 2">
-                <p>Senorita - Description</p>
-            </div>
-            <div class="album" onclick="openSlide(3)">
-                <img src="Album3.jpg" alt="Album 3">
-                <p>Spandhan - Description</p>
-            </div>
-            <div class="album" onclick="openSlide(4)">
-                <img src="album4.jpg" alt="Album 4">
-                <p>Sradhanjali - Description</p>
-            </div>
+    <!-- Albums Grid -->
+    <div class="albums">
+      <div class="album" onclick="openSlide(1)">
+        <img src="Album1.jpg" alt="Album 1" />
+        <p>Bhutani Katha Batha - Description</p>
+      </div>
+      <div class="album" onclick="openSlide(2)">
+        <img src="Album2.jpg" alt="Album 2" />
+        <p>Senorita - Description</p>
+      </div>
+      <div class="album" onclick="openSlide(3)">
+        <img src="Album3.jpg" alt="Album 3" />
+        <p>Spandhan - Description</p>
+      </div>
+      <div class="album" onclick="openSlide(4)">
+        <img src="album4.jpg" alt="Album 4" />
+        <p>Sradhanjali - Description</p>
+      </div>
+    </div>
+
+    <!-- Slide Show Modal -->
+    <div id="albumSlide" class="slide" style="display: none;">
+      <span class="close" onclick="closeSlide()">&times;</span>
+      <div class="slide-content">
+        <img id="slideImage" src="" alt="Album Image" />
+        <div id="slideDetails">
+          <h2>Playlist</h2>
+          <ul id="playlist"></ul>
+
+          <h2>Audio</h2>
+          <audio id="audioPlayer" controls style="width: 100%; margin-bottom: 10px;">
+            <source id="audioSource" src="" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+
+          <h2>Lyrics</h2>
+          <div id="lyrics" style="white-space: pre-line;"></div>
         </div>
+      </div>
+    </div>
+  </main>
 
-        <!-- Slide Show -->
-        <div id="albumSlide" class="slide">
-            <span class="close" onclick="closeSlide()">&times;</span>
-            <div class="slide-content">
-                <img id="slideImage" src="" alt="Album Image">
-                <div id="slideDetails">
-                    <h2>Playlist</h2>
-                    <ul id="playlist"></ul>
-                    <h2>Lyrics</h2>
-                    <div id="lyrics"></div>
-                </div>
-            </div>
-        </div>
-    </main>
+  <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
 
-    <footer>
-        <div data-include="components/footer.html"></div>
-    </footer>
-    <script>
-        // Function to open the slide show
-        function openSlide(albumId) {
-            const albumDetails = {
-                1: {
-                    image: 'Album1.jpg',
-                    playlist: ['Track 1', 'Track 2', 'Track 3'],
-                    lyrics: 'Lyrics for Album 1...'
-                },
-                2: {
-                    image: 'Album2.jpg',
-                    playlist: ['Track 1', 'Track 2', 'Track 3'],
-                    lyrics: 'Lyrics for Album 2...'
-                },
-                3: {
-                    image: 'Album3.jpg',
-                    playlist: ['Track 1', 'Track 2', 'Track 3'],
-                    lyrics: 'Lyrics for Album 3...'
-                },
-                4: {
-                    image: 'album4.jpg',
-                    playlist: ['Track 1', 'Track 2', 'Track 3'],
-                    lyrics: 'Lyrics for Album 4...'
-                }
-            };
+  <script>
+    function openSlide(albumId) {
+      const albumDetails = {
+        1: {
+          image: 'Album1.jpg',
+          playlist: ['Track 1', 'Track 2', 'Track 3'],
+          audio: '',
+          lyrics: 'Lyrics for Album 1...'
+        },
+        2: {
+          image: 'Album2.jpg',
+          playlist: ['01 BAHANA LEY'],
+          audio: '01 BAHANA LEY.mp3',
+          lyrics: `Verse 1
+Bahana ley ta timi tadha bhayau
+Kina kina chupchap bida bhayau
+Ma ta timro parkhai ma basirahe
+Timi ta pachhi farkiyena
 
-            const album = albumDetails[albumId];
-            
-            // Update the slide content
-            document.getElementById('slideImage').src = album.image;
-            const playlist = document.getElementById('playlist');
-            playlist.innerHTML = '';
-            album.playlist.forEach(track => {
-                const li = document.createElement('li');
-                li.textContent = track;
-                playlist.appendChild(li);
-            });
-            document.getElementById('lyrics').textContent = album.lyrics;
+(English)
+With excuses, you distanced yourself from me  
+For some reason, you quietly left  
+I kept sitting, waiting for you  
+But you never came back
 
-            // Show the slide
-            document.getElementById('albumSlide').style.display = 'flex';
+Verse 2
+Din haru ta khasai sajilai gaye
+Raat haru ta anidrai gaye
+Mann bhitra tyo samjhana jali
+Timi bhayepachi sabai bhulna sakin
+
+(English)
+The days passed quite easily  
+But the nights went sleepless  
+That memory burned within my heart  
+Once you left, I couldn't forget anything
+
+Chorus
+Bahana ley maya garyo jasto garera
+Sacheko mutu ma kasto ghaau diyau
+Bhagera ta gayera jindagi bata
+Malai birsane kura kasari sochyau?
+
+(English)
+You pretended to love me using excuses  
+You wounded my honest heart so deeply  
+You ran away from my life  
+How could you even think of forgetting me?
+
+Verse 3
+Jati maya garyo teti nai dukhyo
+Timi binako jindagi sunyota bharyo
+Aankhama aasha, mutu ma maya
+Timi gayepachi sabai adhuro bhayo
+
+(English)
+The more I loved, the more it hurt  
+Life without you filled with emptiness  
+Hope in the eyes, love in the heart  
+But after you left, everything felt incomplete
+
+Chorus (Repeat)
+Bahana ley maya garyo jasto garera
+Sacheko mutu ma kasto ghaau diyau
+Bhagera ta gayera jindagi bata
+Malai birsane kura kasari sochyau?
+
+(English)
+You pretended to love me using excuses  
+You wounded my honest heart so deeply  
+You ran away from my life  
+How could you even think of forgetting me?`
+        },
+        3: {
+          image: 'Album3.jpg',
+          playlist: ['Track 1', 'Track 2', 'Track 3'],
+          audio: '',
+          lyrics: 'Lyrics for Album 3...'
+        },
+        4: {
+          image: 'album4.jpg',
+          playlist: ['Track 1', 'Track 2', 'Track 3'],
+          audio: '',
+          lyrics: 'Lyrics for Album 4...'
         }
+      };
 
-        // Function to close the slide show
-        function closeSlide() {
-            document.getElementById('albumSlide').style.display = 'none';
-        }
-    </script>
+      const album = albumDetails[albumId];
+      document.getElementById('slideImage').src = album.image;
 
-    <script src="scripts/HTMLInclude.min.js"></script>
+      const playlist = document.getElementById('playlist');
+      playlist.innerHTML = '';
+      album.playlist.forEach(track => {
+        const li = document.createElement('li');
+        li.textContent = track;
+        playlist.appendChild(li);
+      });
+
+      document.getElementById('lyrics').textContent = album.lyrics;
+      document.getElementById('audioSource').src = album.audio;
+      document.getElementById('audioPlayer').load();
+      document.getElementById('albumSlide').style.display = 'flex';
+    }
+
+    function closeSlide() {
+      document.getElementById('albumSlide').style.display = 'none';
+    }
+  </script>
+
+  <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>
