@@ -37,7 +37,7 @@
     <div id="albumSlide" class="slide" style="display: none;">
       <span class="close" onclick="closeSlide()">×</span>
       <div class="slide-content">
-        <img id="slideImage" src="" alt="Album Image" />
+        <img id="slideImage" alt="Album Image" />
         <div id="slideDetails">
           <h2>Playlist</h2>
           <select id="trackSelector" onchange="changeTrack(this.value)"></select>
@@ -462,30 +462,37 @@ Just to dance with you.`
         tracks: [{ title: '00 INTRO', audio: '14 INTRO.mp3', lyrics: 'Lyrics for Album 4...' }]
       }
     };
-    let currentAlbum = null;
-    function openSlide(albumId) {
-      currentAlbum = albums[albumId];
-      document.getElementById('slideImage').src = currentAlbum.image;
-      const trackSelector = document.getElementById('trackSelector');
-      trackSelector.innerHTML = '';
-      currentAlbum.tracks.forEach((track, i) => {
-        const option = document.createElement('option');
-        option.value = i;
-        option.textContent = track.title;
-        trackSelector.appendChild(option);
-      });
-      changeTrack(0); // Load first track
-      document.getElementById('albumSlide').style.display = 'flex';
-    }
-    function changeTrack(index) {
-      const track = currentAlbum.tracks[index];
-      document.getElementById('audioSource').src = track.audio;
-      document.getElementById('audioPlayer').load();
-      document.getElementById('lyrics').textContent = track.lyrics;
-    }
-    function closeSlide() {
-      document.getElementById('albumSlide').style.display = 'none';
-    }
+
+  let currentAlbum = null;
+
+  // Define changeTrack function
+  function changeTrack(index) {
+    const track = currentAlbum.tracks[index];
+    document.getElementById('audioSource').src = track.audio;
+    document.getElementById('audioPlayer').load();
+    document.getElementById('lyrics').textContent = track.lyrics;
+  }
+
+  // Define openSlide function
+  function openSlide(albumId) {
+    currentAlbum = albums[albumId];
+    document.getElementById('slideImage').src = currentAlbum.image;
+    const trackSelector = document.getElementById('trackSelector');
+    trackSelector.innerHTML = '';
+    currentAlbum.tracks.forEach((track, i) => {
+      const option = document.createElement('option');
+      option.value = i;
+      option.textContent = track.title;
+      trackSelector.appendChild(option);
+    });
+    changeTrack(0); // Load first track
+    document.getElementById('albumSlide').style.display = 'flex';
+  }
+
+  // Close slide function
+  function closeSlide() {
+    document.getElementById('albumSlide').style.display = 'none';
+  }
   </script>
   <script src="scripts/HTMLInclude.min.js"></script>
 </body>
