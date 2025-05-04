@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
-</head>
 <body>
     <header>
         <div data-include="components/header.html"></div>
@@ -55,6 +54,54 @@
     <footer>
         <div data-include="components/footer.html"></div>
     </footer>
+    <script>
+        // Function to open the slide show
+        function openSlide(albumId) {
+            const albumDetails = {
+                1: {
+                    image: 'album1.jpg',
+                    playlist: ['Track 1', 'Track 2', 'Track 3'],
+                    lyrics: 'Lyrics for Album 1...'
+                },
+                2: {
+                    image: 'album2.jpg',
+                    playlist: ['Track 1', 'Track 2', 'Track 3'],
+                    lyrics: 'Lyrics for Album 2...'
+                },
+                3: {
+                    image: 'album3.jpg',
+                    playlist: ['Track 1', 'Track 2', 'Track 3'],
+                    lyrics: 'Lyrics for Album 3...'
+                },
+                4: {
+                    image: 'album4.jpg',
+                    playlist: ['Track 1', 'Track 2', 'Track 3'],
+                    lyrics: 'Lyrics for Album 4...'
+                }
+            };
+
+            const album = albumDetails[albumId];
+            
+            // Update the slide content
+            document.getElementById('slideImage').src = album.image;
+            const playlist = document.getElementById('playlist');
+            playlist.innerHTML = '';
+            album.playlist.forEach(track => {
+                const li = document.createElement('li');
+                li.textContent = track;
+                playlist.appendChild(li);
+            });
+            document.getElementById('lyrics').textContent = album.lyrics;
+
+            // Show the slide
+            document.getElementById('albumSlide').style.display = 'flex';
+        }
+
+        // Function to close the slide show
+        function closeSlide() {
+            document.getElementById('albumSlide').style.display = 'none';
+        }
+    </script>
 
     <script src="scripts/HTMLInclude.min.js"></script>
 </body>
