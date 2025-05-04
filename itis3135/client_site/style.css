@@ -22,6 +22,10 @@ nav ul li {
     display: inline;
     margin-right: 20px;
 }
+.social-icons img {
+    width: 24px;  /* Make icons smaller */
+    height: 24px; /* Maintain aspect ratio */
+}
 
 nav ul li a {
     color: white;
