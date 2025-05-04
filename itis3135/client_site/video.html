@@ -14,7 +14,7 @@
     .video-frame {
       display: none;
       width: 90%;
-      height: calc(60vw);
+      height: 60vw; /* ✅ Fixed calc() issue */
       max-width: 960px;
       max-height: 320px;
       margin: auto;
@@ -39,7 +39,7 @@
       margin: auto;
       margin-top: 30px;
     }
-    h2.video-heading {
+    .video-heading {
       border-bottom: 2px solid #ccc;
       padding-bottom: 5px;
       margin-top: 40px;
@@ -53,7 +53,7 @@
     .video-item {
       flex: 0 0 calc(33.333% - 20px);
     }
-    h3.video-title {
+    .video-title {
       margin-top: 0;
     }
     .video-item iframe {
