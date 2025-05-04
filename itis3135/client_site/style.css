@@ -26,6 +26,9 @@ nav ul li {
     width: 24px;  /* Make icons smaller */
     height: 24px; /* Maintain aspect ratio */
 }
+.social-icons {
+    text-align: right;
+}
 
 nav ul li a {
     color: white;
@@ -112,3 +115,4 @@ input[type="submit"] {
 .event-col:last-child {
     border-right: none;
 } 
+
