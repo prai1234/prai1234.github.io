@@ -12,10 +12,19 @@ header, footer {
     padding: 10px;
 }
 
+nav {
+    display: flex;
+    align-items: center;  /* Align items vertically in the center */
+    justify-content: space-between;
+    padding: 0.5em 1em;
+    background: #333;  /* Navbar background */
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
 nav ul li {
@@ -28,7 +37,7 @@ nav ul li a {
     text-decoration: none;
 }
 
-main {
+.main {
     padding: 20px;
     text-align: center;
 }
@@ -113,8 +122,9 @@ input[type="submit"] {
 /* Navbar Layout */
 .navbar {
     display: flex;
-    align-items: center;
-    justify-content: space-between;  /* space between logo, menu, and icons */
+    align-items: center;  /* Align items in the center vertically */
+    justify-content: space-between;  /* Space between the logo, menu, and icons */
+    width: 100%;
     padding: 0.5em 1em;
     background: #333;  /* example background color */
 }
@@ -124,7 +134,7 @@ input[type="submit"] {
     margin: 0;
     padding: 0;
     display: flex;
-    /* The nav-menu will naturally be centered by space-between */ 
+    align-items: center;  /* Align menu items in the center */
 }
 
 .nav-menu li {
@@ -132,11 +142,22 @@ input[type="submit"] {
 }
 
 .nav-menu a {
-    color: white;  /* example link color */
+    color: white;
     text-decoration: none;
 }
 
+/* Logo styling (smaller logo) */
+.logo img {
+    height: 30px;  /* Adjust the logo size */
+    width: auto;
+}
+
 /* Social icons on the right */
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
 .social-icons a {
     margin-left: 1em;  /* spacing between icons */
 }
@@ -145,10 +166,4 @@ input[type="submit"] {
     width: 24px;
     height: 24px;
     vertical-align: middle;
-}
-
-/* Logo styling */
-.logo img {
-    height: 40px;  /* example logo size */
-    width: auto;
 }
