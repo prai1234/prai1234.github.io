@@ -3,10 +3,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;  /* Center content on the page */
-    overflow-x: hidden;  /* Prevent horizontal scrolling */
 }
 
 header, footer {
@@ -14,26 +10,12 @@ header, footer {
     color: white;
     text-align: center;
     padding: 10px;
-    width: 100%;
-}
-
-nav {
-    display: flex;
-    align-items: center;  /* Align items vertically in the center */
-    justify-content: space-between;  /* Space between the logo, menu, and icons */
-    width: 100%;
-    padding: 0.5em 1em;
-    background: #333;  /* Navbar background */
-    box-sizing: border-box; /* Ensures padding doesn't push content out of view */
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-grow: 1;  /* This makes the nav menu take the remaining space */
-    justify-content: center;  /* Center the menu items */
 }
 
 nav ul li {
@@ -49,8 +31,6 @@ nav ul li a {
 main {
     padding: 20px;
     text-align: center;
-    width: 100%;
-    max-width: 1200px; /* Center content with a maximum width */
 }
 
 .about-container {
@@ -111,7 +91,6 @@ input[type="submit"] {
     color: white;
     border: none;
 }
-
 .past-events {
     display: flex;
     justify-content: space-between;
@@ -128,58 +107,4 @@ input[type="submit"] {
 
 .event-col:last-child {
     border-right: none;
-}
-
-/* Navbar Layout */
-.navbar {
-    display: flex;
-    align-items: center;  /* Align items vertically in the center */
-    justify-content: space-between;  /* Space between the logo, menu, and icons */
-    width: 100%;
-    padding: 0.5em 1em;
-    background: #333;  /* example background color */
-    box-sizing: border-box;
-}
-
-.nav-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;  /* Align menu items in the center */
-    flex-grow: 1;  /* Make the nav menu take up remaining space */
-    justify-content: center;  /* Center the menu items */
-}
-
-.nav-menu li {
-    margin: 0 1em;
-}
-
-.nav-menu a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Logo styling (smaller logo) */
-.logo img {
-    height: 30px;  /* Adjust the logo size */
-    width: auto;
-    max-width: 100%;  /* Make sure it scales down if needed */
-}
-
-/* Social icons on the right */
-.social-icons {
-    display: flex;
-    align-items: center;
-}
-
-.social-icons a {
-    margin-left: 1em;  /* spacing between icons */
-}
-
-.social-icons img {
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    max-width: 100%;  /* Make sure it scales down if needed */
-}
+} 
