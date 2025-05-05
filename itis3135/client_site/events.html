@@ -6,103 +6,6 @@
     <title>Events - Manoj K. Rai</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <style>
-        /* General Layout */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        header, footer {
-            background-color: #007BFF;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-        }
-
-        header h1, footer h1 {
-            margin: 0;
-            font-size: 1.5rem;
-        }
-
-        main {
-            padding: 20px;
-            text-align: center;
-        }
-
-        h2 {
-            color: #333;
-            margin-top: 40px;
-        }
-
-        /* Ensuring no conflict with other styles */
-        .events-container, .past-events-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-
-        /* Event Cards Styling */
-        .event-card, .past-event-card {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 10px;
-            padding: 20px;
-            width: 45%;
-            max-width: 350px;
-            text-align: left;
-            transition: transform 0.3s ease;
-        }
-
-        .event-card:hover, .past-event-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .event-card h3, .past-event-card h3 {
-            color: #007BFF;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .event-card p, .past-event-card p {
-            font-size: 1rem;
-            margin: 5px 0;
-        }
-
-        a {
-            color: #007BFF;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 10px;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .past-events-container .past-event-card {
-            background-color: #f9f9f9;
-        }
-
-        /* Responsiveness */
-        @media (max-width: 768px) {
-            .events-container, .past-events-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .event-card, .past-event-card {
-                width: 90%;
-                max-width: 500px;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -114,34 +17,34 @@
         <p>Stay updated with Manoj K. Rai's upcoming concerts, performances, and community outreach events.</p>
 
         <h2>Upcoming Events</h2>
-        <div class="events-container">
-            <div class="event-card">
+        <div class="events">
+            <div class="event">
                 <h3>To Be Determined</h3>
                 <p>Date: To Be Announced</p>
                 <p>Location: To Be Announced</p>
             </div>
         </div>
 
-        <h2>Past Events</h2>
-        <div class="past-events-container">
-            <div class="past-event-card">
+        <h2 style="margin-top: 40px;">Past Events</h2> <!-- Added space before Past Events -->
+        <div class="past-events">
+            <div class="event-col">
                 <h3>Statue Inauguration - Tingling View Point</h3>
                 <p>Date: November 5, 2023</p>
                 <p>Location: Mirik, India</p>
                 <a href="https://loveandsupportfoundation.org/homegallery/statue-inauguration/" target="_blank">More Info</a>
             </div>
-            <div class="past-event-card">
+            <div class="event-col">
                 <h3>The 3rd National Convention of Love & Support Foundation-Nepal</h3>
                 <p>Date: November 8-9, 2024</p>
                 <p>Location: Ridi Lounge, Jawalakhel, Lalitpur, Nepal</p>
                 <a href="https://loveandsupportfoundation.org/homegallery/convention-programs/" target="_blank">More Info</a>
             </div>
-            <div class="past-event-card">
+            <div class="event-col">
                 <h3>Global Nepali Film, Music, Media & Social Award - 2018</h3>
                 <p>Date: 2018</p>
                 <a href="https://loveandsupportfoundation.org/online-media/global-nepali-awards/" target="_blank">More Info</a>
             </div>
-            <div class="past-event-card">
+            <div class="event-col">
                 <h3>First Aid Mental Health Training - TRIAD CITY</h3>
                 <p>Date: April 12-13, 2019</p>
                 <p>Location: Greensboro, High Point & Winston Salem</p>
