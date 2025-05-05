@@ -51,10 +51,6 @@ function onYouTubeIframeAPIReady() {
     players.push(player);
   });
 }
-
-/* ----------------------------------
-   Album Slide-out / Track Selector
-   ---------------------------------- */
 const albums = {
   1: {
     image: 'Album1.jpg',
@@ -125,10 +121,6 @@ function openSlide(id) {
 function closeSlide() {
   slide.style.display = 'none';
 }
-
-/* ----------------------------------
-   DOM Ready: wire up both features
-   ---------------------------------- */
 document.addEventListener('DOMContentLoaded', () => {
   // Video controls
   document.getElementById('nextBtn').addEventListener('click', () => {
