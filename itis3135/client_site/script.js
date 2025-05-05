@@ -1,8 +1,3 @@
-// scripts/main.js
-
-/* -------------------------------
-   Video Slideshow Functionality
-   ------------------------------- */
 let current = 0;
 let interval;
 let players = [];
