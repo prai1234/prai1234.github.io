@@ -1,21 +1,21 @@
-const albums = {
-  1: {
-    image: 'Album1.jpg',
-    tracks: [
-      {
-        title: '00 HIMALKO KAAKH',
-        audio: '16 HIMALKO KAAKH.mp3',
-        lyrics: `Lyrics for Album 1...`
-      }
-    ]
-  },
-  2: {
-    image: 'Album2.jpg',
-    tracks: [
-      {
-        title: '01 BAHANA LEY',
-        audio: '01 BAHANA LEY.mp3',
-        lyrics: `Verse 1
+    const albums = {
+      1: {
+        image: 'Album1.jpg',
+        tracks: [
+          {
+            title: '00 HIMALKO KAAKH',
+            audio: '16 HIMALKO KAAKH.mp3',
+            lyrics: `Lyrics for Album 1...`
+          }
+        ]
+      },
+      2: {
+        image: 'Album2.jpg',
+        tracks: [
+          {
+            title: '01 BAHANA LEY',
+            audio: '01 BAHANA LEY.mp3',
+            lyrics: `Verse 1
 Bahana ley ta timi tadha bhayau
 Kina kina chupchap bida bhayau
 Ma ta timro parkhai ma basirahe
@@ -69,11 +69,11 @@ You pretended to love me using excuses
 You wounded my honest heart so deeply  
 You ran away from my life  
 How could you even think of forgetting me?`
-      },
-      {
-        title: '02 LA HAI',
-        audio: '02 LA HAI.mp3',
-        lyrics: `Segment 1
+          },
+          {
+            title: '02 LA HAI',
+            audio: '02 LA HAI.mp3',
+            lyrics: `Segment 1
 La hai maya timilai
 Yo dil ko gahirai
 Bujhna yaar timile
@@ -127,11 +127,11 @@ Here, once again
 I give you my love  
 Every heartbeat of this heart  
 Is a tribute to you`
-      },
-      {
-        title: '03 JABA SANJH',
-        audio: '03 JABA SANJH.mp3',
-        lyrics: `Verse 1
+          },
+          {
+            title: '03 JABA SANJH',
+            audio: '03 JABA SANJH.mp3',
+            lyrics: `Verse 1
 Jaba sanjh parcha
 Timro samjhana aaucha
 Tyo purano gali
@@ -184,11 +184,11 @@ Ma bhitra timi nai baschhau
 (English)
 In this dark night, I keep thinking only of you.  
 When evening falls, you live inside me.`
-      },
-      {
-        title: '04 AAYO FERI',
-        audio: '04 AAYO FERI.mp3',
-        lyrics: `Verse 1
+          },
+          {
+            title: '04 AAYO FERI',
+            audio: '04 AAYO FERI.mp3',
+            lyrics: `Verse 1
 Aayo feri tyo din
 Jun din timilai bheteko
 Tyo muskan le feri
@@ -253,11 +253,11 @@ Again I call out to you,
 Watching and remembering you.  
 In one corner of my heart,  
 Your love still lives.`
-      },
-      {
-        title: '05 ADHARMAA',
-        audio: '05 ADHARMAA.mp3',
-        lyrics: `Verse 1
+          },
+          {
+            title: '05 ADHARMAA',
+            audio: '05 ADHARMAA.mp3',
+            lyrics: `Verse 1
 Adharmaa timro saath ma jindagi
 Timi bhaye pachhi sabai asan bhayo
 Jaba andhakar chha bhanincha
@@ -311,11 +311,11 @@ Sometimes through love, sometimes through pain,
 This heart tells your story.  
 It feels like you are here—  
 Everywhere, it's your world.`
-      },
-      {
-        title: '06 BICHALIT',
-        audio: '06 BICHALIT.mp3',
-        lyrics: `Verse 1
+          },
+          {
+            title: '06 BICHALIT',
+            audio: '06 BICHALIT.mp3',
+            lyrics: `Verse 1
 Bichalit bhayo yo mutu
 Jaba timro samjhana aayo
 Yo akha bhari bhari
@@ -369,11 +369,11 @@ If you could hear
 The cry of these heartbeats,  
 You would understand  
 How short my life has become without you.`
-      },
-      {
-        title: '07 SENORITA',
-        audio: '07 SENORITA.mp3',
-        lyrics: `Verse 1
+          },
+          {
+            title: '07 SENORITA',
+            audio: '07 SENORITA.mp3',
+            lyrics: `Verse 1
 Senorita, timro aankha ko maya
 Tyo muskan le ma chhayan bhanchhu
 Nachau timi sangai yo dhun ma
@@ -427,68 +427,73 @@ Senorita, my name on your lips—
 When you say it, my heartbeat races.  
 Tonight, I want nothing else,  
 Just to dance with you.`
+          }
+        ]
+      },
+      3: {
+        image: 'Album3.jpg',
+        tracks: [
+          {
+            title: '01 MANGSIR',
+            audio: '08 MANGSIR.mp3',
+            lyrics: 'Lyrics for Album 3...'
+          }
+        ]
+      },
+      4: {
+        image: 'album4.jpg',
+        tracks: [
+          {
+            title: '00 INTRO',
+            audio: '14 INTRO.mp3',
+            lyrics: 'Lyrics for Album 4...'
+          }
+        ]
       }
-    ]
-  },
-  3: {
-    image: 'Album3.jpg',
-    tracks: [
-      {
-        title: '01 MANGSIR',
-        audio: '08 MANGSIR.mp3',
-        lyrics: 'Lyrics for Album 3...'
-      }
-    ]
-  },
-  4: {
-    image: 'album4.jpg',
-    tracks: [
-      {
-        title: '00 INTRO',
-        audio: '14 INTRO.mp3',
-        lyrics: 'Lyrics for Album 4...'
-      }
-    ]
-  }
-};
+    };
 
-let currentAlbum = null;
-const slide    = document.getElementById('albumSlide');
-const slideImg = document.getElementById('slideImage');
-const selector = document.getElementById('trackSelector');
-const srcTag   = document.getElementById('audioSource');
-const player   = document.getElementById('audioPlayer');
-const lyricsEl = document.getElementById('lyrics');
+    let currentAlbum = null;
+    const slide    = document.getElementById('albumSlide');
+    const slideImg = document.getElementById('slideImage');
+    const selector = document.getElementById('trackSelector');
+    const srcTag   = document.getElementById('audioSource');
+    const player   = document.getElementById('audioPlayer');
+    const lyricsEl = document.getElementById('lyrics');
 
-function openSlide(id) {
-  currentAlbum = albums[id];
-  slideImg.src = currentAlbum.image;
-  selector.innerHTML = '';
-  currentAlbum.tracks.forEach((t, i) => {
-    const opt = document.createElement('option');
-    opt.value = i;
-    opt.textContent = t.title;
-    selector.append(opt);
-  });
-  changeTrack(0);
-  slide.style.display = 'flex';
-}
+    // 1) changeTrack must be defined before it's used in openSlide
+    function changeTrack(idx) {
+      const t = currentAlbum.tracks[idx];
+      srcTag.src = t.audio;
+      player.load();
+      lyricsEl.textContent = t.lyrics;
+    }
 
-function changeTrack(idx) {
-  const t = currentAlbum.tracks[idx];
-  srcTag.src = t.audio;
-  player.load();
-  lyricsEl.textContent = t.lyrics;
-}
+    // 2) openSlide can now safely call changeTrack
+    function openSlide(id) {
+      currentAlbum = albums[id];
+      slideImg.src = currentAlbum.image;
+      selector.innerHTML = '';
+      currentAlbum.tracks.forEach((t, i) => {
+        const opt = document.createElement('option');
+        opt.value = i;
+        opt.textContent = t.title;
+        selector.append(opt);
+      });
+      changeTrack(0);
+      slide.style.display = 'flex';
+    }
 
-function closeSlide() {
-  slide.style.display = 'none';
-}
+    function closeSlide() {
+      slide.style.display = 'none';
+    }
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.album').forEach((el) => {
-    el.addEventListener('click', () => openSlide(el.dataset.album));
-  });
-  document.querySelector('.close').addEventListener('click', closeSlide);
-  selector.addEventListener('change', () => changeTrack(selector.value));
-});
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.album').forEach((el) => {
+        el.addEventListener('click', () => openSlide(el.dataset.album));
+      });
+      document.querySelector('.close').addEventListener('click', closeSlide);
+      selector.addEventListener('change', () => changeTrack(selector.value));
+    });
+  </script>
+</body>
+</html>
