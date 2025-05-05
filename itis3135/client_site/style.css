@@ -214,7 +214,9 @@ input[type="submit"]:hover {
     margin-top: 1rem;
 }
 
-/* Video Frame (added) */
+/* === Video Styles (merged) === */
+
+/* Video Frame */
 .video-frame {
     display: none;
     width: 90%;
@@ -234,7 +236,7 @@ input[type="submit"]:hover {
     border: none;
 }
 
-/* Video Controls (added) */
+/* Video Controls */
 .controls {
     margin-top: 10px;
     text-align: center;
@@ -247,7 +249,7 @@ input[type="submit"]:hover {
     cursor: pointer;
 }
 
-/* Video Section & Grid (added) */
+/* Video Section & Grid */
 .video-section {
     width: 90%;
     margin: 40px auto 0;
@@ -284,7 +286,7 @@ input[type="submit"]:hover {
     border: none;
 }
 
-/* Responsive for Video Grid */
+/* Responsive Video Grid */
 @media (max-width: 768px) {
     .video-item {
         flex: 0 0 100%;
