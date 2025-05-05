@@ -285,3 +285,9 @@ input[type="submit"]:hover {
         flex: 0 0 100%;
     }
 }
+
+/* Remove hyperlink styling in footer */
+footer a {
+    text-decoration: none;  /* Removes the underline */
+    color: inherit;         /* Inherit color from the parent (footer) */
+}
