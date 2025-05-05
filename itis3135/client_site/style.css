@@ -262,13 +262,6 @@ input[type="submit"]:hover {
     font-size: 1.2em;
 }
 
-.video-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-}
-
 .video-item {
     flex: 0 0 30%;
     box-sizing: border-box;
