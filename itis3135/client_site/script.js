@@ -494,6 +494,3 @@ Just to dance with you.`
       document.querySelector('.close').addEventListener('click', closeSlide);
       selector.addEventListener('change', () => changeTrack(selector.value));
     });
-  </script>
-</body>
-</html>
