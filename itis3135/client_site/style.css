@@ -24,18 +24,18 @@ nav ul li {
     margin-right: 20px;
 }
 
-.social-icons img {
-    width: 24px;  /* Make icons smaller */
-    height: 24px; /* Maintain aspect ratio */
+nav ul li a {
+    color: white;
+    text-decoration: none;
 }
 
 .social-icons {
     text-align: right;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+.social-icons img {
+    width: 24px;  /* Make icons smaller */
+    height: 24px; /* Maintain aspect ratio */
 }
 
 /* Main Content */
@@ -80,14 +80,14 @@ main {
 .album {
     text-align: center;
     cursor: pointer;
-    width: 200px; /* Set a fixed width for album containers */
-    height: 300px; /* Set a fixed height for consistency */
+    width: 200px; /* fixed width */
+    height: 300px; /* fixed height */
 }
 
 .album img {
-    width: 100%; /* Makes the image take up the full width of the album container */
-    height: 200px; /* Set a consistent height for all album images */
-    object-fit: cover; /* Ensures the image covers the area without stretching */
+    width: 100%;       /* full width */
+    height: 200px;     /* consistent height */
+    object-fit: cover; /* maintain aspect */
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
@@ -103,7 +103,8 @@ form {
     margin: 0 auto;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
