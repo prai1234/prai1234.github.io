@@ -13,6 +13,24 @@ header, footer {
     padding: 10px;
 }
 
+/* Remove hyperlink styling in footer */
+footer a {
+    text-decoration: none;  /* Removes the underline */
+    color: inherit;         /* Inherit color from the parent (footer) */
+}
+
+/* Remove hyperlink styling in header */
+header a {
+    text-decoration: none;  /* Removes the underline */
+    color: inherit;         /* Inherit color from the parent (header) */
+}
+
+/* Add hover effect to hyperlinks in both header and footer */
+a:hover {
+    color: lightgreen;  /* Changes text color to light green when hovered */
+}
+
+/* Navigation Menu */
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -29,6 +47,7 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* Social Icons */
 .social-icons {
     text-align: right;
 }
@@ -290,4 +309,15 @@ input[type="submit"]:hover {
 footer a {
     text-decoration: none;  /* Removes the underline */
     color: inherit;         /* Inherit color from the parent (footer) */
+}
+
+/* Remove hyperlink styling in header */
+header a {
+    text-decoration: none;  /* Removes the underline */
+    color: inherit;         /* Inherit color from the parent (header) */
+}
+
+/* Add hover effect to hyperlinks in both header and footer */
+a:hover {
+    color: lightgreen;  /* Changes text color to light green when hovered */
 }
